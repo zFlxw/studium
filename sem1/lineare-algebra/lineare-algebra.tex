@@ -1,0 +1,124 @@
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amsthm,amsfonts,amssymb,amscd}
+\usepackage{multirow,booktabs}
+\usepackage[table]{xcolor}
+\usepackage{fullpage}
+\usepackage{lastpage}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{mathrsfs}
+\usepackage{array}
+\usepackage{wrapfig}
+\usepackage{setspace}
+\usepackage{calc}
+\usepackage{multicol}
+\usepackage{cancel}
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[margin=3cm]{geometry}
+\usepackage{amsmath}
+\usepackage[most]{tcolorbox} \usepackage{xcolor}
+
+\newlength{\tabcont}
+\setlength{\parindent}{0.0in} \setlength{\parskip}{0.05in} \usepackage{empheq} \usepackage{framed}
+
+\colorlet{shadecolor}{orange!15}
+\parindent 0in
+\parskip 12pt \geometry{margin=1in, headsep=0.25in} \theoremstyle{definition}
+
+\newtheorem{defn}{Definition} \newtheorem{reg}{Rule}
+\newtheorem{exer}{Exercise} \newtheorem{note}{Note}
+\begin{document}
+\title{Mathematik I - Lineare Algebra}
+
+\thispagestyle{empty}
+
+\newcommand{\ol}[1]{\begin{enumerate}#1\end{enumerate}}
+\newcommand{\ul}[1]{\begin{itemize}#1\end{itemize}}
+\newcommand{\li}[1]{\item{#1}}
+\newcommand{\equivto}{\Longleftrightarrow}
+\newcommand{\N}{\mathbb{N}}
+
+\begin{center}
+  {\LARGE \bf Mathematik I}\\
+  {\Large Lineare Algebra}\\
+  WS 2024
+\end{center}
+
+\section{Logik}
+\subsection{Begriffe in der Logik}
+$
+  \begin{array}{l l}
+    \text{Aussage:}     & \text{Ein Satz, der in einem gegebenen Kontext eindeutig wahr oder falsch ist} \\
+    \text{Konjunktion:} & \text{Eine logische Verknüpfung (z. B. "und", "oder")}                         \\
+    \text{Negation:}    & \text{Umkehrung des Wahrheitswertes einer Aussage}                             \\
+    \text{Implikation:} & \text{Aus Aussage $A$ folgt Aussage $B$}
+  \end{array}
+$
+
+\subsection{Logische Gesetze}
+$
+  \begin{array}{l l}
+    \text{De-Morgansche Gesetze:} & \lnot(A\land B) \equivto \lnot A \lor \lnot B            \\
+                                  & \lnot(A\lor B) \equivto \lnot A \land \lnot B            \\\\
+    \text{Kommutativgesetz:}      & A \land B \equivto B \land A                             \\
+                                  & A \lor B \equivto B \lor A                               \\\\
+    \text{Assoziativgesetz:}      & A \land (B \land C) \equivto (A \land B) \land C         \\
+                                  & A \lor (B \lor C) \equivto (A \lor B) \lor C             \\\\
+    \text{Distributivgesetz:}     & A \land (B \lor C) \equivto (A \land B) \lor (A \land C) \\
+                                  & A \lor (B \land C) \equivto (A \lor B) \land (A \lor C)  \\\\
+    \text{Absorptionsgesetz:}     & A \land (A \lor B) \equivto A                            \\
+                                  & A \lor (A \land B) \equivto A                            \\
+  \end{array}
+$
+
+\subsection{Quantoren}
+$
+  \begin{array}{l l}
+    \text{Existenzquantor:} & \exists n \in \mathbb{N}\qquad\text{Es existiert ein $n$ in der Menge der natürlichen Zahlen, für das gilt \ldots} \\\\
+    \text{Allquantor:}      & \forall n \in \mathbb{N}\qquad\text{Für alle Zahlen $n$ in der Menge der natürlichen Zahlen gilt, \ldots}          \\\\
+  \end{array}
+$
+
+\subsection{Beweisarten}
+\subsubsection{Direkter und Indirekter Beweis}
+$
+  \begin{array}{l l}
+    \text{Direkter Beweis:}                                                 & A \longrightarrow B                                                                        \\
+    Beispiel\quad n~\text{ist gerade} \longrightarrow n^2~\text{ist gerade} & \exists n \in \N : n = 2k \Longrightarrow n^2 = (2k)^2 = 4k^2 = \underbrace{2(2k)}_{\in\N} \\\\
+    \text{Indirekter Beweis (Widerspruchsbeweis):}                          & \lnot A \longrightarrow\text{Widerspruch}                                                  \\
+    Beispiel\quad\text{Behauptung:~}\sqrt{2}~\text{ist irrational}          & \text{Annahme: }\sqrt{2}~\text{ist rational}                                               \\
+                                                                            & \sqrt{2} = \frac{a}{b} \Longrightarrow 2 = \frac{a^2}{b^2} \Longrightarrow a^2 = 2b^2      \\
+                                                                            & \Longrightarrow a^2~\text{ist gerade} \Longrightarrow a~\text{ist gerade}                  \\
+                                                                            & \Longrightarrow a = 2k \Longrightarrow 2b^2 = 4k^2 \Longrightarrow b^2 = 2k^2              \\
+                                                                            & \Longrightarrow b^2~\text{ist gerade} \Longrightarrow b~\text{ist gerade}                  \\
+                                                                            & \Longrightarrow \text{Widerspruch, da }a~\text{und }b~\text{beide gerade sind}             \\
+  \end{array}
+$
+
+\subsubsection{Beweis durch vollständige Induktion}
+Die vollständige Induktion besteht aus folgenden Schritten:
+\begin{enumerate}
+  \item Induktionsanfang: Zeige, dass die Aussage für ein beliebiges $n$ gilt (meist $n = 0$ oder $n = 1$).
+  \item Induktionsvoraussetzung: durch den Induktionsanfang ist bewiesen, dass es mindestens ein $n$ gibt, für das die Aussage stimmt.
+  \item Induktionsbehauptung: Es wird angenommen, dass wenn die Aussage für $n$ stimmt, dass sie auch für $n + 1$ stimmen muss.
+  \item Induktionsschritt: Beweis, dass die Induktionsbehauptung richtig ist.
+\end{enumerate}
+Das genaue Vorgehen beim Induktionsbeweis hängt von der konrekten Aussage ab.\\
+Beispiel (Gaußsche Summenformel):
+\[
+  \sum\limits_{k=1}^{n}k = \frac{n(n+1)}{2}
+\]
+$
+  \begin{array}{l l}
+    \text{\underline{Induktionsanfang (IA):}}        & n = 1 \quad  1=\frac{2}{2}\quad\checkmark                                          \\\\
+    \text{\underline{Induktionsvoraussetzung (IV):}} & \exists n \in \N : \sum\limits_{k=1}^{n}k = \frac{n(n+1)}{2}                       \\\\
+    \text{\underline{Induktionsbehauptung (IB):}}    & \sum\limits_{k=1}^{n+1}k = \frac{(n+1)((n+1)+1)}{2} = \frac{(n+1)(n+2)}{2}         \\\\
+    \text{\underline{Induktionsschritt (IS):}}       & \sum\limits_{k=1}^{n+1}k = \underbrace{\sum\limits_{k=1}^{n}k}_{\text{IV}} + (n+1) \\\\
+                                                     & = \frac{n(n+1)}{2} + (n+1)                                                         \\\\
+                                                     & = \frac{n(n+1) + 2(n+1)}{2}                                                        \\\\
+                                                     & = \frac{n^2+n+2n+2}{2}                                                             \\\\
+                                                     & = \frac{(n+1)(n+2)}{2}\quad \qed
+  \end{array}
+$
+\end{document}
