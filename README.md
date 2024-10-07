@@ -1,0 +1,3 @@
+# Information & Disclaimer
+
+Dieses Repository beinhaltet Zusammenfassungen zu verschiedenen Modulen des Studiengangs Informatik. Die bereitgestellten Informationen werden nach bestem Wissen und Gewissen von mir veröffentlicht, es besteht jedoch keine Garantie auf Vollständigkeit und Richtigkeit. Sollte ein Fehler auffallen, kann dieser gerne gemeldet werden (z. B. in Form eines Issues oder eine Pull Request).
