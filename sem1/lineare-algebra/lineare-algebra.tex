@@ -29,15 +29,18 @@
 \newtheorem{defn}{Definition} \newtheorem{reg}{Rule}
 \newtheorem{exer}{Exercise} \newtheorem{note}{Note}
 \begin{document}
-\title{Mathematik I - Lineare Algebra}
 
 \thispagestyle{empty}
+
+\newtheorem{definition}{Definition}[section]
 
 \newcommand{\ol}[1]{\begin{enumerate}#1\end{enumerate}}
 \newcommand{\ul}[1]{\begin{itemize}#1\end{itemize}}
 \newcommand{\li}[1]{\item{#1}}
 \newcommand{\equivto}{\Longleftrightarrow}
+
 \newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
 
 \begin{center}
   {\LARGE \bf Mathematik I}\\
@@ -46,13 +49,20 @@
 \end{center}
 
 \section{Logik}
+\begin{definition}
+  Logik ist die \textit{Lehre vom Argumentieren}, bzw. die \textit{Lehre vom Schlussfolgern}.
+  Sie hat das Ziel, die Regeln des Argumentierens so streng zu setzen, dass Widersprüche und Paradoxen möglichst
+  ausgeschlossen sind.
+\end{definition}
 \subsection{Begriffe in der Logik}
 $
   \begin{array}{l l}
-    \text{Aussage:}     & \text{Ein Satz, der in einem gegebenen Kontext eindeutig wahr oder falsch ist} \\
-    \text{Konjunktion:} & \text{Eine logische Verknüpfung (z. B. "und", "oder")}                         \\
-    \text{Negation:}    & \text{Umkehrung des Wahrheitswertes einer Aussage}                             \\
-    \text{Implikation:} & \text{Aus Aussage $A$ folgt Aussage $B$}
+    \text{Aussage:}      & \text{Ein Satz, der in einem gegebenen Kontext eindeutig wahr oder falsch ist} \\
+    \text{Konjunktion:}  & \text{Eine logische Verknüpfung (z. B. "und", "oder")}                         \\
+    \text{Negation:}     & \text{Umkehrung des Wahrheitswertes einer Aussage}                             \\
+    \text{Implikation:}  & \text{Aus Aussage $A$ folgt Aussage $B$}                                       \\\\
+    \text{Tautologie:}   & \text{Eine Aussage, die immer wahr ist}                                        \\
+    \text{Kontradiktion} & \text{Eine widersprüchliche Aussage, die immer falsch ist}                     \\
   \end{array}
 $
 
@@ -104,8 +114,9 @@ Die vollständige Induktion besteht aus folgenden Schritten:
   \item Induktionsbehauptung: Es wird angenommen, dass wenn die Aussage für $n$ stimmt, dass sie auch für $n + 1$ stimmen muss.
   \item Induktionsschritt: Beweis, dass die Induktionsbehauptung richtig ist.
 \end{enumerate}
-Das genaue Vorgehen beim Induktionsbeweis hängt von der konrekten Aussage ab.\\
-Beispiel (Gaußsche Summenformel):
+Das genaue Vorgehen beim Induktionsbeweis hängt von der konrekten Aussage ab.
+
+\paragraph{Beispiel (Gaußsche Summenformel):}
 \[
   \sum\limits_{k=1}^{n}k = \frac{n(n+1)}{2}
 \]
@@ -121,4 +132,51 @@ $
                                                      & = \frac{(n+1)(n+2)}{2}\quad \qed
   \end{array}
 $
+\section{Mengenlehre}
+\begin{definition}
+  Eine Menge ist eine Zusammenfassung von bestimmten, wohlunterschiedenen Objekten unserer Anschauung oder unseres Denkens zu einem Ganzen.
+\end{definition}
+
+\subsection{Beispiele von Mengen}
+$
+  \begin{array}{l l}
+    \N = \{1, 2, 3, 4, \ldots\}                             & \text{(Natürliche Zahlen)} \\
+    \mathbb{Z} = \{\ldots, -3, -2, -1, 0, 1, 2, 3, \ldots\} & \text{(Ganze Zahlen)}      \\
+    \text{M} = \{1, \pi, a\}                                                             \\
+    \text{N} = \{x\in\Z | x = k^2\}                                                      \\
+    \text{O} = \emptyset\text{ oder }\{\}                   & \text{(Leere Menge)}       \\
+  \end{array}
+$
+
+\subsection{Definitionen}
+Eine Menge $A$ ist eine \textbf{Teilmenge} von $B$, wenn jedes Element von $A$ auch in $B$ enthalten ist.
+\[
+  A \subseteq B \equivto \forall x(x \in A \Longrightarrow x \in B)
+\]
+
+Die \textbf{Schnittmenge} von $A$ und $B$ ist die Menge aller Elemente, die sowohl Teil von $A$ als auch Teil von $B$ sind.
+\[
+  A \cap B = \{x | x \in A \land x \in B\}
+\]
+Wenn $A \cap B = \emptyset$, dann heißen $A$ und $B$ \textbf{disjunkt}.
+
+Die \textbf{Vereinigungsmenge} von $A$ und $B$ ist die Menge aller Elemente, die in $A$ oder in $B$ enthalten sind.
+\[
+  A \cup B = \{x | x \in A \lor x \in B\}
+\]
+
+$
+  \begin{array}{l l l}
+    \text{Sind } A, B, C \subseteq \text{ gilt:}                                                                                \\
+    \text{Kommutativgesetz:}  & A \cap B = B \cap A                            & A \cup B = B \cup A                            \\
+    \text{Assoziativgesetz:}  & A \cap (B \cap C) = (A \cap B) \cap C          & A \cup (B \cup C) = (A \cup B) \cup C          \\
+    \text{Distributivgesetz:} & A \cap (B \cup C) = (A \cap B) \cup (A \cap C) & A \cup (B \cap C) = (A \cup B) \cap (A \cup C) \\
+    \text{Absorptionsgesetz:} & A \cap (A \cup B) = A                          & A \cup (A \cap B) = A                          \\
+  \end{array}
+$
+
+Die \textbf{Differenzmenge} von $A$ und $B$ besteht aus allen Elementen der Menge $A$, die nicht in $B$ enthalten sind.
+\[
+  A \setminus B = \{x | x \in A \land x \notin B\}
+\]
 \end{document}
