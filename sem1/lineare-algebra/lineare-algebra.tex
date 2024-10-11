@@ -22,25 +22,28 @@
 \newlength{\tabcont}
 \setlength{\parindent}{0.0in} \setlength{\parskip}{0.05in} \usepackage{empheq} \usepackage{framed}
 
+
 \colorlet{shadecolor}{orange!15}
 \parindent 0in
 \parskip 12pt \geometry{margin=1in, headsep=0.25in} \theoremstyle{definition}
 
-\newtheorem{defn}{Definition} \newtheorem{reg}{Rule}
-\newtheorem{exer}{Exercise} \newtheorem{note}{Note}
 \begin{document}
 
 \thispagestyle{empty}
 
 \newtheorem{definition}{Definition}[section]
+\newtheorem{anmk}{Anmerkung}[section]
+\newtheorem{bsp}{Beispiel}[section]
 
 \newcommand{\ol}[1]{\begin{enumerate}#1\end{enumerate}}
 \newcommand{\ul}[1]{\begin{itemize}#1\end{itemize}}
 \newcommand{\li}[1]{\item{#1}}
 \newcommand{\equivto}{\Longleftrightarrow}
+\newcommand{\sube}{\subseteq}
 
 \newcommand{\N}{\mathbb{N}}
 \newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
 
 \begin{center}
   {\LARGE \bf Mathematik I}\\
@@ -149,34 +152,146 @@ $
 $
 
 \subsection{Definitionen}
-Eine Menge $A$ ist eine \textbf{Teilmenge} von $B$, wenn jedes Element von $A$ auch in $B$ enthalten ist.
+Eine Menge $M$ ist eine \textbf{Teilmenge} von $N$, wenn jedes Element von $M$ auch in $N$ enthalten ist.
 \[
-  A \subseteq B \equivto \forall x(x \in A \Longrightarrow x \in B)
+  M \sube N \equivto \forall x(x \in M \Longrightarrow x \in N)
 \]
 
-Die \textbf{Schnittmenge} von $A$ und $B$ ist die Menge aller Elemente, die sowohl Teil von $A$ als auch Teil von $B$ sind.
+Die \textbf{Schnittmenge} von $M$ und $N$ ist die Menge aller Elemente, die sowohl Teil von $M$ als auch Teil von $N$ sind.
 \[
-  A \cap B = \{x | x \in A \land x \in B\}
+  M \cap N = \{x | x \in M \land x \in N\}
 \]
-Wenn $A \cap B = \emptyset$, dann heißen $A$ und $B$ \textbf{disjunkt}.
+Wenn $M \cap N = \emptyset$, dann heißen $M$ und $N$ \textbf{disjunkt}.
 
-Die \textbf{Vereinigungsmenge} von $A$ und $B$ ist die Menge aller Elemente, die in $A$ oder in $B$ enthalten sind.
+Die \textbf{Vereinigungsmenge} von $M$ und $N$ ist die Menge aller Elemente, die in $M$ oder in $N$ enthalten sind.
 \[
-  A \cup B = \{x | x \in A \lor x \in B\}
+  M \cup N = \{x | x \in M \lor x \in N\}
 \]
 
 $
   \begin{array}{l l l}
-    \text{Sind } A, B, C \subseteq \text{ gilt:}                                                                                \\
-    \text{Kommutativgesetz:}  & A \cap B = B \cap A                            & A \cup B = B \cup A                            \\
-    \text{Assoziativgesetz:}  & A \cap (B \cap C) = (A \cap B) \cap C          & A \cup (B \cup C) = (A \cup B) \cup C          \\
-    \text{Distributivgesetz:} & A \cap (B \cup C) = (A \cap B) \cup (A \cap C) & A \cup (B \cap C) = (A \cup B) \cap (A \cup C) \\
-    \text{Absorptionsgesetz:} & A \cap (A \cup B) = A                          & A \cup (A \cap B) = A                          \\
+    \text{Sind } M, N, C \sube \text{ gilt:}                                                                                    \\
+    \text{Kommutativgesetz:}  & M \cap N = N \cap M                            & M \cup N = N \cup M                            \\
+    \text{Assoziativgesetz:}  & M \cap (N \cap C) = (M \cap N) \cap C          & M \cup (N \cup C) = (M \cup N) \cup C          \\
+    \text{Distributivgesetz:} & M \cap (N \cup C) = (M \cap N) \cup (M \cap C) & M \cup (N \cap C) = (M \cup N) \cap (M \cup C) \\
+    \text{Absorptionsgesetz:} & M \cap (M \cup N) = M                          & M \cup (M \cap N) = M                          \\
   \end{array}
 $
 
-Die \textbf{Differenzmenge} von $A$ und $B$ besteht aus allen Elementen der Menge $A$, die nicht in $B$ enthalten sind.
+Die \textbf{Differenzmenge} von $M$ und $N$ besteht aus allen Elementen der Menge $M$, die nicht in $N$ enthalten sind.
 \[
-  A \setminus B = \{x | x \in A \land x \notin B\}
+  M \setminus N = \{x | x \in M \land x \notin N\}
 \]
+
+Die \textbf{Menge aller Teilmengen} einer Menge $M$ wird als $P(M)$ angegeben.
+
+\[
+  M = \{1, a, \pi \}
+\]
+\[
+  P(M) = \emptyset, M, \{1\}, \{a\}, \{\pi\}, \{1, a\}, \{1, \pi\}, \{a, \pi\}
+\]
+
+Die Anzahl der Elemente in einer Menge bezeichnet man als \textbf{Kardinalität} oder \textbf{Mächtigkeit}. Geschrieben
+wird sie als
+\[
+  |M| = ...
+\]
+
+Die Anzahl der möglichen Teilmengen ist
+\[
+  |P(M)| = 2^{|M|}
+\]
+
+\begin{anmk}
+  Die Kardinalität der Menge der natürlichen Zahlen ist $|\N| = \aleph_0$, welche als kleinste abzählbare Unendlichkeit
+  bekannt ist.
+\end{anmk}
+
+\subsection{Kartesisches Produkt}
+Das \textbf{kartesische Produkt} einer Menge $M$ und einer Menge $N$ ist definiert als
+\[
+  M\times N := \{(a,b)|a\in M, b \in N\}
+\]
+
+Die Kardinalität des kartesischen Produkts ist definiert als
+\[
+  |M \times N| = |M| \cdot |N|
+\]
+
+\subsection{Relationen}
+Eine \textbf{Relation} $R$ zwischen einer Menge $M$ und einer Menge $N$ ist eine Beziehung zwischen Elementen von $M$ und $N$,
+geordnet in Paare $(m, n)$ mit $m \in M$ und $n \in N$. Daraus folgt, dass jede Relation zwischen zwei Mengen eine
+Teilmenge des kartesischen Produkts ebendieser ist. Eine Relation wird geschrieben als $\sim_R$. Gilt $M = N$, so heißt
+die Relation \textbf{homogen}.
+
+Betrachtet man eine Funktion $f : D \longrightarrow \R$ mit $D \sube \R$, so ist diese Funktion eine Relation $R$ zwischen
+$D$ und $\R$ mit der Eigenschaft:
+\[
+  \forall x \in D~\exists^{=1} y \in \R: (x, y) \in R
+\]
+
+Daraus lässt sich allgemein feststellen, dass eine Funktion $f : D \longrightarrow N$ eine Relation $R$ zwischen $D$ und
+$N$ ist, für die gilt:
+\[
+  \forall x \in D~\exists^{=1} y \in N: (x, y) \in R
+\]
+
+\subsection{Eigenschaften von homogenen Relationen}
+$
+  \begin{array}{l l}
+    \text{Reflexiv:}        & \forall m \in M: m \sim_R m                                        \\
+    \text{Transitiv:}       & m_1 \sim_R m_2 \land m_2 \sim_R m_3 \Longrightarrow m_1 \sim_R m_3 \\
+    \text{Symmetrisch:}     & m_1 \sim_R m_2 \Longrightarrow m_2 \sim_R m_1                      \\
+    \text{Antisymmetrisch:} & m_1 \sim_R m_2 \land m_2 \sim_R m_1 \Longrightarrow m_1 = m_2      \\
+    \text{Asymmetrisch}:    & m_1 \sim_R m_2 \Longrightarrow \lnot(m_2 \sim_R m_1)               \\
+  \end{array}
+$
+
+Außerdem heißt $R$ \textbf{Äquivalenzrelation}, wenn sie reflexiv, symmetrisch und transitiv ist.
+
+\subsection{Äquivalenzklassen}
+Betrachtet man eine Äquivalenzrelation $\sim_R$ auf eine Menge $M$ mit zwei Elementen $m, n \in M$, so heißen diese
+\textbf{äquivalent}, wenn $m \sim_R n$.
+
+Eine Teilmenge $a \sube M$ heißt \textbf{Äquivalenzklasse}, wenn gilt
+\ul{
+  \li{$\text{Sind } m,n \in A, \text{ so ist } m \sim_R n$}
+  \li{$\text{Ist } m \in A \land n \in M \text{ mit } n \sim_R m, \text{ so ist } n \in A$}
+}
+
+Das bedeutet, die Äquivalenzklasse $[a]$ enthält alle Elemente, die mit $a$ in Relation stehen.
+Existiert eine Äquivalenzrelation $\sim_R$ auf $M$ und sind $m,n \in M$, dann gilt entweder $[m] = [n]$ oder $[m]$ und
+$[n]$ sind disjunkt.
+
+\subsection{Repräsentantensystem}
+Ein \textbf{Repräsentant} einer Äquivalenzklasse $[a]$ ist ein Element $a \in [a]$, das die Klasse repräsentiert.
+
+Ein \textbf{Repräsentantensystem} ist eine Teilmenge $N \sube M$ die genau einen Repräsentanten jeder Äquivalenzklasse
+enthält.
+
+\begin{bsp}
+  Gegeben ist die Relation "modulo 3" auf der Menge $\Z$. Zwei Zahlen $a, b$ sind äquivalent bezüglich dieser Relation,
+  wenn sie bei der Division durch 3 den gleichen Rest haben. Mathematisch bedeutet das:
+  \[
+    a \equiv b(\operatorname{mod} 3) \quad \text{wenn}\quad 3\mid a-b
+  \]
+
+  Die Äquivalenzklassen für diese Äquivalenzrelation sind die Menge aller Elemente, die zueinander äquivalent sind.
+  In diesem Fall existieren drei Äquivalenzklassen, nämlich für jeden möglichen Rest (0, 1, 2) der Division jeweils eine.
+  \begin{align*}
+    [0] = \{\ldots, -6, -3, 0, 3, 6, \ldots\} \\
+    [1] = \{\ldots, -5, -2, 1, 4, 7, \ldots\} \\
+    [2] = \{\ldots, -4, -1, 2, 5, 8, \ldots\}
+  \end{align*}
+
+  Nun kann man ein Repräsentantensystem für diese Äquivalenzrelation aufstellen. Dafür nimmt man aus jeder Äquivalenzklasse
+  ein beliebiges Element (da die Elemente alle untereinander äquivalent sind, repräsentiert ein beliebiges Element die
+  gesamte Klasse).
+
+  Ein mögliches Repräsentantensystem für diese Relation ist:
+  \[
+    \{0, 1, 2\}
+  \]
+\end{bsp}
 \end{document}
