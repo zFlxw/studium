@@ -1,0 +1,200 @@
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amsthm,amsfonts,amssymb,amscd}
+\usepackage{multirow,booktabs}
+\usepackage{xcolor}
+\usepackage{fullpage}
+\usepackage{lastpage}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{mathrsfs}
+\usepackage{array}
+\usepackage{wrapfig}
+\usepackage{setspace}
+\usepackage{calc}
+\usepackage{multicol}
+\usepackage{cancel}
+\usepackage[margin=3cm]{geometry}
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[most]{tcolorbox} \usepackage{xcolor}
+
+\usepackage{minted}
+\usepackage{booktabs}
+\usepackage{hyperref}
+
+
+\newcommand*{\figref}[2][]{%
+  \hyperref[{fig:#2}]{%
+    \textit{Fig.~\ref*{fig:#2}}%
+    \ifx\\#1\\%
+    \else
+      \,#1%
+    \fi
+  }%
+}
+
+\newlength{\tabcont}
+\setlength{\parindent}{0.0in} \setlength{\parskip}{0.05in} \usepackage{empheq} \usepackage{framed}
+
+
+\colorlet{shadecolor}{orange!15}
+\parindent 0in
+\parskip 12pt \geometry{margin=1in, headsep=0.25in} \theoremstyle{definition}
+
+\begin{document}
+
+\thispagestyle{empty}
+
+\newtheorem{anmk}{Anmerkung}[section]
+\newtheorem{bsp}{Beispiel}[section]
+
+\renewcommand{\figurename}{Fig.}
+
+\newcommand{\ol}[1]{\begin{enumerate}#1\end{enumerate}}
+\newcommand{\ul}[1]{\begin{itemize}#1\end{itemize}}
+\newcommand{\li}[1]{\item{#1}}
+\newcommand{\equivto}{\Longleftrightarrow}
+\newcommand{\sube}{\subseteq}
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+
+\begin{center}
+  {\LARGE \bf Programmieren I}\\
+  {\Large Programmieren in C}\\
+  WS 2024
+\end{center}
+
+\section{Einführung}
+C ist eine imperative Programmiersprache, die bereits seit 1972 existiert und somit eine der ältesten Programmiersprachen ist.
+Aufgrund der Eigenschaft, dass C eine Low-Level Sprache ist, wird sie oft für Betriebssysteme, Treiber oder embedded
+Systeme wie Arduinos, RasPis oder Autos verwendet.
+
+Anders als bei vielen moderneren Programmiersprachen, gibt es in C relativ wenige Beschränkungen. Prinzipiell macht C genau
+das, was man ihm sagt. Das bedeutet aber auch, dass man sich selbst um viele Dinge kümmern muss und es in vielen Fällen
+zu ungewollten Nebeneffekten kommen kann, wenn man nicht aufpasst.
+
+\begin{bsp}
+  Es existiert ein Array (der Datentyp ist dabei egal) mit 10 Elementen. Um auf ein Element dieses Arrays zuzugreifen,
+  wird die Syntax \texttt{array[i]} verwendet, wobei \texttt{i} der Index (also die Stelle) des Elements ist. Das heißt,
+  der Aufruf \texttt{array[0]} gibt das erste Element des Arrays zurück, \texttt{array[1]} das zweite, usw.
+
+  Ruft man allerdings das Element \texttt{array[10]} auf, würde man einen Fehler erwarten, da das Array nur 10 Elemente
+  beinhaltet. In vielen Programmiersprachen wäre das auch tatsächlich der Fall; Java würde eine \texttt{ArrayIndexOutOfBoundsException}
+  werfen, Python einen \texttt{IndexError}, usw. C hingegen verfolgt das Mindset, dass der Entwickler schon weiß, was er
+  tut und gibt somit einfach den Wert zurück, der sich an der 11. Stelle des Arrays befinden würde. Das klingt vielleicht
+  etwas verwirrend, da es gar keinen 11. Wert gibt, aber ein Array ist im Endeffekt nichts anderes als eine durchgängige
+  Reihe an Speicherzellen im Arbeitsspeicher. Über den Index berechnet man die Speicheradresse der jeweiligen Zelle und
+  wenn der Index größer als die Länge des Arrays ist, wird auf eine Speicherzelle zugegriffen, die nicht zum Array gehört.
+  Daher kann man also auch nicht vorhersehen, welcher Wert in dieser Zelle steht. Das ist zumden natürlich auch ein
+  Sicherheitsrisiko, da unbefugt auf fremden Speicher zugegriffen wird und dieser im Wort-Case sensible Daten wie Passwörter
+  beinhalten könnte.
+\end{bsp}
+
+\section{Hello, World!}
+Oft ist das erste Programm, das man in einer (neuen) Programmiersprache schreibt, ein "Hello, World"-Programm. Das ist
+ein simples Programm, das den Text "Hello, World!" auf der Konsole ausgibt. Der Sinn dahinter ist, zu überprüfen, ob bei
+der Installation der Entwicklungsumgebung, Runtime, usw. alles korrekt verlief oder ob es zu Fehlern kam.
+
+\newpage
+Möchte man in C sieht ein solches Programm schreiben, könnte das wie folgt aussehen:
+\begin{figure}[h!]
+  \ignorespaces
+  \begin{minted}{c}
+    #include <stdio.h>
+
+    int main() {
+      printf("Hello, World!\n");
+      return 0;
+    }
+  \end{minted}
+  \caption{Hello, World! in C}
+  \label{fig:hello-world}
+\end{figure}
+
+\section{Datentypen, Variablen und Operatoren}
+Der Code \figref{hello-world} zeigt bereits die grundlegende Struktur eines C-Programms. Der Startpunkt ist die
+\texttt{main}-Funktion, welche somit beim Start des Programms aufgerufen wird. Der genaue Aufbau einer Funktion wird in
+Kapitel \ref{sec:funktionen} genauer erläutert.
+
+\subsection{Datentypen}
+Ein grundlegender Bestandteil von Programmiersprachen sind Datentypen. Mithilfe von Datentypen unterscheidet man, welchen
+Wert eine Variable speichern kann. Eine Art von Datentypen sind die \textbf{primitiven Datentypen}. Diese bilden die Basis
+für alle anderen Datentypen. Folgende primitive Datentypen gibt es in C:
+\begin{table}[h!]
+  \centering
+  \begin{tabular}{@{}llll@{}}
+    \toprule
+    Datentyp  & Keyword   & Speichergröße   & Wert             \\ \midrule
+    Integer   & int       & 16 bit / 32 bit & Ganze Zahlen     \\
+    Short     & short     & 16 bit          & Ganze Zahlen     \\
+    Long      & long      & 32 bit          & Ganze Zahlen     \\
+    Long Long & long long & 64 bit          & Ganze Zahlen     \\
+    Float     & float     & 32 bit          & Gleitkommazahlen \\
+    Double    & double    & 64 bit          & Gleitkommazahlen \\
+    Character & char      & 8 bit           & Ganze Zahlen     \\ \bottomrule
+  \end{tabular}
+  \caption{Primitive Datentypen in C}
+\end{table}
+
+Für alle ganzzahligen Datentypen kann außerdem ein \texttt{unsigned} vorangestellt werden, um nur positive Werte
+zuzulassen und somit den Wertebereich "nach oben" zu verdoppeln.
+
+Die einzelnen Speichergrößen sind zudem abhängig von der verbauten CPU sowie dem verwendeten Compiler. So können
+insbesondere die Speichergrößen von Integern und Longs variieren.
+
+\subsection{Variablen}
+Wenn man in C von einer Variable spricht, meint man damit eigentlich nur einen fest reservierten Platz im Arbeitsspeicher.
+In C haben Variablen außerdem einen festen Datentypen, den man bestimmt, wenn man die Variable \textbf{deklariert} (also dem Compiler
+mitteilt, dass diese Variable existiert). Um eine Variable zu deklarieren, schreibt man in C:
+\begin{minted}{c}
+  <Datentyp> <Variablenname>;
+\end{minted}
+
+\begin{bsp}
+  Um eine Variable \texttt{a} vom Typ \texttt{int} zu deklarieren, verwendet man in C den Aufruf:
+  \begin{minted}{c}
+  int a;
+  \end{minted}
+\end{bsp}
+
+Durch eine reine Deklaration wird der Variable allerdings noch kein Wert zugewiesen. Würde man die Variable nun so aufrufen,
+würde sie den Wert zurückgeben, der noch im Speicher an der Stelle vorhanden ist. Daher sollte eine Variable immer
+bei der Deklaration einen Wert zugewiesen bekommen:
+\begin{minted}{c}
+  int a = 0;
+\end{minted}
+
+Diese Zuweisung nennt man \textbf{Initialisierung}.
+
+\subsection{Operatoren}
+Operatoren bieten unter anderem die Möglichkeit, Variablen miteinander zu verknüpfen. Die grundlegendsten Operatoren, die
+man bereits aus der Mathematik kennt, sind:
+\begin{table}[h!]
+  \centering
+  \begin{tabular}{@{}ll@{}}
+    \toprule
+    Operator & Bedeutung                    \\ \midrule
+    +        & Addition                     \\
+    -        & Subtraktion                  \\
+    *        & Multiplikation               \\
+    /        & Division                     \\
+    \%       & Modulo (Rest einer Division) \\ \bottomrule
+  \end{tabular}
+  \caption{Grundlegende Operatoren in C}
+\end{table}
+
+\begin{bsp}
+  Gegeben sind zwei Variablen \texttt{a} und \texttt{b} und man möchte den Rest der ganzzahligen Division von \texttt{a}
+  durch \texttt{b} berechnen. Der Code dazu könnte wie folgt aussehen:
+  \begin{minted}{c}
+    int a = 10;
+    int b = 3;
+    int rest = a % b; // = 1, da 10/3 = 3 Rest 1
+  \end{minted}
+
+\end{bsp}
+
+\section{Funktionen}{\label{sec:funktionen}}
+\end{document}
