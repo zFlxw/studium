@@ -113,6 +113,9 @@ Möchte man in C sieht ein solches Programm schreiben, könnte das wie folgt aus
   \label{fig:hello-world}
 \end{figure}
 
+Anhand dieses Beispiels lassen sich schon einige Aspekte der generellen C-Syntax erkennen. Zum Beispiel, dass (vereinfacht 
+ausgedrückt) fast jede Zeile mit einem Semikolon (\texttt{;}) oder einer geschweiften Klammer (\texttt{\{ \}}) endet. 
+
 \section{Datentypen, Variablen und Operatoren}
 Der Code \figref{hello-world} zeigt bereits die grundlegende Struktur eines C-Programms. Der Startpunkt ist die
 \texttt{main}-Funktion, welche somit beim Start des Programms aufgerufen wird. Der genaue Aufbau einer Funktion wird in
@@ -169,8 +172,8 @@ bei der Deklaration einen Wert zugewiesen bekommen:
 Diese Zuweisung nennt man \textbf{Initialisierung}.
 
 \subsection{Operatoren}
-Operatoren bieten unter anderem die Möglichkeit, Variablen miteinander zu verknüpfen. Die grundlegendsten Operatoren, die
-man bereits aus der Mathematik kennt, sind:
+Operatoren bieten unter anderem die Möglichkeit, Variablen miteinander zu verknüpfen. Es gibt dabei verschiedene Arten
+von Operatoren. Einige, die man man bereits aus der Mathematik kennt, sind die \textbf{arithmetischen Operatoren}:
 \begin{table}[h!]
   \centering
   \begin{tabular}{@{}ll@{}}
@@ -182,7 +185,7 @@ man bereits aus der Mathematik kennt, sind:
     /        & Division                     \\
     \%       & Modulo (Rest einer Division) \\ \bottomrule
   \end{tabular}
-  \caption{Grundlegende Operatoren in C}
+  \caption{Arithmetische Operatoren in C}
 \end{table}
 
 \begin{bsp}
@@ -194,6 +197,105 @@ man bereits aus der Mathematik kennt, sind:
     int rest = a % b; // = 1, da 10/3 = 3 Rest 1
   \end{minted}
 
+\end{bsp}
+
+Des Weiteren existieren auch noch \textbf{logische Operatoren}, welche dazu dienen, einen Wahrheitswert aus zwei oder
+mehreren Variablen zu schließen. In C gibt es dafür folgende \textbf{logische Operatoren}:
+\begin{table}[h!]
+  \centering
+  \begin{tabular}{@{}ll@{}}
+    \toprule
+    Operator   & Bedeutung       \\ \midrule
+    \&\&       & logisches Und   \\
+    $\mid\mid$ & logisches Oder  \\
+    !          & logisches Nicht \\ \bottomrule
+  \end{tabular}
+  \caption{Logische Operatoren in C}
+\end{table}
+
+Logische Operatoren werden häufig genutzt, um Bedingungen zu überprüfen. Dazu mehr in Kapitel \ref{sec:kontrollstrukturen}.
+
+Die dritte Art von Operatoren sind \textbf{Vergleichsoperatoren}. Diese verwendet man, um zwei Werte direkt miteinander
+zu vergleichen und geben daher ebenfalls einen Wahrheitswert zurück. In C gibt es folgende Vergleichsoperatoren:
+\begin{table}[h!]
+  \centering
+  \begin{tabular}{@{}ll@{}}
+    \toprule
+    Operator & Bedeutung           \\ \midrule
+    $==$     & Gleich              \\
+    $!=$     & Ungleich            \\
+    $>$      & Größer              \\
+    $<$      & Kleiner             \\
+    $>=$     & Größer oder gleich  \\
+    $<=$     & Kleiner oder gleich \\ \bottomrule
+  \end{tabular}
+  \caption{Vergleichsoperatoren in C}
+\end{table}
+
+\textbf{Wichtig:} \texttt{=} und \texttt{==} sind zwei verschiedene Operatoren! Das einfache Gleichheitszeichen wird verwendet,
+um einer Variable einen Wert zuzuweisen. Möchte man den Wert einer Variable mit einem anderen Wert auf Gleichheit prüfen,
+verwendet man dazu immer ein doppeltes Gleichheitszeichen.
+
+Ein entsprechendes Codebeispiel zur Anwendung von Vergleichsoperatoren folgt auch hier in Kapitel \ref{sec:kontrollstrukturen}.
+
+\section{Kontrollstrukturen}{\label{sec:kontrollstrukturen}}
+Ein Programm, das lediglich aus Variablen und Operatoren besteht, wäre relativ sinnfrei, da es keine Möglichkeit gäbe,
+den Verlauf des Programms auf die Eingaben des Benutzers oder auf andere Gegebenheiten anzupassen. Das könnte zum Beispiel
+die Berechtigung eines Benutzers sein; ein Programm soll vielleicht andere Funktionen ausführen, wenn es sich bei dem Benutzer
+um einen Administrator handelt.
+
+Um solche Bedingungen in den Verlauf des Programms einzubeziehen, gibt es sogenannte \textbf{Kontrollstrukturen}.
+Grundsätzlich lassen sich diese in zwei Kategorien unterteilen: \textbf{Bedingte Anweisungen} und \textbf{Schleifen}.
+
+\subsection{Bedingte Anweisungen}
+Eine bedingte Anweisung ist ein Codeblock, der nur dann ausgeführt wird, wenn eine bestimmte Bedingung erfüllt wird. Das
+Keyword in C dafür lautet \texttt{if} und ist wie folgt definiert:
+\begin{figure}[h!]
+  \begin{minted}{c}
+    if (<Bedingung>) {
+      // Code, der ausgeführt wird, wenn die Bedingung erfüllt ist
+    }
+  \end{minted}
+  \caption{if-Statement in C}
+  \label{fig:if-statement}
+\end{figure}
+
+\begin{bsp}
+  Gegeben ist eine Variable \texttt{alter}, die das Alter des Benutzers speichert. Das Programm soll nun einen Text ausgeben,
+  wenn der Benutzer volljährig ist. Der Code dazu könnte wie folgt aussehen:
+  \begin{minted}{c}
+  int main() {
+    int alter = 18;
+    if (alter >= 18) {
+      printf("Du bist volljährig!\n");
+    }
+
+    return 0;
+  }
+  \end{minted}
+
+  Führt man dieses Programm nun aus, erscheint der Text \texttt{Du bist volljährig!} in der Konsole.
+  Ändert man den Wert der Variable \texttt{alter} aber beispielsweise auf \texttt{17}, passiert gar nichts.
+  Das liegt daran, dass der Code innerhalb des \texttt{if}-Statements wirklich nur dann ausgeführt wird, wenn die
+  Bedingung in den runden Klammern erfüllt ist.
+
+  Um das Programm dahingehend zu erweitern, dass auch ein Text erscheint, wenn der Benutzer nicht volljährig ist, gibt es
+  in C das Keyword \texttt{else}. Der Code innerhalb eines \text{else}-Blocks wird immer dann ausgeführt, wenn die
+  Bedingung im vorangestelltn \texttt{if}-Statement nicht erfüllt ist. Für das obige Beispiel könnte ein passender
+  \texttt{else}-Block wie folgt aussehen:
+
+  \begin{minted}{c}
+    int main() {
+      int alter = 17;
+      if (alter >= 18) {
+        printf("Du bist volljährig!\n");
+      } else {
+        printf("Du bist minderjährig!\n");
+      }
+  
+      return 0;
+    }
+    \end{minted}
 \end{bsp}
 
 \section{Funktionen}{\label{sec:funktionen}}
