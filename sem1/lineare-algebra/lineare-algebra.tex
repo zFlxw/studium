@@ -294,4 +294,101 @@ enthält.
     \{0, 1, 2\}
   \]
 \end{bsp}
+
+\section{Algebraische Strukturen}
+\subsection{Gruppen}
+Betrachtet man eine Menge $M$, so bezeichnet man die Abbildung
+\[
+  \circ : M \times M \longrightarrow M
+\]
+als \textbf{innere Verknüpfung} von $M$. Diese Verknüpfung kann zum Beispiel eine Addition oder Multiplikation sein.
+
+Gilt für diese Verknüpfung das \textbf{Assoziativgesetz}, also sprich
+\[
+  \forall a, b, c \in M: (a \circ b) \circ c = a \circ (b \circ c)
+\]
+so heißt die Menge $M$ eine \textbf{Halbgruppe}.
+\begin{bsp}
+  Folgende Beispiele sind Halbgruppen:
+  $(\Z, +)$,
+  $(\R, \cdot)$
+\end{bsp}
+
+Existiert in der Halbgruppe zusätzlich ein \textbf{neutrales Element} $e \in M$, sodass gilt
+\[
+  \forall a \in M: a \circ e = e \circ a = a
+\]
+so heißt die Halbgruppe eine \textbf{Monoid}.
+\begin{bsp}
+  Folgende neutrale Elemente existieren als Beispiel:
+  $(\Z, +)$: $0$,
+  $(\R, \cdot)$: $1$,
+  $(P(M), \cup)$: $\emptyset$
+\end{bsp}
+
+Existiert in der Monoid zusätzlich zu dem neutralen Element ein \textbf{inverses Element} $a^{-1} \in M$, sodass gilt
+\[
+  a \circ a^{-1} = a^{-1} \circ a = e
+\]
+so heißt die Monoid eine \textbf{Gruppe}.
+
+\begin{bsp}
+  Folgende Beispiele sind Gruppen:
+  $(\Z, +)$,
+  $(\R, +)$,
+  $(\R\setminus\{0\}, \cdot)$
+\end{bsp}
+
+\begin{anmk}
+  Ist eine Gruppe zusätzlich noch kommutativ, also wenn
+  \[
+    \forall a, b \in M: a \circ b = b \circ a
+  \]
+  gilt, so spricht man von einer \textbf{abelschen Gruppe}.
+\end{anmk}
+
+\subsubsection{Permutationsgruppen}
+Eine \textbf{Permutation} ist eine bijektive Abbildung von einer Menge auf sich selbst. Das bedeutet, dass die Permutation
+die gleichen Elemente wie die Ausgangsmenge beinhaltet und lediglich die Reihenfolge verändert wird. Diese permuttierten
+Elemente werden als $\sigma \in S_N$ bezeichnet.
+
+Betrachtet man die Zahlen, die vertauscht wurden, so spricht man von \textbf{Transpositionen}.
+\begin{bsp}
+  Gegeben ist
+  \[
+    \sigma = \begin{pmatrix}
+      1 & 2 & 3 & 4 \\
+      2 & 1 & 4 & 3
+    \end{pmatrix}
+  \]
+
+  Vertauscht wurden unter anderem die Zahlen $1$ und $2$, also spricht man von der Transposition $\tau_{12} = \langle1~2\rangle$
+\end{bsp}
+
+Die Verknüpfung, bei der die Permutation die gleiche Reihenfolge wie die Ausgangsmenge abbildet, nennt man id.
+
+Ist $\tau = \langle i~k \rangle$, so gilt:
+\[
+  \tau \circ \tau = \text{id}
+\]
+
+Eine wichtige Eigenschaft von Permutationen ist außerdem die \textbf{Signatur}. Die Signatur $\operatorname{sign}(\sigma)$ ist die Anzahl
+der Fehlstände, also der Anzahl an Vertauschungen, bei denen $i < j$ aber $\sigma(i) > \sigma(j)$ gilt.
+
+Die Signatur ist definiert als:
+\[
+  \operatorname{sign}(\sigma) = \begin{cases}
+    +1 & \text{für gerade Anzahl an Vertauschungen}   \\
+    -1 & \text{für ungerade Anzahl an Vertauschungen}
+  \end{cases}
+\]
+
+Um die Signatur zu bestimmen kann man entweder alle Fehlstände zählen oder die folgende Formel verwenden:
+\[
+  \operatorname{sign}(\sigma) = \prod\limits_{i < j}\frac{\sigma(j) - \sigma(i)}{j - i}
+\]
+
+\subsubsection{Endliche Gruppen}
+Eine Gruppe $G$ heißt \textbf{endlich}, wenn $|G| < \infty$, also wenn $G$ nur endlich viele Elemente hat. Die Ordnung 
+$\operatorname{ord}(G)$ ist in diesem Fall $|G|$.
 \end{document}
