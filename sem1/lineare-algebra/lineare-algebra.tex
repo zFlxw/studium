@@ -296,12 +296,14 @@ enthält.
 \end{bsp}
 
 \section{Algebraische Strukturen}
-\subsection{Gruppen}
+\subsection{Halbgruppen, Monoide, Gruppen}
 Betrachtet man eine Menge $M$, so bezeichnet man die Abbildung
 \[
   \circ : M \times M \longrightarrow M
 \]
 als \textbf{innere Verknüpfung} von $M$. Diese Verknüpfung kann zum Beispiel eine Addition oder Multiplikation sein.
+Bildet man nun ein Tupel mit der Menge und der inneren Verknüpfung, also $(M, \circ)$, so nennt man dieses Tupel auch
+\textbf{Magma}.
 
 Gilt für diese Verknüpfung das \textbf{Assoziativgesetz}, also sprich
 \[
@@ -389,6 +391,46 @@ Um die Signatur zu bestimmen kann man entweder alle Fehlstände zählen oder die
 \]
 
 \subsubsection{Endliche Gruppen}
-Eine Gruppe $G$ heißt \textbf{endlich}, wenn $|G| < \infty$, also wenn $G$ nur endlich viele Elemente hat. Die Ordnung 
-$\operatorname{ord}(G)$ ist in diesem Fall $|G|$.
+Eine Gruppe $G$ heißt \textbf{endlich}, wenn $|G| < \infty$, also wenn $G$ nur endlich viele Elemente hat.
+
+Die Ordnung der Gruppe $G$ ist die Anzahl der Elemente in $G$, also $\operatorname{ord}(G) = |G| = n$.
+Die Ordnung eines Elements $g \in G$ ist das kleinste $n \ge 1$ für das gilt: $g^n=e$. Also in anderen Worten, es muss
+ein $g^n\in G$ existieren, für das am Ende das neutrale Element $e$ herauskommt und das kleinste $n$, für das dies gilt,
+bezeichnet man als Ordnung der Gruppe.
+
+\begin{anmk}
+  Die Ordnung eines Elements $g$ ist immer ein Teiler der Ordnung der Gruppe $G$.
+  \[
+    \operatorname{ord}(g) \mid \operatorname{ord}(G)
+  \]
+\end{anmk}
+\begin{bsp}
+  Gegeben ist die Gruppe ($\Z\backslash7\Z, \cdot, 1$). Die gegebene Menge ist die Restklasse von $\Z \mod 7$ und somit
+  endlich, da sie nur aus den Elementen $\{1, 2, 3, 4, 5, 6\}$ besteht. Das bedeutet, $\operatorname{ord}(G) = 6$. Somit
+  muss jedes $g \in G$ die Ordnung $1, 2, 3 \text{ oder } 6$ haben.
+
+  Um die Ordnung für ein Element $g \in G$ zu bestimmen, multipliziert man es solange mit sich selbst, bis das neutrale
+  Element $e$ (in diesem Fall $1$) herauskommt. Für beispielsweise $g = 3$ ergibt sich dadurch:
+  \begin{align*}
+    3^1 \equiv 3                                             \\
+    3 \cdot 3 = 3^2 \equiv 2                                 \\
+    3 \cdot 3 \cdot 3 = 3^3 \equiv 6                         \\
+    3 \cdot 3 \cdot 3 \cdot 3 = 3^4 \equiv 4                 \\
+    3 \cdot 3 \cdot 3 \cdot 3 \cdot 3 = 3^5 \equiv 5         \\
+    3 \cdot 3 \cdot 3 \cdot 3 \cdot 3 \cdot 3 = 3^6 \equiv 1 \\
+    \operatorname{ord}(3) = 6
+  \end{align*}
+\end{bsp}
+
+\subsection{Ringe}
+Ein \textbf{Ring} ist ein Tripel ($R, +, \cdot$), mit einer nicht leeren Menge $R$ und zwei Verknüpfungen $+$ und $\cdot$,
+für das gilt:
+\ul{
+  \li{$(R, +, 0)$ ist eine abelsche Gruppe}
+  \li{$(R, \cdot, 1)$ ist eine Halbgruppe}
+  \li{Es gilt das Distributivgesetz}
+}
+
+Ist $(R, \cdot, 1)$ ein Monoid, so spricht man von einem \textbf{unitären Ring}.
+Ist das Monoid $(R, \cdot, 1)$ zusätzlich ein kommutatives Monoid, spricht man von einem kommutativen unitären Ring.
 \end{document}
