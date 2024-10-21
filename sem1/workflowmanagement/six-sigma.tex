@@ -1,0 +1,153 @@
+\documentclass[11pt]{article}
+\usepackage[ngerman]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amsthm,amsfonts,amssymb,amscd}
+\usepackage{multirow,booktabs}
+\usepackage[table]{xcolor}
+\usepackage{fullpage}
+\usepackage{lastpage}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{mathrsfs}
+\usepackage{array}
+\usepackage{wrapfig}
+\usepackage{setspace}
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[margin=3cm]{geometry}
+\usepackage{amsmath}
+\usepackage[most]{tcolorbox} \usepackage{xcolor}
+
+\newlength{\tabcont}
+\setlength{\parindent}{0.0in} \setlength{\parskip}{0.05in} \usepackage{empheq} \usepackage{framed}
+
+\colorlet{shadecolor}{orange!15}
+
+\begin{document}
+
+\thispagestyle{empty}
+
+\newcommand{\ol}[1]{\begin{enumerate}#1\end{enumerate}}
+\newcommand{\ul}[1]{\begin{itemize}#1\end{itemize}}
+\begin{center}
+  {\LARGE \bf Workflowmanagement}\\
+  {\Large Six Sigma Methode}\\
+  WS 2024
+\end{center}
+
+\section{Definition}
+\ul{
+  \item Managementsystem zur Prozessverbesserung
+  \item Methode zum Qualitätsmanagement
+}
+
+\section{Geschichtlicher Hintergrund}
+\ul{
+  \item Entwickelt von Motorola in den 1980er Jahren
+  \item Erzielte große Popularität nach Einsatz bei General Electric Inc. Ende der 1990er Jahre
+  \item Seit 2001 oft in Kombination mit Lean Management $\Longrightarrow$ "Lean Six Sigma"
+  \item 2011 erschien mit ISO 13053 die erste internationale Norm für Six Sigma
+}
+
+\section{Vorgehensweise}
+\ul{
+  \item Kernprozess: DMAIC-Zyklus
+  \item \textbf{D} -- Define
+  \ul{
+    \item Projekt-Charta festlegen
+    \ul{
+      \item Projektziele festlegen (Wunschzustand dokumentieren)
+      \item Vermutungen über Ursachen für derzeitige Probleme formulieren
+      \item Projektdefinition (Mitglieder, benötigte Ressourcen, Zeitumfang)
+    }
+    \item Meist weitere Werkzeuge wie
+    \ul{
+      \item Problemdefinition unter Kepner-Tregoe-Analyse
+      \item SIPOC-Diagramm (Supplier, Input, Process, Output, Customer)
+      \item CQT-Bäume (Critical to Quality): Bestimmung der messbaren, kritischen Qualitätsmerkmale
+      \item VoC (Voice of Customer): Kundenanforderungen mit einbeziehen
+    }
+  }
+  \item \textbf{M} -- Measure
+  \ul{
+    \item Wie gut deckt der Prozess die Kundenanforderungen ab?
+    \item Prozessfähigkeitsuntersuchung
+    \ul{
+      \item Prozessvisualisierung durch Process Mapping
+      \item Statistische Datenherbungs- und Versuchsplanung
+    }
+  }
+  \item \textbf{A} -- Analyze
+  \ul{
+    \item Warum erfüllt der Prozess die Kundenanforderungen noch nicht (im gewünschten Umfang)?
+    \item Möglich Werkzeuge
+    \ul{
+      \item C\&E Matrix (Cause and Effect): Ursachen-Wirkungs-Diagramm
+      \item Durchlaufzeitanalyse
+      \item Hypothesentest
+      \item Ishikawa-Diagramm (Diagramm zur Darstellung von Ursachen und deren Wirkungen)
+      \item Paretodiagramm
+      \item Regressionsanalyse
+      \item Streudiagramm (Scatter Plot)
+      \item Wertschöpfungsanalyse 
+    }
+  }
+
+  \item \textbf{I} -- Improve
+  \ul{
+    \item Implementierung und Test des Prozesses
+    \item Verwendete Werkzeuge:
+    \ul{
+      \item Platzzifferverfahren
+      \item K.-o.-Analyse
+      \item Kriterienbasierte Matrix
+      \item Kosten-Nutzen-Analyse
+      \item Soll-Prozessdarstellung
+      \item Poka Yoke
+      \item Brainstorming zum Finden von Verbesserungsmöglichkeiten
+      \item FMEA (Failure Mode and Effects Analysis): Methode zur Risikobewertung
+    }
+  }
+  \item \textbf{C} -- Control
+  \ul{
+    \item Überwachung des Prozesses mithilfe statistischer Methoden
+    \item Werkzeuge
+    \ul{
+      \item SPC-Regelkarten (Statistical Process Control)
+      \item Prozessdokumentation
+      \item Prozessmanagement- und Reaktionsplan
+      \item Precontrol
+      \item Projekterfolgsberechnung
+    }
+  }
+}
+
+\section{Rollen und Aufgaben}
+\ul{
+  \item Richtet sich nach Rangkennzeichen (ähnlich zu Gürtelfarben im Kampfsport)
+  \item Niedrigster Rang: grüner Gürtel
+  \ul{
+    \item Meist Abteilungsleiter, Gruppenleiter oder Planer
+  }
+  \item Höherer Rang: schwarzer Gürtel
+  \ul{
+    \item Übernimmt Projektmanagementaufgaben und hat umfassende Kenntnisse in Six Sigma und wie man die Methoden anwendet
+    \item Faustregel: vier Verbesserungsmethoden pro Jahr mit insgesamt ca. 200.000 Euro Einsparung
+  }
+  \item Nächsthöherer Rang: Schwarzer Meistergürtel
+  \ul{
+    \item Ist Vollzeitverbesserungsexperte
+    \item Ist für Coaching und Ausbildung neuer Six Sixma Gürtel verantwortlich
+  }
+  \item Höchster Rang: Champion
+  \ul{
+    \item In drei Klassen unterteilt
+    \item Leiter der strategischen Managements: langjähriger Unternehmer und leitet Lehrveranstaltungen an Universitäten
+    \item Auslieferungschampion: Mitglied der Unternehmensleitung; Leiter von Six Sigma Projekten im Unternehmensleitung
+    \item Projektmanagement: Mitglied des mittleren Managements und Auftraggeber für einzelne Six Sigma Projekte
+  }
+}
+
+\section{Statistische Qualitätsziel}
+
+\end{document}
