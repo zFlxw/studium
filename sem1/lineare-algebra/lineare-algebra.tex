@@ -1,5 +1,7 @@
 \documentclass[11pt]{article}
 \usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
 \usepackage{amsmath,amsthm,amsfonts,amssymb,amscd}
 \usepackage{multirow,booktabs}
 \usepackage[table]{xcolor}
@@ -21,11 +23,9 @@
 
 \newlength{\tabcont}
 \setlength{\parindent}{0.0in} \setlength{\parskip}{0.05in} \usepackage{empheq} \usepackage{framed}
-
+\parskip 12pt \geometry{margin=1in, headsep=0.25in} \theoremstyle{definition}
 
 \colorlet{shadecolor}{orange!15}
-\parindent 0in
-\parskip 12pt \geometry{margin=1in, headsep=0.25in} \theoremstyle{definition}
 
 \begin{document}
 
@@ -240,11 +240,11 @@ $N$ ist, für die gilt:
 \subsection{Eigenschaften von homogenen Relationen}
 $
   \begin{array}{l l}
-    \text{Reflexiv:}        & \forall m \in M: m \sim_R m                                        \\
-    \text{Transitiv:}       & m_1 \sim_R m_2 \land m_2 \sim_R m_3 \Longrightarrow m_1 \sim_R m_3 \\
-    \text{Symmetrisch:}     & m_1 \sim_R m_2 \Longrightarrow m_2 \sim_R m_1                      \\
-    \text{Antisymmetrisch:} & m_1 \sim_R m_2 \land m_2 \sim_R m_1 \Longrightarrow m_1 = m_2      \\
-    \text{Asymmetrisch}:    & m_1 \sim_R m_2 \Longrightarrow \lnot(m_2 \sim_R m_1)               \\
+    \text{Reflexiv:}        & \forall m \in M: m \sim_R m                                                  \\
+    \text{Transitiv:}       & m_1 \sim_R m_2 \land m_2 \sim_R m_3 \Longrightarrow m_1 \sim_R m_3           \\
+    \text{Symmetrisch:}     & m_1 \sim_R m_2 \Longrightarrow m_2 \sim_R m_1                                \\
+    \text{Antisymmetrisch:} & m_1 \sim_R m_2 \land m_2 \sim_R m_1 \Longrightarrow m_1 = m_2                \\
+    \text{Asymmetrisch}:    & m_1 \sim_R m_2 \Longrightarrow \lnot(m_2 \sim_R m_1)                         \\
   \end{array}
 $
 
@@ -433,4 +433,8 @@ für das gilt:
 
 Ist $(R, \cdot, 1)$ ein Monoid, so spricht man von einem \textbf{unitären Ring}.
 Ist das Monoid $(R, \cdot, 1)$ zusätzlich ein kommutatives Monoid, spricht man von einem kommutativen unitären Ring.
+
+\subsection{Körper}
+Ein \textbf{Körper} ist im Endeffekt nichts anderes als ein Ring, bei dem $(R\backslash\{0\}, \cdot, 1)$ eine abelsche
+Gruppe ist.
 \end{document}
