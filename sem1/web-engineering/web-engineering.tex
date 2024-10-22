@@ -34,6 +34,7 @@
 \newtheorem{definition}{Definition}[section]
 \newtheorem{anmk}{Anmerkung}[section]
 \newtheorem{bsp}{Beispiel}[section]
+\newtheorem{aufgabe}{Aufgabe}[section]
 
 \newcommand{\N}{\mathbb{N}}
 \newcommand{\Z}{\mathbb{Z}}
@@ -45,7 +46,7 @@
   WS 2024
 \end{center}
 
-\section{Aufgabe 1}
+\section{Aufgaben -- 15.10.2024}
 \subsection{Aufgabe 1.1}
 Die grobe Timeline des Internets sieht folgendermaßen aus:
 \begin{itemize}
@@ -80,4 +81,61 @@ war.
   \item ICANN: Internet Corporation for Assigned Names and Numbers. Sie ist eine internationale Organisation, die sich 
   um die Vergabe von Domainnamen und IP-Adressen kümmert.
 \end{itemize}
+
+\section{Aufgaben -- 22.10.2024}
+\begin{aufgabe}
+  Was ist der Unterschied zwischen einem (Internet) Dienst und einem Protokoll?
+
+  Ein Dienst stellt stellt eine bestimmte Funktionalität dar, während ein Protokoll zur Kommunikation mit einem Dienst
+  verwendet wird.
+
+  Beispiele für Dienste: FTP-Server, E-Mail-Server, Web-Server
+
+  Beispiele für Protokolle: HTTP(S), SMTP, FTP
+\end{aufgabe}
+
+\begin{aufgabe}
+  Was sind Schichtenmodelle?
+
+  Schichtenmodelle beschreiben den technischen Aufbau der Netzwerkkommunikation und teilen Datenpakete ist verschiedene
+  Schichten auf.
+
+  Die bekanntesten Schichtenmodelle sind das ISO/OSI-Modell und das TCP/IP-Modell. Diese unterscheiden sich darin, dass
+  das TCP/IP Modell im wesentlichen die drei Anwendungsschichten in einer Schicht vereint und die ersten beiden Schichten
+  werden ebenfalls kombiniert. Somit beinhaltet das TCP/IP-Modell nur vier der sieben Schichten des ISO/OSI-Modells.
+
+  Protokolle auf Transportebene: TCP, UDP
+
+  Protokolle auf Anwendungsebene: HTTP, FTP
+\end{aufgabe}
+
+\begin{aufgabe}
+  Warum werden die Daten beim OSI-Referenzmodell von Schicht 1 zu Schicht 7 weniger?
+
+  Dadurch, dass jede Schicht ihre eigenen Header und Tailer anhängt, wird mit jeder Schicht mehr "drumherum" gebaut
+  und somit sind die Datenpakete bei Schicht 7 größer als bei Schicht 1.
+\end{aufgabe}
+
+\begin{aufgabe}
+  Auf welcher Schicht ist Wireless LAN (WLAN) angesiedelt?
+
+  WLAN ist auf der Schicht 1 (Bitübertragungs-Schicht) angesiedelt.
+
+  Wi-Fi 4, 5 und 6 sind Standards für WLAN, die jeweils einen IEEE 802.11-Standard darstellen. Dabei ist Wi-Fi 4 gleich
+  dem 802.11n Standard, Wi-Fi 5 entspricht 802.11ac, Wi-Fi 6 entspricht 802.11ax und Wi-Fi 7 ist für den 802.11be Standard
+  geplant. Letzterer ermöglicht in der Theorie Datenübertragungen bis 46,1 GBit/s.
+\end{aufgabe}
+
+\begin{aufgabe}
+  Aufgaben eines Ports:
+
+  Ports von drei bekannten Diensten: MongoDB (27017), PostgreSQL (5432), TS Server (9987)
+\end{aufgabe}
+
+\begin{aufgabe}
+  Ist eine IP-Adresse einmalig?
+
+  Es kommt darauf an. Private IP-Adressen sind nicht eindeutig, da sie nur in privaten Netzwerken genutzt werden und somit
+  in jedem privaten Netzwerk vorkommen können. Öffentliche, bzw. statische IP-Adressen sind eindeutig.
+\end{aufgabe}
 \end{document}
