@@ -240,11 +240,11 @@ $N$ ist, für die gilt:
 \subsection{Eigenschaften von homogenen Relationen}
 $
   \begin{array}{l l}
-    \text{Reflexiv:}        & \forall m \in M: m \sim_R m                                                  \\
-    \text{Transitiv:}       & m_1 \sim_R m_2 \land m_2 \sim_R m_3 \Longrightarrow m_1 \sim_R m_3           \\
-    \text{Symmetrisch:}     & m_1 \sim_R m_2 \Longrightarrow m_2 \sim_R m_1                                \\
-    \text{Antisymmetrisch:} & m_1 \sim_R m_2 \land m_2 \sim_R m_1 \Longrightarrow m_1 = m_2                \\
-    \text{Asymmetrisch}:    & m_1 \sim_R m_2 \Longrightarrow \lnot(m_2 \sim_R m_1)                         \\
+    \text{Reflexiv:}        & \forall m \in M: m \sim_R m                                        \\
+    \text{Transitiv:}       & m_1 \sim_R m_2 \land m_2 \sim_R m_3 \Longrightarrow m_1 \sim_R m_3 \\
+    \text{Symmetrisch:}     & m_1 \sim_R m_2 \Longrightarrow m_2 \sim_R m_1                      \\
+    \text{Antisymmetrisch:} & m_1 \sim_R m_2 \land m_2 \sim_R m_1 \Longrightarrow m_1 = m_2      \\
+    \text{Asymmetrisch}:    & m_1 \sim_R m_2 \Longrightarrow \lnot(m_2 \sim_R m_1)               \\
   \end{array}
 $
 
@@ -297,24 +297,30 @@ enthält.
 
 \section{Algebraische Strukturen}
 \subsection{Halbgruppen, Monoide, Gruppen}
-Betrachtet man eine Menge $M$, so bezeichnet man die Abbildung
-\[
-  \circ : M \times M \longrightarrow M
-\]
-als \textbf{innere Verknüpfung} von $M$. Diese Verknüpfung kann zum Beispiel eine Addition oder Multiplikation sein.
-Bildet man nun ein Tupel mit der Menge und der inneren Verknüpfung, also $(M, \circ)$, so nennt man dieses Tupel auch
-\textbf{Magma}.
+\begin{definition}
+  Gegeben ist eine Menge $M$. Verknüpft man zwei Elemente $m_1, m_2 \in M$ und ist das Ergebnis ebenfalls ein Element aus
+  $M$, so spricht man von einem \textbf{Magma}.
 
-Gilt für diese Verknüpfung das \textbf{Assoziativgesetz}, also sprich
-\[
-  \forall a, b, c \in M: (a \circ b) \circ c = a \circ (b \circ c)
-\]
-so heißt die Menge $M$ eine \textbf{Halbgruppe}.
-\begin{bsp}
-  Folgende Beispiele sind Halbgruppen:
-  $(\Z, +)$,
-  $(\R, \cdot)$
-\end{bsp}
+  Die innere Verknüpfung wird oft als $\circ$ gekennzeichnet und ist formal definiert ist:
+  \[
+    \circ : M \times M \longrightarrow M
+  \]
+  Beispiele für die innere Verknüpfung sind die Addition oder die Multiplikation.
+
+  Die Schreibweise eines Magmas ist $(M, \circ)$.
+\end{definition}
+\begin{definition}
+  Gilt für das Magma das \textbf{Assoziativgesetz}, also gilt für alle $a, b, c \in M$:
+  \[
+    (a \circ b) \circ c = a \circ (b \circ c)
+  \]
+  so heißt das Magma ($M, \circ$) eine \textbf{Halbgruppe}.
+  \begin{bsp}
+    Folgende Beispiele sind Halbgruppen:
+    $(\Z, +)$,
+    $(\R, \cdot)$
+  \end{bsp}
+\end{definition}
 
 Existiert in der Halbgruppe zusätzlich ein \textbf{neutrales Element} $e \in M$, sodass gilt
 \[
@@ -437,4 +443,39 @@ Ist das Monoid $(R, \cdot, 1)$ zusätzlich ein kommutatives Monoid, spricht man 
 \subsection{Körper}
 Ein \textbf{Körper} ist im Endeffekt nichts anderes als ein Ring, bei dem $(R\backslash\{0\}, \cdot, 1)$ eine abelsche
 Gruppe ist.
+
+\section{Zahlentheorie}
+\subsection{Teilbarkeit}
+\begin{definition}
+  Gegeben ist ein Ring $(R, +, \cdot)$ mit den neutralen Elementen $0$ (bzgl. der Addition) und $1$ (bzgl. der Multiplikation).
+
+  Nimmt man drei Zahlen $a, b, q \in R$, so heißt $a$ genau dann \textbf{Teiler} von $b$, wenn es ein $q$ gibt, sodass gilt:
+  \[
+    b = a \cdot q
+  \]
+  In diesem Fall schreibt man auch $a \mid b$. Existiert kein $q$, für das diese Gleichung erfüllt wird, ist $a$ kein Teiler
+  von b und wir schreiben $a \nmid b$.
+\end{definition}
+\begin{bsp}
+  Folgende Beispiele zeigen die Teilbarkeit von verschiedenen Zahlen
+  \ul{
+    \item $3 \mid 9$, da  $9 = 3 \cdot 3$
+    \item $3 \nmid 10$, da  $10 = 3 \cdot 3 + 1$
+    \item $a \mid 0$, da  $0 = a \cdot 0$
+    \item $a \mid a$, da  $a = a \cdot 1$
+  }
+\end{bsp}
+
+\subsection{Primzahlen}
+Davon ausgehend lassen sich ebenfalls \textbf{Primzahlen} definieren. Eine Zahl $p$ ist genau dann eine Primzahl, wenn sie
+lediglich $1$ und sich selbst als Teiler hat.
+
+Die Menge aller Primzahlen wird als $\mathbb{P}$ bezeichent. Wenn $d(n)$ die Anzahl an Teilern von $n$ ist, ist die Menge
+$\mathbb{P}$ definiert als:
+\[
+  \mathbb{P}=\{n\in\N \mid d(n) = 2\}
+\]
+
+Außerdem gilt nach dem \textbf{Lemma von Euklid}, dass wenn das Produkt zweier natürlicher Zahlen durch eine Primzahl
+teilbar ist, dann ist mindestens einer der Faktoren durch die Primzahl teilbar.
 \end{document}
