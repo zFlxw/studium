@@ -481,6 +481,9 @@ $b$ und $c$:
 
 Außerdem wird der größte gemeinsame Teiler als ggT bezeichnet und das kleinste gemeinsame Vielfache als kgV.
 
+\subsection{Teilbarkeitsregeln}
+TO DO
+
 \subsection{Primzahlen}
 Davon ausgehend lassen sich ebenfalls \textbf{Primzahlen} definieren. Eine Zahl $p$ ist genau dann eine Primzahl, wenn sie
 lediglich $1$ und sich selbst als Teiler hat.
@@ -521,4 +524,40 @@ wie oft eine Primzahl vorkommt) und entsprechend, ob man den ggT oder das kgV be
   \li{ggT:}{Die kleinste Potenz, die in beiden Zerlegungen vorkommt}
   \li{kgV:}{Die größte Potenz, die in beiden Zerlegungen vorkommt}
 }
+
+\begin{bsp}
+  Gegeben sind die Zahlen $4620$ und $9100$. Im ersten Schritt zerlegen wir die beiden Zahlen in ihre Primfaktoren:
+  \begin{align*}
+    4620 & = 2^2 \cdot 3^1 \cdot 5^1 \cdot 7^1 \cdot 11^1 \\
+    9100 & = 2^2 \cdot 5^2 \cdot 7^1 \cdot 13^1
+  \end{align*}
+
+  Aus den Exponenten der Primfaktoren lassen sich nun der ggT und das kgV bestimmen.
+  \begin{align*}
+    \operatorname{ggT}(4620, 9100) & = 2^2 \cdot 5^1 \cdot 7^1 = 140                                    \\
+    \operatorname{kgV}(4620, 9100) & = 2^2 \cdot 3^1 \cdot 5^2 \cdot 7^1 \cdot 11^1 \cdot 13^1 = 300300
+  \end{align*}
+\end{bsp}
+
+\subsection{Lemma von Bézout}
+Das \textbf{Lemma von Bézout} besagt, dass der ggT zweier ganzen Zahlen $a$ und $b$ als Linearkombination der Form
+\[
+  s \cdot a + t \cdot b
+\]
+mit $s, t \in \Z$ dargestellt werden kann.
+
+Formell ausgedrückt heißt das
+\[
+  \forall a,b \in \Z: \exists s,t \in \Z: \operatorname{ggT}(a,b) = s \cdot a + t \cdot b
+\]
+
+Dabei bezeichnet man $s$ und $t$ auch als Bézout-Koeffizienten.
+
+\subsection{(Erweiterter) Euklidischer Algorithmus}
+Die Berechnung des ggT durch die Primfaktorzerlegung ist zwar recht einfach, jedoch auch relativ aufwendig, gerade wenn
+wir mit größeren Zahlen arbeiten. Zur Berechnung des ggT gibt es daher ein Verfahren, das bereits in der Antike entdeckt
+wurde: den \textbf{Euklidischen Algorithmus}.
+
+
+
 \end{document}
