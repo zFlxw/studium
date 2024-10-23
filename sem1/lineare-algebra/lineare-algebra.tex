@@ -466,6 +466,21 @@ Gruppe ist.
   }
 \end{bsp}
 
+\subsection{gT und gV}
+Ist $a$ ein Teiler von $b$ und ein Teiler von $c$, so ist $a$ ein gemeinsamer Teiler (gT) von $b$ und $c$.
+Also wenn gilt:
+\[
+  a \mid b \land a \mid c \Longrightarrow c = \operatorname{gT}(a,b)
+\]
+
+Analog dazu gilt, wenn $b$ ein Teiler von $a$ und $c$ ein Teiler von $a$ ist, dann ist $a$ ein gemeinsames Vielfaches von
+$b$ und $c$:
+\[
+  b \mid a \land c \mid a \Longrightarrow a = \operatorname{gV}(b,c)
+\]
+
+Außerdem wird der größte gemeinsame Teiler als ggT bezeichnet und das kleinste gemeinsame Vielfache als kgV.
+
 \subsection{Primzahlen}
 Davon ausgehend lassen sich ebenfalls \textbf{Primzahlen} definieren. Eine Zahl $p$ ist genau dann eine Primzahl, wenn sie
 lediglich $1$ und sich selbst als Teiler hat.
@@ -477,5 +492,33 @@ $\mathbb{P}$ definiert als:
 \]
 
 Außerdem gilt nach dem \textbf{Lemma von Euklid}, dass wenn das Produkt zweier natürlicher Zahlen durch eine Primzahl
-teilbar ist, dann ist mindestens einer der Faktoren durch die Primzahl teilbar.
+teilbar ist, dann ist mindestens einer der Faktoren durch die Primzahl teilbar. Das bedeutet, dass für alle $p \in \mathbb{P}$
+gilt:
+\[
+  p \mid a \cdot b \Longrightarrow p \mid a \lor p \mid b
+\]
+
+\subsection{Hauptsatz der Arithmetik}
+Der Haupsatz der Arithmetik besagt, dass jede natürliche Zahl $n$ als Produkt von Primzahlen dargestellt werden kann.
+Diese Darstellung nennt man auch Primfaktorzerlegung.
+\[
+  n = p_1^{\alpha_1} \cdot p_2^{\alpha_2} \cdot \ldots \cdot p_k^{\alpha_k}
+\]
+
+\begin{bsp}
+  Einige Zahlen in ihre Primfaktoren zerlegt:
+  \ul{
+    \item $120 = 2^3 \cdot 3^1 \cdot 5^1$
+    \item $144 = 2^4 \cdot 3^1$
+    \item $250 = 2^1 \cdot 5^3$
+  }
+\end{bsp}
+
+Diesen Haupsatz kann man anwenden, um den ggT und das kgV von zwei Zahlen zu berechnen. Im ersten Schritt zerlegt man die
+Zahlen in ihre Primfaktoren und als Potenzen aufschreibt. Anschließend betrachtet man die Exponenten (also die Anzahl,
+wie oft eine Primzahl vorkommt) und entsprechend, ob man den ggT oder das kgV betimmen möchte, nimmt man:
+\ul{
+  \li{ggT:}{Die kleinste Potenz, die in beiden Zerlegungen vorkommt}
+  \li{kgV:}{Die größte Potenz, die in beiden Zerlegungen vorkommt}
+}
 \end{document}
