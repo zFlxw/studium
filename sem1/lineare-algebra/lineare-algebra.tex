@@ -542,7 +542,7 @@ wie oft eine Primzahl vorkommt) und entsprechend, ob man den ggT oder das kgV be
 \subsection{Lemma von Bézout}
 Das \textbf{Lemma von Bézout} besagt, dass der ggT zweier ganzen Zahlen $a$ und $b$ als Linearkombination der Form
 \[
-  s \cdot a + t \cdot b
+  \operatorname{ggT}(a,b) = s \cdot a + t \cdot b
 \]
 mit $s, t \in \Z$ dargestellt werden kann.
 
@@ -551,13 +551,48 @@ Formell ausgedrückt heißt das
   \forall a,b \in \Z: \exists s,t \in \Z: \operatorname{ggT}(a,b) = s \cdot a + t \cdot b
 \]
 
-Dabei bezeichnet man $s$ und $t$ auch als Bézout-Koeffizienten.
+Dabei bezeichnet man $s$ und $t$ als \textbf{Bézout-Koeffizienten}.
 
-\subsection{(Erweiterter) Euklidischer Algorithmus}
+\subsection{Erweiterter Euklidischer Algorithmus}
 Die Berechnung des ggT durch die Primfaktorzerlegung ist zwar recht einfach, jedoch auch relativ aufwendig, gerade wenn
 wir mit größeren Zahlen arbeiten. Zur Berechnung des ggT gibt es daher ein Verfahren, das bereits in der Antike entdeckt
-wurde: den \textbf{Euklidischen Algorithmus}.
+wurde: den \textbf{Euklidischen Algorithmus}. Dieser hat die Form:
+\[
+  a = q \cdot b + r
+\]
+wobei $a$ der größere Wert ist, $b$ der kleinere Wert, $q$ der Faktor, wie oft der kleinere Wert in den größeren passt und
+$r$ der Rest, der übrig bleibt.
 
+\begin{bsp}
+  Die Bestimmung des ggT von $4620$ und $9100$ mit dem erweiterten euklidischen Algorithmus sieht folgendermaßen aus:
+  \begin{align}
+    9100 & = 1 \cdot 4620 + 4480 \\
+    4620 & = 1 \cdot 4480 + 140  \\
+    4480 & = 32 \cdot 140 + 0
+  \end{align}
+\end{bsp}
 
+Ausgehend davon lassen sich ebenfalls die sogenannen Bézout-Koeffizienten bestimmen. Dazu wenden wir den
+\textbf{erweiterten Euklidischen Algorithmus} an. Zunächst starten wir in der Zeile, in der der ggT als Rest steht. Für
+das obige Beispiel ist das Zeile (2).
 
+Diese Zeile stellen formen wir nun so um, dass auf der einen Seite der Rest (bzw. der ggT) und auf der anderen Seite der
+restliche Teil der Gleichung steht. In unserem Beispiel also:
+\[
+  140 = 4620 - 1 \cdot 4480
+\]
+
+Betrachten wir nun die vorherigen Zeilen, so lässt sich feststellen, dass (für das obige Beispiel) $4480$ wiederum nichts
+anderes als der Rest der vorherigen Zeile ist. Diese können wir also ebenfalls umformen und für $4480$ einsetzen:
+\[
+  140 = 4620 - 1 \cdot (9100 - 1 \cdot 4620)
+\]
+
+Nun lässt sich diese Gleichung noch ausmultiplizieren, sodass die Gleichung die Form:
+\[
+  140 = 2 \cdot 4620 - 1 \cdot 9100
+\]
+annimmt. Dieses Vorgehen wiederholen wir solange, bis wir bei der ersten Zeile angekommen sind (was für unser Beispiel
+jetzt der Fall ist). Die Koeffizienten, die vor den beiden Zahlen stehen, sind die sogenannten
+\textbf{Bézout-Koeffizienten}.
 \end{document}
