@@ -67,37 +67,41 @@
 \end{center}
 
 \section{Einführung}
-C ist eine imperative Programmiersprache, die bereits seit 1972 existiert und somit eine der ältesten Programmiersprachen ist.
-Aufgrund der Eigenschaft, dass C eine Low-Level Sprache ist, wird sie oft für Betriebssysteme, Treiber oder embedded
-Systeme wie Arduinos, RasPis oder Autos verwendet.
+C ist eine imperative Programmiersprache, die im Jahr 1972 erstmals veröffentlicht wurde. Da C sehr maschinennah arbeitet
+und somit wenig Abstraktion beinhaltet, wird sie oft für Betriebssysteme, Treiber oder embedded Systeme wie Arduinos,
+RasPis oder Autos verwendet. Man betitelt C daher auch als \textbf{Low-Level Sprache}.
 
-Anders als bei vielen moderneren Programmiersprachen, gibt es in C relativ wenige Beschränkungen. Prinzipiell macht C genau
-das, was man ihm sagt. Das bedeutet aber auch, dass man sich selbst um viele Dinge kümmern muss und es in vielen Fällen
-zu ungewollten Nebeneffekten kommen kann, wenn man nicht aufpasst.
+Die fehlende Abstraktion und der maschinennahe Ansatz sorgt in C dafür, dass ein Entwickler wenige Beschränkungen hat.
+Prinzipiell macht C-Code genau das, was der Entwickler ihm sagt. Dies gibt eine immense Freiheit, aber bringt auch ein
+gewisses Risiko mit sich, da durch die lockeren Compilerbeschränkungen auch viele Fehler passieren können.
 
 \begin{bsp}
-  Es existiert ein Array (der Datentyp ist dabei egal) mit 10 Elementen. Um auf ein Element dieses Arrays zuzugreifen,
-  wird die Syntax \texttt{array[i]} verwendet, wobei \texttt{i} der Index (also die Stelle) des Elements ist. Das heißt,
-  der Aufruf \texttt{array[0]} gibt das erste Element des Arrays zurück, \texttt{array[1]} das zweite, usw.
+  Ein Entwickler legt ein Array mit einer festen Länge (z.B. 10) an. Um auf ein Element dieses Arrays zuzugreifen,
+  wird die Syntax \texttt{array[i]} verwendet, wobei \texttt{i} der Index (also die Stelle) des Elements, das abgerufen
+  werden soll, ist. Der Index beginnt bei $0$ und endet bei der Länge des Arrays minus $1$. Für dieses Beispiel würde das
+  bedeuten, dass der höchste, im Array enthaltene Index $9$ ist. Ein unerfahrener Entwickler könnte nun allerdings versuchen,
+  das Array an der Stelle \texttt{array[10]} aufzurufen, da er denkt, dass der Index bei $1$ beginnt und das letzte
+  Element den Index $10$ besitzt. Was nun?
 
-  Ruft man allerdings das Element \texttt{array[10]} auf, würde man einen Fehler erwarten, da das Array nur 10 Elemente
-  beinhaltet. In vielen Programmiersprachen wäre das auch tatsächlich der Fall; Java würde eine \texttt{ArrayIndexOutOfBoundsException}
-  werfen, Python einen \texttt{IndexError}, usw. C hingegen verfolgt das Mindset, dass der Entwickler schon weiß, was er
-  tut und gibt somit einfach den Wert zurück, der sich an der 11. Stelle des Arrays befinden würde. Das klingt vielleicht
-  etwas verwirrend, da es gar keinen 11. Wert gibt, aber ein Array ist im Endeffekt nichts anderes als eine durchgängige
-  Reihe an Speicherzellen im Arbeitsspeicher. Über den Index berechnet man die Speicheradresse der jeweiligen Zelle und
-  wenn der Index größer als die Länge des Arrays ist, wird auf eine Speicherzelle zugegriffen, die nicht zum Array gehört.
-  Daher kann man also auch nicht vorhersehen, welcher Wert in dieser Zelle steht. Das ist zumden natürlich auch ein
-  Sicherheitsrisiko, da unbefugt auf fremden Speicher zugegriffen wird und dieser im Wort-Case sensible Daten wie Passwörter
-  beinhalten könnte.
+  In vielen anderen Programmiersprachen würde das Programm nicht kompilieren, da der Compiler bereits erkennt, dass der
+  Index zu groß ist und außerhalb des Arrays liegt. Wie allerdings bereits in der Einführung erwähnt, gibt C dem Entwickler
+  die volle Kontrolle über sein Handeln und kompiliert den Code trotzdem. Das führt dazu, dass wenn das Programm zur Laufzeit
+  auf das Element \texttt{array[10]} zugreifen möchte, es auf den Speicherbereich zugreift, der nach dem Array liegt. Dort
+  können Daten liegen, dort können aber auch einfach leere Speicherzellen sein. In jedem Fall greift das Programm jedoch
+  auf einen Speicherbereich zu, auf den es nicht zugreifen sollte. Je nachdem, welcher Bereich das ist, kann es ebenfalls
+  passieren, dass das Betriebssystem das Programm beendet.
 \end{bsp}
 
-\section{Hello, World!}
-Oft ist das erste Programm, das man in einer (neuen) Programmiersprache schreibt, ein "Hello, World"-Programm. Das ist
-ein simples Programm, das den Text "Hello, World!" auf der Konsole ausgibt. Der Sinn dahinter ist, zu überprüfen, ob bei
-der Installation der Entwicklungsumgebung, Runtime, usw. alles korrekt verlief oder ob es zu Fehlern kam.
+Dieses Beispiel soll verdeutlichen, dass C eine mächtige Programmiersprache ist, bei der dem Entwickler viel Freiheit geboten
+wird, aber auch viel Verantwortung auf ihm lastet. Es ist daher wichtig, sorgfältig und bedacht in C zu programmieren und
+bewusst mit den Freiheiten umzugehen.
 
 \newpage
+
+\section{Hello, World!}
+Beginnt man mit einer völligen neuen Programmiersprache, ist der erste Code, das man in dieser Sprache entwickelt,
+oft ein simpler Textoutput in der Konsole.
+
 Möchte man in C sieht ein solches Programm schreiben, könnte das wie folgt aussehen:
 \begin{figure}[h!]
   \ignorespaces
@@ -113,18 +117,37 @@ Möchte man in C sieht ein solches Programm schreiben, könnte das wie folgt aus
   \label{fig:hello-world}
 \end{figure}
 
-Anhand dieses Beispiels lassen sich schon einige Aspekte der generellen C-Syntax erkennen. Zum Beispiel, dass (vereinfacht 
-ausgedrückt) fast jede Zeile mit einem Semikolon (\texttt{;}) oder einer geschweiften Klammer (\texttt{\{ \}}) endet. 
+Anhand dieses Beispiels lassen sich schon einige Aspekte der generellen C-Syntax erkennen. Zum Beispiel ist die Verwendung
+von Semikolon (\texttt{;}) am Ende einer Anweisung erkennbar sowie auch die Verwendung von geschweiften Klammern
+(\texttt{\{ \}}) für Codeblöcke (Scopes). Die genauen Bedeutungen der einzelnen Bestandteile werden nach und nach in den
+nächsten Abschnitten erläutert.
 
 \section{Datentypen, Variablen und Operatoren}
-Der Code \figref{hello-world} zeigt bereits die grundlegende Struktur eines C-Programms. Der Startpunkt ist die
-\texttt{main}-Funktion, welche somit beim Start des Programms aufgerufen wird. Der genaue Aufbau einer Funktion wird in
-Kapitel \ref{sec:funktionen} genauer erläutert.
+Ein elementarer Bestandteil von Programmiersprachen ist die Fähigkeit, Daten temporär zu speichern. Damit ein Programm
+dem Betriebssystem die Aufgabe geben kann, Daten temporär zu speichern, benötigt es jedoch zwei Informationen:
+\ul{
+  \item \textbf{Welche} Art von Daten soll gespeichert werden?
+  \item \textbf{Wie groß} sind die Daten, bzw. \textbf{wie viel} Speicherplatz nehmen sie ein?
+}
+
+In C werden diese Informationen durch \textbf{Datentypen} und \textbf{Variablen} definiert.
 
 \subsection{Datentypen}
-Ein grundlegender Bestandteil von Programmiersprachen sind Datentypen. Mithilfe von Datentypen unterscheidet man, welchen
-Wert eine Variable speichern kann. Eine Art von Datentypen sind die \textbf{primitiven Datentypen}. Diese bilden die Basis
-für alle anderen Datentypen. Folgende primitive Datentypen gibt es in C:
+Bevor wir zu Datentypen kommen, muss erstmal geklärt werden, wie Daten überhaupt dargestellt werden.
+
+Ein Computer speichert Daten in Form von \textbf{Bits} (Binary Digits), also einer Abfolge von Nullen und Einsen. Das
+heißt, die Zahl $25$ kann einfach in ihrer binären Form als $11001$ im Speicher abgelegt werden.
+
+Nun ist allerdings das Problem, dass wir nicht wissen, für was ein Datensatz $11001$ im Speicher steht. Nur weil wir wissen,
+dass dieser Datensatz die Dezimalzahl 25 in Binärform darstellt, heißt das aber nicht, dass auch genau das damit gemeint
+ist. Es könnte sich auch um ein oder mehrere Zeichen halten, die mittels einer bestimmten Codierung (z.B. ASCII)
+gespeichert wurden.
+
+Um dieses Problem zu lösen, gibt es in C sogenannte \textbf{Datentypen}. Ein Datentyp definiert, wie eine Abfolge von
+Bits von einem Programm interpretiert werden soll. Dabei gibt ein Datentyp neben der "Art" der Daten auch an, wie viel
+Speicherplatz diese Daten einnehmen. Es gibt eine Vielzahl an verschiedenen Datentypen. Einige davon zeigt Tabelle
+\ref{tbl:datentypen}.
+
 \begin{table}[h!]
   \centering
   \begin{tabular}{@{}llll@{}}
@@ -139,41 +162,59 @@ für alle anderen Datentypen. Folgende primitive Datentypen gibt es in C:
     Character & char      & 8 bit           & Ganze Zahlen     \\ \bottomrule
   \end{tabular}
   \caption{Primitive Datentypen in C}
+  \label{tbl:datentypen}
 \end{table}
 
-Für alle ganzzahligen Datentypen kann außerdem ein \texttt{unsigned} vorangestellt werden, um nur positive Werte
-zuzulassen und somit den Wertebereich "nach oben" zu verdoppeln.
+\begin{anmk}
+  Alle ganzzahligen Datentypen sind vorzeichenbehaftet, d.h. sie können sowohl positive als auch negative Werte speichern.
+  Das bedeutet aber auch, dass ein Bit vom Datenbereich für das Vorzeichen reserviert ist und sich der Wertebereich
+  somit um eine Potenz von 2 verringert (z.B. bei einem 16-bit Integer von $-2^{15}$ bis $2^{15}-1$).
 
-Die einzelnen Speichergrößen sind zudem abhängig von der verbauten CPU sowie dem verwendeten Compiler. So können
-insbesondere die Speichergrößen von Integern und Longs variieren.
+  Möchte man dieses Bit lieber nutzen, um den Wertebereich zu erhöhen und dafür auf das Vorzeichen verzichten, gibt es
+  die Möglichkeit den Datentypen mit dem Keyword \texttt{unsigned} zu versehen. Ein \texttt{unsigned int} kann also
+  Werte von $0$ bis $2^{16}-1$ speichern.
+\end{anmk}
 
 \subsection{Variablen}
-Wenn man in C von einer Variable spricht, meint man damit eigentlich nur einen fest reservierten Platz im Arbeitsspeicher.
-In C haben Variablen außerdem einen festen Datentypen, den man bestimmt, wenn man die Variable \textbf{deklariert} (also dem Compiler
-mitteilt, dass diese Variable existiert). Um eine Variable zu deklarieren, schreibt man in C:
+Wir haben nun Datentypen kennengelernt, aber wie verwenden wir sie in einem Programm? Dafür benötigen wir \textbf{Variablen}.
+
+Eine Variable ist im Endeffekt nichts anderes als ein reservierter Speicherbereich, in dem ein Programm während der
+Laufzeit Daten ablegen und auslesen kann. In C ist einer Variable immer ein fester Datentyp zugewiesen, welcher sich
+auch nach der Deklaration nicht mehr ändern lässt. Die Syntax zur Erstellung einer Variable lautet:
 \begin{minted}{c}
   <Datentyp> <Variablenname>;
 \end{minted}
 
+\begin{anmk}
+  Als \textbf{Deklaration} bezeichnen wir die Bekanntmachung einer Variable an den Compiler. Das bedeutet, der Compiler
+  weiß nun, dass wir eine Variable mit einem bestimmten Namen erstellen wollen und reserviert dafür entsprechend des
+  Datentyps den Speicherplatz. Bei der Deklaration muss der Variable aber noch nicht zwingend ein Wert zugewiesen werden.
+  Das erfolgt bei der Initialisierung, also der Zuweisung eines Wertes zu einer Variable.
+\end{anmk}
+
 \begin{bsp}
-  Um eine Variable \texttt{a} vom Typ \texttt{int} zu deklarieren, verwendet man in C den Aufruf:
+  Um eine Variable \texttt{a} vom Typ \texttt{int} zu deklarieren, verwenden wir in C den Aufruf:
   \begin{minted}{c}
   int a;
   \end{minted}
 \end{bsp}
 
-Durch eine reine Deklaration wird der Variable allerdings noch kein Wert zugewiesen. Würde man die Variable nun so aufrufen,
-würde sie den Wert zurückgeben, der noch im Speicher an der Stelle vorhanden ist. Daher sollte eine Variable immer
-bei der Deklaration einen Wert zugewiesen bekommen:
+Wie bereits erwähhnt, wird der Variable durch eine reine Deklaration noch kein Wert zugewiesen. Würden wir die Variable 
+nun so aufrufen, würde sie den Wert zurückgeben, der noch im Speicher an der Stelle vorhanden ist. Daher sollte eine 
+Variable immer bei der Deklaration \textbf{initialisiert} werden, um unerwünschtes Verhalten zu vermeiden:
 \begin{minted}{c}
   int a = 0;
 \end{minted}
 
-Diese Zuweisung nennt man \textbf{Initialisierung}.
-
 \subsection{Operatoren}
-Operatoren bieten unter anderem die Möglichkeit, Variablen miteinander zu verknüpfen. Es gibt dabei verschiedene Arten
-von Operatoren. Einige, die man man bereits aus der Mathematik kennt, sind die \textbf{arithmetischen Operatoren}:
+Wir haben nun also die Möglichkeit Daten zu speichern und festzustellen, um welche Art von Daten es sich handelt.
+Nun wäre es auch sinnvoll, mit diesen Daten zu arbeiten. Dafür gibt es in C die sogenannten \textbf{Operatoren}.
+
+Ein \textbf{Operator} verknüpft Variablen miteinander und führt eine Operation auf ihnen aus. Es gibt dabei verschiedene
+Arten von Operatoren, die unterschiedliche Aufgaben erfüllen. Eine davon kennen wir bereits aus der Mathematik, nämlich
+die \textbf{arithmetischen Operatoren}. Diese dienen, wie bereits der Name sagt, dazu, Rechenoperationen auf Variablen
+auszuführen. In C gibt es folgende arithmetische Operatoren:
+
 \begin{table}[h!]
   \centering
   \begin{tabular}{@{}ll@{}}
@@ -188,19 +229,29 @@ von Operatoren. Einige, die man man bereits aus der Mathematik kennt, sind die \
   \caption{Arithmetische Operatoren in C}
 \end{table}
 
+\begin{anmk}
+  Arithmetische Operatoren sollten nur auf Variablen angewendet werden, die als Zahl interpretiert werden sollen. Ein
+  Character (\texttt{char}) wird intern auch als Zahl gehandhabt und somit kann man mit ihnen auch rechnen, nur wird
+  dabei eventuell nicht das gewünschte Ergebnis erziehlt.
+\end{anmk}
+
 \begin{bsp}
-  Gegeben sind zwei Variablen \texttt{a} und \texttt{b} und man möchte den Rest der ganzzahligen Division von \texttt{a}
-  durch \texttt{b} berechnen. Der Code dazu könnte wie folgt aussehen:
+  Gegeben sind zwei ganzzahlige Variablen \texttt{a} und \texttt{b} und wir möchten den Rest der ganzzahligen Division 
+  von \texttt{a} durch \texttt{b} berechnen. Der Code dazu könnte wie folgt aussehen:
   \begin{minted}{c}
     int a = 10;
     int b = 3;
     int rest = a % b; // = 1, da 10/3 = 3 Rest 1
   \end{minted}
 
+  An diesem Beispiel erkennen wir, dass das Ergebnis einer arithmetischen Operation eine Zahl ist, die wir beispielsweise
+  in einer neuen Variable speichern können.
 \end{bsp}
 
-Des Weiteren existieren auch noch \textbf{logische Operatoren}, welche dazu dienen, einen Wahrheitswert aus zwei oder
-mehreren Variablen zu schließen. In C gibt es dafür folgende \textbf{logische Operatoren}:
+Neben den arithmetischen Operatoren existieren darüber hinaus auch die logischen Operatoren. Diese Operatoren geben 
+einen Wahrheitswert ($0$ für falsch, $1$ für wahr) zurück und werden häufig in Verbindung mit \textbf{Bedingungen} 
+(s. Kapitel \ref{sec:kontrollstrukturen}) verwendet. In C gibt es folgende logische Operatoren:
+
 \begin{table}[h!]
   \centering
   \begin{tabular}{@{}ll@{}}
@@ -212,8 +263,6 @@ mehreren Variablen zu schließen. In C gibt es dafür folgende \textbf{logische 
   \end{tabular}
   \caption{Logische Operatoren in C}
 \end{table}
-
-Logische Operatoren werden häufig genutzt, um Bedingungen zu überprüfen. Dazu mehr in Kapitel \ref{sec:kontrollstrukturen}.
 
 Die dritte Art von Operatoren sind \textbf{Vergleichsoperatoren}. Diese verwendet man, um zwei Werte direkt miteinander
 zu vergleichen und geben daher ebenfalls einen Wahrheitswert zurück. In C gibt es folgende Vergleichsoperatoren:
