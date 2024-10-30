@@ -1,3 +1,8 @@
-# Information & Disclaimer
+# Studium
+## ℹ️ Information
 
-Dieses Repository beinhaltet Zusammenfassungen zu verschiedenen Modulen des Studiengangs Informatik. Die bereitgestellten Informationen werden nach bestem Wissen und Gewissen von mir veröffentlicht, es besteht jedoch keine Garantie auf Vollständigkeit und Richtigkeit. Sollte ein Fehler auffallen, kann dieser gerne gemeldet werden (z. B. in Form eines Issues oder eine Pull Request).
+In diesem Repository veröffentliche ich Zusammenfassungen, Codes und andere Ressourcen, die ich im Rahmen meines Studiums (Angewandte Informatik) erstellt habe. Die meisten Inhalte sind in deutscher Sprache verfasst, vereinzelt können Inhalt aber auch in englischer Sprache verfasst sein.
+
+## ⚖️ Disclaimer
+
+Alle Inhalte dürfen frei verwendet werden (siehe [License](./LICENSE)), jedoch gebe ich keine Garantie auf Vollständigkeit und/oder Richtigkeit. Ich veröffentliche alle Inhalt nach bestem Wissen und Gewissen, wenn du aber dennoch einen Fehler findest, kannst du gerne ein Issue oder eine Pull Request erstellen oder mich auf anderem Wege kontaktieren.

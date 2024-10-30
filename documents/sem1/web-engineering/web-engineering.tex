@@ -12,12 +12,15 @@
 \usepackage{wrapfig}
 \usepackage{setspace}
 \usepackage{calc}
+\usepackage{graphicx}
 \usepackage{multicol}
 \usepackage{cancel}
 \usepackage[retainorgcmds]{IEEEtrantools}
 \usepackage[margin=3cm]{geometry}
 \usepackage{amsmath}
 \usepackage[most]{tcolorbox} \usepackage{xcolor}
+
+\graphicspath{{./images/}}
 
 \newlength{\tabcont}
 \setlength{\parindent}{0.0in} \setlength{\parskip}{0.05in} \usepackage{empheq} \usepackage{framed}
@@ -46,7 +49,7 @@
   WS 2024
 \end{center}
 
-\section{Aufgaben -- 15.10.2024}
+\section{Übung -- 15.10.2024}
 \subsection{Aufgabe 1.1}
 Die grobe Timeline des Internets sieht folgendermaßen aus:
 \begin{itemize}
@@ -76,13 +79,13 @@ war.
 \begin{itemize}
   \item ISOC: Internet Society. Sie ist eine internationale Organisation, die sich für die Entwicklung und
         Standardisierung des Internets einsetzt.
-  \item W3C: World Wide Web Consortium. Es ist eine internationale Organisation, die sich für die Entwicklung und 
-  Standardisierung des World Wide Web einsetzt.
-  \item ICANN: Internet Corporation for Assigned Names and Numbers. Sie ist eine internationale Organisation, die sich 
-  um die Vergabe von Domainnamen und IP-Adressen kümmert.
+  \item W3C: World Wide Web Consortium. Es ist eine internationale Organisation, die sich für die Entwicklung und
+        Standardisierung des World Wide Web einsetzt.
+  \item ICANN: Internet Corporation for Assigned Names and Numbers. Sie ist eine internationale Organisation, die sich
+        um die Vergabe von Domainnamen und IP-Adressen kümmert.
 \end{itemize}
 
-\section{Aufgaben -- 22.10.2024}
+\section{Übung -- 22.10.2024}
 \begin{aufgabe}
   Was ist der Unterschied zwischen einem (Internet) Dienst und einem Protokoll?
 
@@ -137,5 +140,40 @@ war.
 
   Es kommt darauf an. Private IP-Adressen sind nicht eindeutig, da sie nur in privaten Netzwerken genutzt werden und somit
   in jedem privaten Netzwerk vorkommen können. Öffentliche, bzw. statische IP-Adressen sind eindeutig.
+\end{aufgabe}
+
+\section{Übung -- 29.10.2024}
+\begin{aufgabe}
+  Öffnen Sie eine Shell und und schauen Sie sich ihre IP-Konfiguration an. Was kommt dabei heraus?
+
+  \centering
+  \includegraphics[height=11cm]{ip-configuration}
+\end{aufgabe}
+\newpage
+\begin{aufgabe}
+  Öffnen Sie https://ipaddress.com und schauen Sie, ob Ihre IP-Adresse übereinstimmt oder nicht.
+
+  \centering
+  \includegraphics[width=11cm]{ip-address.png}
+\end{aufgabe}
+
+\begin{aufgabe}
+  Führen Sie den Befehlt \texttt{ping www.google.com} in Ihrer Shell aus. Was kommt dabei heraus?
+
+  \centering
+  \includegraphics[height=8.5cm]{google-ping.png}
+\end{aufgabe}
+
+\begin{aufgabe}
+  Schauen Sie sich im StGB-Paragraph §202c an und geben Sie den Inhalt in eigenen Worten wieder.
+
+  Der Artikel beschreibt, dass die Erstellung und Nutzung von Programmen, mit denen Passwörter und andere Zugangscodes
+  abgefangen werden können, mit bis zu zwei Jahren Gefängnis bestraft werden können.
+\end{aufgabe}
+
+\begin{aufgabe}
+  Führen Sie den Befehlt \texttt{traceroute <hostname>} in Ihrer Shell aus. Welche Informationen erhalten Sie?
+
+  Der Befehl trackt den Weg, den ein Datenpaket nimmt, um von dem Ausgangs-PC bis zum Ziel zu kommen.
 \end{aufgabe}
 \end{document}
