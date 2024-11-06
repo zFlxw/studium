@@ -1,5 +1,4 @@
 import random
-import math
 import timeit
 
 
@@ -92,6 +91,14 @@ def merge_sort(arr):
     return merge(left, right)
 
 
+def partition():
+    pass
+
+
+def quick_sort(arr):
+    pass
+
+
 def benchmark(sorting_algortihm, arr, runs, dbg=False):
     # A copy is necessary to prevent the original array from being sorted. This is necessary when using the same array
     # for multiple benchmarks.
@@ -111,12 +118,13 @@ def benchmark(sorting_algortihm, arr, runs, dbg=False):
 
 
 def main():
-    arr = [i for i in range(10000)]
+    arr = [i for i in range(100000)]
     random.shuffle(arr)
     runs = 10
 
-    benchmark(selection_sort, arr, runs, dbg=False)
+    benchmark(shell_sort, arr, runs, dbg=False)
     benchmark(merge_sort, arr, runs, dbg=False) # Debug Mode doesnt work for mergesort, as it doesnt touch the original array
+    benchmark(sorted, arr, runs)
 
 if __name__ == "__main__":
     main()
