@@ -91,12 +91,33 @@ def merge_sort(arr):
     return merge(left, right)
 
 
-def partition():
-    pass
+def partition(arr, low, high):
+    pivot = arr[(low + high) // 2]
+    left = low
+    right = high
+
+    while 1:
+        while arr[left] < pivot:
+            left += 1
+
+        while arr[right] > pivot:
+            right -= 1
+
+        if left >= right:
+            return right
+
+        arr[left], arr[right] = arr[right], arr[left]
+        left += 1
+        right -= 1
 
 
-def quick_sort(arr):
-    pass
+def quick_sort(arr, low = 0, high = -1):
+    if (high == -1):
+        high = len(arr) - 1
+    if low < high:
+        pivot = partition(arr, low, high)
+        quick_sort(arr, low, pivot)
+        quick_sort(arr, pivot + 1, high)
 
 
 def benchmark(sorting_algortihm, arr, runs, dbg=False):
@@ -120,11 +141,15 @@ def benchmark(sorting_algortihm, arr, runs, dbg=False):
 def main():
     arr = [i for i in range(100000)]
     random.shuffle(arr)
-    runs = 10
+    runs = 100
 
-    benchmark(shell_sort, arr, runs, dbg=False)
-    benchmark(merge_sort, arr, runs, dbg=False) # Debug Mode doesnt work for mergesort, as it doesnt touch the original array
+#    benchmark(shell_sort, arr, runs, dbg=False)
+    """ benchmark(
+        merge_sort, arr, runs, dbg=False
+    )  # Debug Mode doesnt work for mergesort, as it doesnt touch the original array """
     benchmark(sorted, arr, runs)
+    benchmark(quick_sort, arr, runs)
+
 
 if __name__ == "__main__":
     main()
