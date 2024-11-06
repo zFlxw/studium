@@ -602,11 +602,22 @@ Der kleine Satz von Fermat besagt: \textit{Es sei $p$ eine Primzahl. Dann gilt f
   k^{p-1}\equiv 1 \quad (\text{mod}~ p)
 \]
 
-\section{Komplexe Zahlen}
+\subsection{Komplexe Zahlen}
 Betrachten wir eine Gleichung
 \[
   x^2 + 1 = 0
 \]
-so können wir in der Menge der reellen Zahlen keine Lösung für $x$ finden, da $x = \sqrt{-1}$ wäre und die Wurzel einer 
+so können wir in der Menge der reellen Zahlen keine Lösung für $x$ finden, da $x = \sqrt{-1}$ wäre und die Wurzel einer
 negativen Zahl nicht in den reellen Zahlen definiert ist.
+
+\newpage
+\section{Vektorräume}
+Eine Menge $V$ ist ein Vektorraum, wenn es eine Verknüpfung $+:V\times V\longrightarrow V$ und eine Verknüpfung
+$\cdot: \mathbb{K}\times V\longrightarrow V$ gibt, die folgende Eigenschaften bzgl. der Addition erfüllt sind:
+\ul{
+  \item $\vec{u} + (\vec{v} + \vec{w}) = (\vec{u} + \vec{v}) + \vec{w} \quad \forall \vec{u},\vec{v},\vec{w} \in V \quad \text{(Assoziativität)}$
+  \item Es existiert ein neutrales Element $\vec{0}: \vec{u} + \vec{0} = \vec{u} \quad \forall \vec{u} \in V \quad \text{(Nullvektor)}$
+  \item Für jedes Element $\vec{u} \in V$ existiert ein inverses Element $\vec{u}^{-1}: \vec{u} + \vec{u}^{-1} = \vec{0}$
+  \item Es gilt das Kommutativgesetz: $\forall \vec{u},\vec{v} \in V: \vec{u} + \vec{v} = \vec{v} + \vec{u}$
+}.
 \end{document}
