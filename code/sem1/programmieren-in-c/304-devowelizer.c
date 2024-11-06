@@ -16,7 +16,7 @@ void replaceRandomly(char txt[], char vowels[]) {
   int i = 0;
   while (txt[i] != 0) {
     for (int j = 0; j < 5; j++) {
-      if (txt[i] == vowels[j]) {
+      if ((txt[i] | 32) == vowels[j]) {
         txt[i] = vowels[rand() % 5];
       }
     }
@@ -30,7 +30,7 @@ void removeVowels(char txt[], char vowels[]) {
   int i = 0;
   while (txt[i] != 0) {
     for (int j = 0; j < 5; j++) {
-      if (txt[i] == vowels[j]) {
+      if ((txt[i] | 32) == vowels[j]) {
         for (int k = i; txt[k] != 0; k++) {
           txt[k] = txt[k + 1];
         }
