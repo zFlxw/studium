@@ -1,0 +1,69 @@
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amsthm,amsfonts,amssymb,amscd}
+\usepackage{multirow,booktabs}
+\usepackage{xcolor}
+\usepackage{fullpage}
+\usepackage{lastpage}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{mathrsfs}
+\usepackage{array}
+\usepackage{wrapfig}
+\usepackage{setspace}
+\usepackage{calc}
+\usepackage{multicol}
+\usepackage{cancel}
+\usepackage[margin=3cm]{geometry}
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[most]{tcolorbox} \usepackage{xcolor}
+
+\usepackage{minted}
+\usepackage{booktabs}
+\usepackage{hyperref}
+
+
+\newcommand*{\figref}[2][]{%
+  \hyperref[{fig:#2}]{%
+    \textit{Fig.~\ref*{fig:#2}}%
+    \ifx\\#1\\%
+    \else
+      \,#1%
+    \fi
+  }%
+}
+
+\newlength{\tabcont}
+\setlength{\parindent}{0.0in} \setlength{\parskip}{0.05in} \usepackage{empheq} \usepackage{framed}
+
+
+\colorlet{shadecolor}{orange!15}
+\parindent 0in
+\parskip 12pt \geometry{margin=1in, headsep=0.25in} \theoremstyle{definition}
+
+\begin{document}
+
+\thispagestyle{empty}
+
+\newtheorem{anmk}{Anmerkung}[section]
+\newtheorem{bsp}{Beispiel}[section]
+
+\renewcommand{\figurename}{Fig.}
+
+\newcommand{\ol}[1]{\begin{enumerate}#1\end{enumerate}}
+\newcommand{\ul}[1]{\begin{itemize}#1\end{itemize}}
+\newcommand{\li}[1]{\item{#1}}
+\newcommand{\equivto}{\Longleftrightarrow}
+\newcommand{\sube}{\subseteq}
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+
+\begin{center}
+  {\LARGE \bf Algorithmen und Komplexität}\\
+  {\Large Algorithmen und Komplexität}\\
+  WS 2024
+\end{center}
+
+\end{document}
