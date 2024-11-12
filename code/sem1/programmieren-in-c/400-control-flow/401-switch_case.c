@@ -39,11 +39,6 @@ int main() {
         price = 2.5f;
         break;
 
-      case 'm':
-        height = 2;
-        price = 3.5f;
-        break;
-
       case 'l':
         height = 3;
         price = 4.5f;
@@ -55,8 +50,8 @@ int main() {
         break;
 
       default:
-        height = 1;
-        price = 2.5f;
+        height = 2;
+        price = 3.5f;
     }
 
     printf("\n\n.-\"\"\"\"-.\n");
