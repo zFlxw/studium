@@ -48,9 +48,6 @@ int move(char direction) {
     }
   }
 
-  printf("Empty i: %d, Empty j: %d, Direction: %c\n", empty_i, empty_j,
-         direction);
-
   int tmp;
 
   switch (direction) {
@@ -124,29 +121,29 @@ int main() {
   char sorted = 0;  // This flag indicates whether the field is sorted.
   int i, j;
 
-  for (i = 0; i < 16; i++) {
+  for (i = 0; i < N * N; i++) {
     if (i != 15) {
-      puzzle[i / 4][i % 4] = i + 1;
+      puzzle[i / N][i % N] = i + 1;
     } else {
-      puzzle[i / 4][i % 4] = -1;
+      puzzle[i / N][i % N] = -1;
     }
   }
 
-  for (int k = 0; k <10; k++) {
+  for (int k = 0; k < 10; k++) {
     move("wasd"[rand() % 4]);
   }
 
   while (!sorted) {
     /* Output */
     printf("*********************\n");
-    for (i = 0; i < 4; i++) {
-      for (j = 0; j < 4; j++) {
+    for (i = 0; i < N; i++) {
+      for (j = 0; j < N; j++) {
         if (puzzle[i][j] != -1) {
           printf("* %2d ", puzzle[i][j]);
         } else {
           printf("*    ");
         }
-        if (j == 3) {
+        if (j == N - 1) {
           printf("*\n");
         }
       }
@@ -166,10 +163,10 @@ int main() {
 
   printf("Puzzle solved! Here's the final result.\n");
   printf("*********************\n");
-  for (i = 0; i < 4; i++) {
-    for (j = 0; j < 4; j++) {
+  for (i = 0; i < N; i++) {
+    for (j = 0; j < N; j++) {
       printf("* %2d ", puzzle[i][j]);
-      if (j == 3) {
+      if (j == N - 1) {
         printf("*\n");
       }
     }
