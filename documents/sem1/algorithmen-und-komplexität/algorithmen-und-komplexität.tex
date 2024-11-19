@@ -73,6 +73,30 @@
   umwandelt.
 \end{definition}
 \begin{definition}
-  
+  Eine \textbf{Datenstruktur} dient zur Organisation von Daten. Dabei unterscheidet sich der Fokus von Datenstruktur zu 
+  Datenstruktur; manche sind effizienter für bestimmte Operationen als andere.
 \end{definition}
+
+\section{Laufzeit}
+Als \textbf{Laufzeit} bezeichnet man die Zeit, die ein Programm benötigt, um eine bestimmte Aufgabe zu erledigen. Konrekt bedeutet
+das hier, dass die Laufzeit die Zeit beschreibt, die ein Algorithmus benötigt, um eine bestimmte Eingabe zu vearbeiten und
+daraus eine bestimmte Ausgabe zu erzeugen.
+
+Da es jedoch nicht immer möglich ist, die Laufzeit eines Algorithmus exakt zu bestimmen, wird die Laufzeit von Algorithmen
+in der Regel \textbf{asymptotisch} betrachtet. Das bedeutet, man betrachtet die Laufzeit eines Algorithmus für sehr große
+Eingaben und versucht, eine obere Schranke für die Laufzeit zu finden.
+
+\subsection{Tilde-Notation}
+Eine mögliche Notation, um die asymptotische Laufzeit eines Algorithmus zu beschreiben, ist die \textbf{Tilde-Notation}.
+Diese ist eine simple Annäherung, bei der lediglich der höchste Exponent der Laufzeitfunktion betrachtet wird, da man davon
+ausgeht, dass bei großen $N$ die anderen Terme der Funktion vernachlässigbar klein werden.
+
+\begin{bsp}
+  Sei $T(n) = 3n^2 + 2n + 1$ die Laufzeitfunktion eines Algorithmus. Dann gilt in Tilde-Notation:
+  \begin{align*}
+    T(n) = \sim 3n^3
+  \end{align*}
+\end{bsp}
+
+\subsection{}
 \end{document}
