@@ -28,14 +28,16 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <termios.h>
 #include <time.h>
+#include <unistd.h>
 
 #define N 4
 
 int puzzle[N][N];
 int empty_i = -1, empty_j = -1;
 
-int move(char direction) {
+void moves(char direction) {
   if (empty_i == -1 || empty_j == -1) {
     for (int i = 0; i < N; i++) {
       for (int j = 0; j < N; j++) {
@@ -114,6 +116,23 @@ int is_sorted() {
   return 1;
 }
 
+void printBoard() {
+  printf("*********************\n");
+  for (int i = 0; i < N; i++) {
+    for (int j = 0; j < N; j++) {
+      if (puzzle[i][j] != -1) {
+        printf("* %2d ", puzzle[i][j]);
+      } else {
+        printf("*    ");
+      }
+      if (j == N - 1) {
+        printf("*\n");
+      }
+    }
+    printf("*********************\n");
+  }
+}
+
 int main() {
   srand(time(NULL));
 
@@ -122,7 +141,7 @@ int main() {
   int i, j;
 
   for (i = 0; i < N * N; i++) {
-    if (i != 15) {
+    if (i != N * N - 1) {
       puzzle[i / N][i % N] = i + 1;
     } else {
       puzzle[i / N][i % N] = -1;
@@ -130,25 +149,12 @@ int main() {
   }
 
   for (int k = 0; k < 10; k++) {
-    move("wasd"[rand() % 4]);
+    moves("wasd"[rand() % 4]);
   }
 
   while (!sorted) {
     /* Output */
-    printf("*********************\n");
-    for (i = 0; i < N; i++) {
-      for (j = 0; j < N; j++) {
-        if (puzzle[i][j] != -1) {
-          printf("* %2d ", puzzle[i][j]);
-        } else {
-          printf("*    ");
-        }
-        if (j == N - 1) {
-          printf("*\n");
-        }
-      }
-      printf("*********************\n");
-    }
+    printBoard();
 
     printf("move into direction?");
     printf("\n");
@@ -157,19 +163,12 @@ int main() {
       continue;
     }
 
-    move(key);
+    moves(key);
     sorted = is_sorted();
   }
 
   printf("Puzzle solved! Here's the final result.\n");
-  printf("*********************\n");
-  for (i = 0; i < N; i++) {
-    for (j = 0; j < N; j++) {
-      printf("* %2d ", puzzle[i][j]);
-      if (j == N - 1) {
-        printf("*\n");
-      }
-    }
-    printf("*********************\n");
-  }
+  printBoard();
+
+  return 0;
 }

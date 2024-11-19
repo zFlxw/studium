@@ -42,6 +42,7 @@ see: http://en.wikipedia.org/wiki/Conway's_Game_of_Life
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 
 // Global 2-dim-array which contains the cells
 char cells[30][50];
@@ -50,28 +51,89 @@ char cells[30][50];
 void initialize_cells() {
   for (int i = 0; i < 30; i++) {
     for (int j = 0; j < 50; j++) {
-      // TO DO ...
+      if (rand() % 4 == 0) {
+        cells[i][j] = 1;
+      } else {
+        cells[i][j] = 0;
+      }
     }
   }
 }
 
 // TO DO: Write output function to show the cells
 void display_cells() {
-  system("CLS");  // sends Clear screen to the console (Windows), Linux: "clear"
-                  // TO DO
+  system("clear");
+
+  for (int i = 0; i < 30; i++) {
+    for (int j = 0; j < 50; j++) {
+      if (cells[i][j] == 1) {
+        printf("X");
+      } else {
+        printf(" ");
+      }
+    }
+
+    printf("\n");
+  }
 }
 
 // TO DO: Write a function to calculate the next evolution step
 void evolution_step() {
   // TO DO: Use this array for the calculation of the next step
   char cells_helper[30][50];
+  for (int i = 0; i < 30; i++) {
+    for (int j = 0; j < 50; j++) {
+      cells_helper[i][j] = cells[i][j];
+    }
+  }
+
+  for (int i = 0; i < 30; i++) {
+    for (int j = 0; j < 50; j++) {
+      int alive_neighbours = 0;
+      for (int k = -1; k < 2; k++) {
+        for (int l = -1; l < 2; l++) {
+          if (k == 0 && l == 0) {
+            continue;
+          }
+          
+          if (cells[(i + k) % 30][(j + l) % 50] == 1) {
+            alive_neighbours++;
+          }
+        }
+      }
+
+      if (cells[i][j] == 1 && (alive_neighbours < 2 || alive_neighbours > 3)) {
+        cells_helper[i][j] = 0;
+      } else if (cells[i][j] == 0 && alive_neighbours == 3) {
+        cells_helper[i][j] = 1;
+      }
+    }
+  }
+
+  for (int i = 0; i < 30; i++) {
+    for (int j = 0; j < 50; j++) {
+      cells[i][j] = cells_helper[i][j];
+    }
+  }
 }
 
 // TO DO: Write a function that counts the occupied cells
-int count_cells() {}
+int count_cells() {
+  int count = 0;
+  for (int i = 0; i < 30; i++) {
+    for (int j = 0; j < 50; j++) {
+      if (cells[i][j] == 1) {
+        count++;
+      }
+    }
+  }
+
+  return count;
+}
 
 // Main program
 int main() {
+  srand(time(NULL));
   initialize_cells();
 
   while (1) {
