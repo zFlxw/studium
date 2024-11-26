@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tabellen und Bilder</title>
+    <title>Joa</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
   </head>
   <body>
@@ -68,6 +68,65 @@
     <h2>Bilder</h2>
     <img src="https://placehold.co/300x150" alt="Bildbeschreibung" />
     <img src="https://placehold.co/275x250" alt="Bildbeschreibung" />
-    <img src="https://placehold.co/300x400" alt="Bildbeschreibung" />
+    <img src="https://placehold.co/305x400" alt="Bildbeschreibung" />
+
+    <h2>Forms</h2>
+    <form action="POST">
+      <fieldset>
+        <legend>Personendaten</legend>
+        <label for="name">Name:</label>
+        <input type="datetime-local" id="name" name="name" />
+
+        <label for="email">E-Mail:</label>
+        <input type="password" id="email" name="email" placeholder="mail@example.com" />
+
+        <label for="password">Passwort:</label>
+        <input type="color" id="password" name="password" />
+      </fieldset>
+      <fieldset>
+        <legend>Anfrage</legend>
+
+        <textarea
+          name="description"
+          id="description"
+          style="width: 100%; resize: vertical; min-height: 100px"
+          placeholder="Gib hier das Anliegen deiner Anfrage an."
+          dir="rtl"
+        ></textarea>
+        <textarea
+          name="description"
+          id="description"
+          style="width: 100%; resize: vertical; min-height: 100px"
+          placeholder="Ich bin nutzlos und diene nur zur Erfüllung der Statistik."
+        ></textarea>
+      </fieldset>
+      <fieldset>
+        <legend>Rechtliches</legend>
+        <label for="organe">Ich spende:</label>
+        <select name="organe" id="organe">
+          <option value="herz">Herz</option>
+          <option value="nieren">Nieren</option>
+          <option value="lungen">Lungen</option>
+          <option value="ohren">Ohren</option>
+          <option value="julius">Julius</option>
+        </select>
+        (Dafür sind wir werbefrei)
+        <div>
+          <input type="checkbox" id="ds" name="agb" />
+          <label for="agb"
+            >Ich akzeptiere die
+            <a href="https://www.youtube.com/watch?v=xvFZjo5PgG0">Allgemeinen Geschäftsbedingungen</a></label
+          >
+        </div>
+        <div>
+          <input type="checkbox" id="agb" name="agb" />
+          <label for="ds"
+            >Ich akzeptiere die <a href="https://www.youtube.com/watch?v=xvFZjo5PgG0">Datenschutzerklärung</a></label
+          >
+        </div>
+      </fieldset>
+
+      <input type="submit" value="Absenden" />
+    </form>
   </body>
 </html>

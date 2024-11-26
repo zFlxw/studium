@@ -48,11 +48,13 @@ int ackermann(int m, int n) {
 
   if (m > 0 && n == 0) {
     depth++;
+
     return ackermann(m - 1, 1);
   }
 
   if (m > 0 && n > 0) {
     depth++;
+
     return ackermann(m - 1, ackermann(m, n - 1));
   }
 
