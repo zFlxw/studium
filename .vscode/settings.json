@@ -10,6 +10,7 @@
     "format": "c",
     "initializer_list": "c",
     "span": "c",
-    "text_encoding": "c"
+    "text_encoding": "c",
+    "stdio.h": "c"
   }
 }

@@ -33,11 +33,17 @@ see: http://en.wikipedia.org/wiki/Conway's_Game_of_Life
 //        and benefit from being able to develop functions independently and
 //        integrate them into the final program.
 // TO DO optional 1: extend the program, such that it detects 'stable states',
-// i.e. the system is oscillating between a few states. TO DO optional 2: let
+// i.e. the system is oscillating between a few states. 
+
+// TO DO optional 2: let
 // the program find a start state such that the system stays alive and unstable
-// for as long as possible TO DO optional 3: Create a flicker-free output: Do
+// for as long as possible 
+
+// TO DO optional 3: Create a flicker-free output: Do
 // not print each character separately, but write the output into a string,
-// which is printed all at once TO DO optional 4: extend the program such that
+// which is printed all at once 
+
+// TO DO optional 4: extend the program such that
 // the content of the cells can be edited by the user.
 
 #include <stdio.h>
@@ -122,7 +128,8 @@ void evolution_step() {
             continue;
           }
 
-          if (cells[(i + k) % 30][(j + l) % 50] == 1) {
+          if (i + k > 0 && j + l > 0 &&
+              cells[(i + k) % 30][(j + l) % 50] == 1) {
             alive_neighbours++;
           }
         }
