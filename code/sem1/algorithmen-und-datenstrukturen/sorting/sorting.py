@@ -119,9 +119,9 @@ def quick_sort(arr, low=0, high=None, cutoff=30):
         high = len(arr) - 1
 
     if low < high - cutoff:
-        pivot = partition(arr, low, high)
-        quick_sort(arr, low, pivot)
-        quick_sort(arr, pivot + 1, high)
+        old_pivot_index = partition(arr, low, high)
+        quick_sort(arr, low, old_pivot_index)
+        quick_sort(arr, old_pivot_index + 1, high)
     else:
         insertion_sort(arr, low, high + 1)
 

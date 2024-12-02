@@ -280,7 +280,6 @@ int main() {
       case '1':
         add_student();
         break;
-
       case '2':
         delete_student();
         break;
