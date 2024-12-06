@@ -1,38 +1,35 @@
 #include <stdio.h>
 
-enum months { JANUARY = 1, MARCH = 3, AUGUST = 8, DECEMBER = 12 };
-enum error_codes { NOT_FOUND = 405, NOT_ALLOWED = 403 };
+void summenzeichen(int n) {
+  int sum = 0;
+  for (int i = 0; i < n; i++) {
+    sum = sum + i;
+  }
+}
 
-struct user {
-  int *id;
-};
+int add(int a, int b) {
+  a++;
+  b++;
+  return a + b;
+}
 
-int add(int *a) {
+int increase(int *a) {
+  printf("%p\n", a);
   (*a)++;
+  printf("Increased %d\n", a);
 }
 
 int main() {
   int x = 10;
-  printf("x=%d\n", x);
-  add(&x);
-  printf("x=%d\n", x);
+  int y = 20;
 
-  // web client -> server
-  // server: status code 404
+  printf("x + y = %d\n", add(x, y));
+  printf("x = %d\n", x);
+  printf("y = %d\n", y);
 
-  struct user my_user;
-
-  int error = 404;
-  if (error == NOT_FOUND) {
-    printf("Kein Zugriff\n");
-  }
-
-  int a = 5;
-  float b = a;
-
-  //...
-  
-  printf("March: %d\n", MARCH);
-  printf("August: %d\n", AUGUST);
-  printf("December: %d\n", DECEMBER);
+  increase(&x);
+  increase(&x);
+  increase(&x);
+  printf("x = %d\n", x);
+  printf("y = %d\n", y);
 }
