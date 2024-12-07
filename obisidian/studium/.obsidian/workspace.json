@@ -8,16 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "84db554bcd714014",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
-            }
-          },
-          {
             "id": "6a5ff23a21a53d13",
             "type": "leaf",
             "state": {
@@ -174,10 +164,12 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "84db554bcd714014",
+  "active": "6a5ff23a21a53d13",
   "lastOpenFiles": [
-    "Mathematik I/Lineare Algebra/Eigenwerte und Eigenvektoren.md",
+    "Pasted image 20241207110144.png",
+    "Pasted image 20241207105459.png",
     "Mathematik I/Lineare Algebra/Lineare Abbildung.md",
+    "Mathematik I/Lineare Algebra/Eigenwerte und Eigenvektoren.md",
     "Mathematik I/Lineare Algebra",
     "Mathematik I",
     "Welcome.md"
