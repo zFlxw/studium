@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "6410f10074659265",
+        "id": "4fd2e808d237ee3f",
         "type": "tabs",
         "children": [
           {
-            "id": "6a5ff23a21a53d13",
+            "id": "7dfeb5ab008f2dd2",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -164,11 +164,13 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "6a5ff23a21a53d13",
+  "active": "f735a802d12a13e6",
   "lastOpenFiles": [
-    "Pasted image 20241207110144.png",
-    "Pasted image 20241207105459.png",
+    "Untitled",
+    "Mathematik I/Lineare Algebra/(media)/Pasted image 20241207105459.png",
+    "Mathematik I/Lineare Algebra/(media)",
     "Mathematik I/Lineare Algebra/Lineare Abbildung.md",
+    "Mathematik I/Lineare Algebra/(media)/Pasted image 20241207110144.png",
     "Mathematik I/Lineare Algebra/Eigenwerte und Eigenvektoren.md",
     "Mathematik I/Lineare Algebra",
     "Mathematik I",
