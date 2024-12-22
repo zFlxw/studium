@@ -3,7 +3,7 @@
 int main() {
   for (int i = 1; i <= 6; i++) {
     int k = 0;
-    for (int j = 0; j < 50; j++) {
+    for (int j = 0; j < 30; j++) {
       if (j % i == 0) {
         printf("%d", k % 10);
         k++;
@@ -11,6 +11,7 @@ int main() {
         printf("-");
       }
     }
+
     printf("\n");
   }
 }
