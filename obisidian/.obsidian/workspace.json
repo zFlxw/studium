@@ -1,20 +1,24 @@
 {
   "main": {
-    "id": "9f50847caecbb2ac",
+    "id": "29b15c3eac29dbe4",
     "type": "split",
     "children": [
       {
-        "id": "cfedc5e6cc1f4f92",
+        "id": "88473b4c5f82074f",
         "type": "tabs",
         "children": [
           {
-            "id": "dfcaea9258e5f672",
+            "id": "344224fce42b22b3",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "sem1/Mathematik I/Lineare Abbildungen.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "Lineare Abbildungen"
             }
           }
         ]
@@ -23,15 +27,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "f35c08c007131ef5",
+    "id": "9ae5abbe7a0e3645",
     "type": "split",
     "children": [
       {
-        "id": "098affaef34f478f",
+        "id": "73cf4d86955116ec",
         "type": "tabs",
         "children": [
           {
-            "id": "f735a802d12a13e6",
+            "id": "6bbc59a4db36bb5b",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -43,7 +47,7 @@
             }
           },
           {
-            "id": "f6a76101d83aaa97",
+            "id": "d844fdba2a5dbc0c",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -60,7 +64,7 @@
             }
           },
           {
-            "id": "289047e196a120a3",
+            "id": "9471d736ef539464",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -76,20 +80,20 @@
     "width": 300
   },
   "right": {
-    "id": "f388ae00151941e5",
+    "id": "2625a55d3a9e966e",
     "type": "split",
     "children": [
       {
-        "id": "575c2757def24834",
+        "id": "5575944a3bf81d5a",
         "type": "tabs",
         "children": [
           {
-            "id": "f3bb4741900fcbf1",
+            "id": "93758409984c218b",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Throretische Informatik II/Datenstrukturen/Priority Queues & Heaps.md",
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -99,25 +103,25 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Priority Queues & Heaps"
+              "title": "Backlinks for README"
             }
           },
           {
-            "id": "bec095fb0d4d122c",
+            "id": "3c290df8f9a41b77",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Throretische Informatik II/Datenstrukturen/Priority Queues & Heaps.md",
+                "file": "README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Priority Queues & Heaps"
+              "title": "Outgoing links from README"
             }
           },
           {
-            "id": "510dc31577d049d6",
+            "id": "f640eb241eb11c45",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -130,33 +134,23 @@
             }
           },
           {
-            "id": "24236bc232478f1c",
+            "id": "05a8750d2f1b14a8",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "Mathematik I/Lineare Algebra/Eigenwerte und Eigenvektoren.md"
+                "file": "README.md"
               },
               "icon": "lucide-list",
-              "title": "Outline of Eigenwerte und Eigenvektoren"
-            }
-          },
-          {
-            "id": "4f882a180cd25771",
-            "type": "leaf",
-            "state": {
-              "type": "advanced-tables-toolbar",
-              "state": {},
-              "icon": "spreadsheet",
-              "title": "Advanced Tables"
+              "title": "Outline of README"
             }
           }
-        ],
-        "currentTab": 4
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -165,25 +159,22 @@
       "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
-      "command-palette:Open command palette": false,
-      "table-editor-obsidian:Advanced Tables Toolbar": false
+      "command-palette:Open command palette": false
     }
   },
-  "active": "dfcaea9258e5f672",
+  "active": "6bbc59a4db36bb5b",
   "lastOpenFiles": [
-    "Throretische Informatik II/Datenstrukturen/Priority Queues & Heaps.md",
-    "Mathematik I/Lineare Algebra/Eigenwerte und Eigenvektoren.md",
-    "Mathematik I/Lineare Algebra/Lineare Abbildung.md",
-    "Übersicht.canvas",
-    "2024-12-08.md",
-    "Throretische Informatik II/Datenstrukturen",
-    "Throretische Informatik II/Algorithmen",
-    "Throretische Informatik II",
-    "Mathematik I/Lineare Algebra/(media)/Pasted image 20241207105459.png",
-    "Mathematik I/Lineare Algebra/(media)",
-    "Mathematik I/Lineare Algebra/(media)/Pasted image 20241207110144.png",
-    "Mathematik I/Lineare Algebra",
-    "Mathematik I",
-    "Welcome.md"
+    "sem1/Mathematik I/Eigenwerte und Eigenvektoren.md",
+    "README.md",
+    "sem1/Mathematik I/Lineare Abbildungen.md",
+    "(attachments)/Pasted image 20241207110144.png",
+    "(attachments)/Pasted image 20241207110144.png.crdownload",
+    "(attachments)/Pasted image 20241207105459.png",
+    "(attachments)/Pasted image 20241207105459.png.crdownload",
+    "sem1/Mathematik I/Untitled",
+    "Untitled",
+    "sem1/Mathematik I",
+    "sem1",
+    "(attachments)"
   ]
 }
