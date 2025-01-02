@@ -1,0 +1,13 @@
+{
+  "cssTheme": "Minimal",
+  "accentColor": "#855fbf",
+  "theme": "obsidian",
+  "enabledCssSnippets": [
+    "center-image"
+  ],
+  "baseFontSize": 18,
+  "baseFontSizeAction": true,
+  "textFontFamily": "Atkinson Hyperlegible,Noto Sans",
+  "showViewHeader": true,
+  "nativeMenus": false
+}
