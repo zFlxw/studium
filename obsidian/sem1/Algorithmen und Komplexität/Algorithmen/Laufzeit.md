@@ -4,7 +4,7 @@ Der Begriff „Laufzeit“ ist in der Informatik zweideutig definiert. Je nach K
 
 Letzteres ist relativ selbsterklärend und benötigt keine weitere Erklärung. Alle weiteren Punkte in diesem Dokument beziehen sich auf die Laufzeit als Dauer der Ausführung.
 # Laufzeitanalyse
-*Warum ist die Analyse eines Algorithmus wichtig?* Die Antwort darauf ist eigentlich recht simpel: Durch eine Analyse eines [[Übersicht#Algorithmus|Algorithmus]], kann die Performance, also in diesem Fall insbesondere die Laufzeit und der Speicherverbrauch eines Algorithmus vorhergesagt werden. Außerdem lässt sich die Performance von Algorithmen somit vergleichen, sodass man eindeutig sagen kann, welcher Algorithmus besser für eine bestimmte Aufgabe geeignet ist.
+*Warum ist die Analyse eines Algorithmus wichtig?* Die Antwort darauf ist eigentlich recht simpel: Durch eine Analyse eines [[Algorithmen und Datenstrukturen#Algorithmus|Algorithmus]], kann die Performance, also in diesem Fall insbesondere die Laufzeit und der Speicherverbrauch eines Algorithmus vorhergesagt werden. Außerdem lässt sich die Performance von Algorithmen somit vergleichen, sodass man eindeutig sagen kann, welcher Algorithmus besser für eine bestimmte Aufgabe geeignet ist.
 
 „Und wie bestimmt man die Laufzeit eines Algorithmus nun?“. Dazu gibt es verschiedene Ansätze, welche mehr oder weniger gut geeignet sind. 
 ## Empirischer Ansatz
@@ -23,7 +23,7 @@ Das Vorgehen hierbei ist an sich ebenfalls recht simpel: Jede Operation, die im 
 
 Es ist aber nicht immer (ohne Aufwand) möglich die Summe aller Operationen zu bestimmen, die ein Algorithmus durchführt. Das ist aber auch nicht nötig, da bei großen Eingabewerten eine **ungefähre Annäherung** der Laufzeit ausreichend ist. Daher gibt es verschiedene **Notationen**, die eine solche Annäherung beschreiben.
 # Tilde-Notation
-Die Tilde-Notation beschreibt die **asymptotische Annäherung** an die tatsächliche Laufzeit eines Algorithmus. Um die Tilde-Notation eines Algorithmus zu bestimmen, benötigen wir die **exakte Laufzeit** als Funktion $T(N)$, wobei $N$ die Größe der Eingabe darstellt. Bei dieser Funktion betrachten wir nun lediglich den höchstwertigen Term, also den Term, bei dem $N$ den größten Exponenten hat.
+Die Tilde-Notation beschreibt eine **ungefähre Approximation** an die tatsächliche Laufzeit eines Algorithmus. Um die Tilde-Notation eines Algorithmus zu bestimmen, benötigen wir die **exakte Laufzeit** als Funktion $T(N)$, wobei $N$ die Größe der Eingabe darstellt. Bei dieser Funktion betrachten wir nun lediglich den höchstwertigen Term, also den Term, bei dem $N$ den größten Exponenten hat.
 
 **Beispiel.** Wir nehmen als Beispiel einen Algorithmus an, dessen Kosten als Funktion
 $$
@@ -45,7 +45,7 @@ Wir sehen, dass die Abweichung der Annährung für einen kleinen Eingabewert rec
 ![[Pasted image 20250102212630.png]]
 *Hinweis*: Beide Achsen sind logarithmisch skaliert.
 
-Der rote Funktionsgraph gehört in dieser Abbildung zur Funktion der **exakten Laufzeit**. Der blaue Funktionsgraph beschreibt die **asymptotische Annährung**. Wir sehen also, dass mit steigender Eingabegröße die Abweichung der Annährung vom tatsächlichen Wert immer weiter sinkt und nahezu gegen $0$ geht.
+Der rote Funktionsgraph gehört in dieser Abbildung zur Funktion der **exakten Laufzeit**. Der blaue Funktionsgraph beschreibt die **Approximation** durch die Tilde-Notation. Wir sehen also, dass mit steigender Eingabegröße die Abweichung der Annährung vom tatsächlichen Wert immer weiter sinkt und nahezu gegen $0$ geht.
 
 Die formale Definition für dieses Verhalten lautet:
 $$
@@ -94,3 +94,13 @@ $$
 T(N)=1+N+1=N+2
 $$
 Das bedeutet, die Gesamtkosten dieses Algorithmus betragen $O(N)$, da wir lediglich den Term höchster Ordnung betrachten.
+# Komplexitätsklassen
+Oft passiert es, dass mehrere Algorithmen einen ähnlichen oder sogar den gleichen Kostenaufwand besitzen. Gruppiert man diese Algorithmen nach ihren Kosten, bilden sich dadurch die sogenannten **Komplexitätsklassen**. Häufig nutzt man zur Beschreibung dieser die [[#Big-Oh Notation]].
+
+Es wäre unmöglich sich jede einzelne Komplexitätsklasse auf der Welt zu merken (und es wäre auch nicht zielführend), aber es gibt ein paar Komplexitätsklassen, die man kennen sollte, um einschätzen zu können, wie kostenaufwändig ein Algorithmus ist. Folgende Grafik zeigt die wichtigsten Komplexitätsklassen und ihr Wachstumsverhalten recht anschaulich:
+![[Pasted image 20250103173433.png|center]]
+Quelle: https://javachallengers.com/wp-content/uploads/2023/01/Screenshot-2023-01-30-at-13.27.39.png
+
+Anhand dieser Tabelle lässt sich ebenfalls erkennen, warum es wichtig ist eine möglichst niedrige Laufzeitkomplexität bei einem Algorithmus zu erzielen:
+![[Pasted image 20250103174601.png]]
+Quelle: Kleinberg, J. & Tardos, E. (2005). *Algorithm Design*, S. 34

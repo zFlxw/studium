@@ -1,5 +1,5 @@
 # Algorithmus
-Ein Algorithmus ist eine endliche Abfolge von [[Glossar#^571088|wohldefinierten]] Anweisungen, die eine bestimmte Eingabe in eine bestimmte Ausgabe umwandelt. Darüberhinaus gilt:
+Ein Algorithmus ist eine endliche Abfolge von **wohldefinierten** (eindeutig definierten) Anweisungen, die eine bestimmte Eingabe in eine bestimmte Ausgabe umwandelt. Darüber hinaus gilt:
 	- Jeder Schritt muss tatsächlich ausführbar sein
 	- Zu jedem Zeitpunkt darf nur endlich viel Speicherplatz benötigt werden
 

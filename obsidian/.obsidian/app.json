@@ -4,5 +4,12 @@
   "attachmentFolderPath": "attachments",
   "showRibbon": true,
   "showInlineTitle": true,
-  "spellcheck": true
+  "spellcheck": true,
+  "alwaysUpdateLinks": true,
+  "newLinkFormat": "shortest",
+  "useMarkdownLinks": false,
+  "showUnsupportedFiles": false,
+  "readableLineLength": true,
+  "strictLineBreaks": false,
+  "showLineNumber": false
 }

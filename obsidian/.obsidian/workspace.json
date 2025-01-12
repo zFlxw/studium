@@ -4,33 +4,90 @@
     "type": "split",
     "children": [
       {
-        "id": "88473b4c5f82074f",
+        "id": "0b84106ca4618a1d",
         "type": "tabs",
-        "dimension": 43.727436823104696,
+        "dimension": 47.51805054151625,
         "children": [
           {
-            "id": "344224fce42b22b3",
+            "id": "e702d25851d6ca60",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "sem1/Algorithmen und Komplexität/Übersicht.md",
+                "file": "sem1/Algorithmen und Komplexität/Datenstrukturen/Array.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Übersicht"
+              "title": "Array"
+            }
+          },
+          {
+            "id": "e5ac5e7ccc94aafe",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "sem1/Algorithmen und Komplexität/Datenstrukturen/Liste.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Liste"
+            }
+          },
+          {
+            "id": "34bbf6006250cf37",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "sem1/Algorithmen und Komplexität/Algorithmen/Laufzeit.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Laufzeit"
+            }
+          },
+          {
+            "id": "63fe2d9942ef298d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "sem1/Algorithmen und Komplexität/Algorithmen/Suchalgorithmen/Einfache Suchalgorithmen/Lineare Suche.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Lineare Suche"
+            }
+          },
+          {
+            "id": "7e0ffa76eca21a76",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "sem1/Algorithmen und Komplexität/Algorithmen/Suchalgorithmen/Einfache Suchalgorithmen/Binäre Suche.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Binäre Suche"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       },
       {
-        "id": "73d0dbc12fa5229a",
+        "id": "01d5f07e5967a442",
         "type": "tabs",
-        "dimension": 56.272563176895304,
+        "dimension": 52.48194945848375,
         "children": [
           {
-            "id": "5122ed823f8eb2c0",
+            "id": "affcb27f51cb4bdb",
             "type": "leaf",
             "state": {
               "type": "pdf",
@@ -39,6 +96,18 @@
               },
               "icon": "lucide-file-text",
               "title": "Algorithmen - 00 - Introduction"
+            }
+          },
+          {
+            "id": "bce533b99607872c",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "sem1/Algorithmen und Komplexität/(folien)/Algorithmen - 01 - Sortieren - Mergesort.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "Algorithmen - 01 - Sortieren - Mergesort"
             }
           }
         ]
@@ -113,7 +182,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "sem1/Algorithmen und Komplexität/(folien)/Algorithmen - 00 - Introduction.pdf",
+                "file": "sem1/Algorithmen und Komplexität/Übersicht.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -123,7 +192,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Algorithmen - 00 - Introduction"
+              "title": "Backlinks for Übersicht"
             }
           },
           {
@@ -132,12 +201,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "sem1/Algorithmen und Komplexität/(folien)/Algorithmen - 00 - Introduction.pdf",
+                "file": "sem1/Algorithmen und Komplexität/Übersicht.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Algorithmen - 00 - Introduction"
+              "title": "Outgoing links from Übersicht"
             }
           },
           {
@@ -183,18 +252,30 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "5122ed823f8eb2c0",
+  "active": "e5ac5e7ccc94aafe",
   "lastOpenFiles": [
-    "sem1/Algorithmen und Komplexität/Übersicht.md",
-    "sem1/Algorithmen und Komplexität/Algorithmen/Laufzeit.md",
+    "sem1/Algorithmen und Komplexität/Datenstrukturen/Array.md",
+    "sem1/Algorithmen und Komplexität/Datenstrukturen/Liste.md",
+    "attachments/Pasted image 20250105122941.png",
     "sem1/Algorithmen und Komplexität/(folien)/Algorithmen - 00 - Introduction.pdf",
+    "attachments/Pasted image 20250103215808.png",
+    "sem1/Algorithmen und Komplexität/Algorithmen/Suchalgorithmen/Einfache Suchalgorithmen/Lineare Suche.md",
+    "sem1/Algorithmen und Komplexität/Algorithmen/Suchalgorithmen/Einfache Suchalgorithmen/Binäre Suche.md",
+    "sem1/Algorithmen und Komplexität/Algorithmen/Laufzeit.md",
+    "attachments/Pasted image 20250103174601.png",
+    "attachments/Pasted image 20250103173433.png",
+    "sem1/Algorithmen und Komplexität/Algorithmen/Suchalgorithmen/Suchalgorithmen.md",
+    "sem1/Algorithmen und Komplexität/Datenstrukturen",
+    "sem1/Lineare Algebra/Eigenwerte und Eigenvektoren.md",
+    "sem1/Algorithmen und Komplexität/Algorithmen und Datenstrukturen.md",
+    "sem1/Algorithmen und Komplexität/(folien)/Algorithmen - 01 - Sortieren - Mergesort.pdf",
+    "sem1/Algorithmen und Komplexität/Algorithmen/Suchalgorithmen/Einfache Suchalgorithmen",
+    "sem1/Algorithmen und Komplexität/Algorithmen/Suchalgorithmen",
+    "common/Glossar.md",
     "Tilde-Notation.md",
     "attachments/Pasted image 20250102212630.png",
     "sem1/Algorithmen und Komplexität/Algorithmen",
-    "sem1/Algorithmen und Komplexität/(folien)/Algorithmen - 01 - Sortieren - Mergesort.pdf",
-    "common/Glossar.md",
     "sem1/Lineare Algebra/Lineare Abbildungen.md",
-    "sem1/Lineare Algebra/Eigenwerte und Eigenvektoren.md",
     "common",
     "sem1/Algorithmen und Komplexität/(folien)/Test.md",
     "sem1/Lineare Algebra/(slides)/Test.md",
@@ -205,11 +286,7 @@
     "(test)/Pasted image 20241207105459.png",
     "(test)",
     "(attachments)/Pasted image 20241207110144.png",
-    "(attachments)/Pasted image 20241207105459.png",
     "(attachments)",
-    "(slides)",
-    "sem1/Lineare Algebra/slides",
-    "sem1/Lineare Algebra/(slides)",
     "README.md"
   ]
 }
