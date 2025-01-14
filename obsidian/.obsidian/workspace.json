@@ -28,12 +28,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "sem1/Algorithmen und Komplexität/Datenstrukturen/Liste.md",
+                "file": "sem1/Algorithmen und Komplexität/Datenstrukturen/Stack.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Liste"
+              "title": "Stack"
             }
           },
           {
@@ -252,8 +252,17 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "e5ac5e7ccc94aafe",
+  "active": "6bbc59a4db36bb5b",
   "lastOpenFiles": [
+    "sem1/Algorithmen und Komplexität/_code/stack.c",
+    "sem1/Algorithmen und Komplexität/_code",
+    "code/Untitled",
+    "code/Untitled.md",
+    "sem1/Algorithmen und Komplexität/Datenstrukturen/Stack.md",
+    "code",
+    "attachments/Pasted image 20250114194751.png",
+    "attachments/Pasted image 20250114194723.png",
+    "attachments/Pasted image 20250114194702.png",
     "sem1/Algorithmen und Komplexität/Datenstrukturen/Array.md",
     "sem1/Algorithmen und Komplexität/Datenstrukturen/Liste.md",
     "attachments/Pasted image 20250105122941.png",
@@ -281,12 +290,6 @@
     "sem1/Lineare Algebra/(slides)/Test.md",
     "attachments/Pasted image 20241207110144.png",
     "attachments/Pasted image 20241207105459.png",
-    "attachments",
-    "(test)/Pasted image 20241207110144.png",
-    "(test)/Pasted image 20241207105459.png",
-    "(test)",
-    "(attachments)/Pasted image 20241207110144.png",
-    "(attachments)",
     "README.md"
   ]
 }
