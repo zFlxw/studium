@@ -9,5 +9,6 @@
   "baseFontSizeAction": true,
   "textFontFamily": "Atkinson Hyperlegible,Noto Sans",
   "showViewHeader": true,
-  "nativeMenus": false
+  "nativeMenus": false,
+  "showRibbon": true
 }

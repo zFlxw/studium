@@ -2,7 +2,6 @@
   "vimMode": true,
   "newFileLocation": "root",
   "attachmentFolderPath": "attachments",
-  "showRibbon": true,
   "showInlineTitle": true,
   "spellcheck": true,
   "alwaysUpdateLinks": true,
@@ -11,5 +10,11 @@
   "showUnsupportedFiles": false,
   "readableLineLength": true,
   "strictLineBreaks": false,
-  "showLineNumber": false
+  "showLineNumber": false,
+  "pdfExportSettings": {
+    "pageSize": "Letter",
+    "landscape": false,
+    "margin": "0",
+    "downscalePercent": 100
+  }
 }
