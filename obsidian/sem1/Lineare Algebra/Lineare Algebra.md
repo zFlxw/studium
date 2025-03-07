@@ -1,0 +1,1 @@
+Die **lineare Algebra** ist ein Teilgebiet der Mathematik, das sich insbesondere mit Vektorräumen beschäftigt. Gerade in der Informatik ist die lineare Algebra häufig vertreten.

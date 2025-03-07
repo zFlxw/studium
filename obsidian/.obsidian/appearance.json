@@ -1,9 +1,10 @@
 {
-  "cssTheme": "Minimal",
+  "cssTheme": "",
   "accentColor": "#855fbf",
   "theme": "obsidian",
   "enabledCssSnippets": [
-    "center-image"
+    "center-image",
+    "small-caps"
   ],
   "baseFontSize": 18,
   "baseFontSizeAction": true,

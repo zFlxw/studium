@@ -1,3 +1,4 @@
+Die **elementare Aussagenlogik** beschäftigt sich mit logischen Zusammenhängen zwischen ganzen Aussagen. Dabei wird vorausgesetzt, dass eine Aussage eindeutig als wahr oder falsch angesehen werden kann, ohne dass eine Abhängigkeit zum „inneren“ der Aussage besteht.
 # Definition der Grundbegriffe
 - Eine **Aussage** $A$ ist ein Satz der in einem gegebenen Kontext eindeutig wahr $w$ oder falsch $f$ ist.
 - Die **Negation** einer Aussage $A$ wird als $\lnot A$ bezeichnet und ist die dann wahr, wenn $A$ falsch ist, bzw. dann falsch, wenn $A$ wahr ist.
