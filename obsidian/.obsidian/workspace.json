@@ -13,13 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "sem1/Lineare Algebra/Mengenlehre/Relationen.md",
+                "file": "sem2/Analysis/Folgen.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "Relationen"
+              "title": "Folgen"
             }
           },
           {
@@ -35,46 +35,6 @@
               },
               "icon": "lucide-file",
               "title": "Lineare Algebra"
-            }
-          },
-          {
-            "id": "ffbd969f37b1823b",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
-            }
-          }
-        ]
-      },
-      {
-        "id": "a0c7a034997d1860",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "4638cb0656ada7c3",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "sem1/Lineare Algebra/(skript)/LA_Huebl.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "LA_Huebl"
-            }
-          },
-          {
-            "id": "6eb767b4f8561e9e",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "sem1/Lineare Algebra/(skript)/LA_Stroetmann.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "LA_Stroetmann"
             }
           }
         ]
@@ -221,8 +181,15 @@
   },
   "active": "e99af3fa3987ae98",
   "lastOpenFiles": [
-    "sem1/Lineare Algebra/(skript)/LA_Huebl.pdf",
+    "sem2/Analysis/(folien)/01 Folgen.pdf",
+    "sem2/Analysis/(folien)",
+    "sem2/Web Engineering II/Einführung in Web Engineering II.md",
+    "sem2/Analysis/Folgen.md",
+    "sem2/Analysis",
+    "sem2/Web Engineering II",
     "sem1/Lineare Algebra/Mengenlehre/Relationen.md",
+    "sem2",
+    "sem1/Lineare Algebra/(skript)/LA_Huebl.pdf",
     "sem1/Lineare Algebra/Mengenlehre/Mengen.md",
     "sem1/Lineare Algebra/Lineare Algebra.md",
     "sem1/Lineare Algebra/Logik/Elementare Aussagenlogik.md",
@@ -233,12 +200,8 @@
     "sem2/Web Engineering II",
     "sem2/Digitaltechnik",
     "sem2/Logik",
-    "sem2/Java",
-    "sem2/Analysis",
-    "sem2",
     "attachments/Pasted image 20250305150709.png",
     "sem1/Lineare Algebra/Eigenwerte und Eigenvektoren.md",
-    "sem1/Lineare Algebra/Logik",
     "sem1/Lineare Algebra/Lineare Abbildungen.md",
     "sem1/Algorithmen und Komplexität/Datenstrukturen/Stack.md",
     "sem1/Algorithmen und Komplexität/Datenstrukturen/Liste.md",
