@@ -36,6 +36,16 @@
               "icon": "lucide-file",
               "title": "Lineare Algebra"
             }
+          },
+          {
+            "id": "ffbd969f37b1823b",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
+            }
           }
         ]
       }
@@ -181,13 +191,11 @@
   },
   "active": "e99af3fa3987ae98",
   "lastOpenFiles": [
-    "sem2/Analysis/(folien)/01 Folgen.pdf",
-    "sem2/Analysis/(folien)",
     "sem2/Web Engineering II/Einführung in Web Engineering II.md",
-    "sem2/Analysis/Folgen.md",
-    "sem2/Analysis",
     "sem2/Web Engineering II",
     "sem1/Lineare Algebra/Mengenlehre/Relationen.md",
+    "sem2/Analysis/Folgen.md",
+    "sem2/Analysis",
     "sem2",
     "sem1/Lineare Algebra/(skript)/LA_Huebl.pdf",
     "sem1/Lineare Algebra/Mengenlehre/Mengen.md",
@@ -197,9 +205,10 @@
     "sem1/Lineare Algebra/Logik/Beweistechniken.md",
     "sem1/Lineare Algebra/Mengenlehre",
     "sem1/Lineare Algebra/Logik/Prädikatenlogik.md",
-    "sem2/Web Engineering II",
     "sem2/Digitaltechnik",
     "sem2/Logik",
+    "sem2/Java",
+    "sem2/Analysis",
     "attachments/Pasted image 20250305150709.png",
     "sem1/Lineare Algebra/Eigenwerte und Eigenvektoren.md",
     "sem1/Lineare Algebra/Lineare Abbildungen.md",
