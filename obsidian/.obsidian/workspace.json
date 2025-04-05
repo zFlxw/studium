@@ -6,49 +6,43 @@
       {
         "id": "9eb3aaf0359bc2c5",
         "type": "tabs",
+        "dimension": 44.95230524642289,
+        "children": [
+          {
+            "id": "1527dff6fdf244dc",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "sem2/Analysis/Grenzwert (Folgen).md",
+                "mode": "source",
+                "source": false,
+                "backlinks": false
+              },
+              "icon": "lucide-file",
+              "title": "Grenzwert (Folgen)"
+            }
+          }
+        ]
+      },
+      {
+        "id": "c54bb0215981bbc9",
+        "type": "tabs",
+        "dimension": 55.047694753577105,
         "children": [
           {
             "id": "e99af3fa3987ae98",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "sem2/Analysis/Monotonie.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": false
+                "file": "sem2/Analysis/(folien)/01 Folgen.pdf"
               },
-              "icon": "lucide-file",
-              "title": "Monotonie"
-            }
-          },
-          {
-            "id": "4bbb1e5c94482e07",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "sem2/Analysis/Häufungspunkt.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": false
-              },
-              "icon": "lucide-file",
-              "title": "Häufungspunkt"
-            }
-          },
-          {
-            "id": "ffbd969f37b1823b",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "icon": "lucide-file-text",
+              "title": "01 Folgen"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -105,7 +99,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 303.5,
+    "collapsed": true
   },
   "right": {
     "id": "2625a55d3a9e966e",
@@ -190,28 +185,31 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "4bbb1e5c94482e07",
+  "active": "1527dff6fdf244dc",
   "lastOpenFiles": [
-    "sem2/Analysis/Folgen.md",
+    "sem2/Analysis/(folien)/01 Folgen.pdf",
+    "sem2/Analysis/Grenzwert (Folgen).md",
     "sem2/Analysis/Häufungspunkt.md",
+    "sem2/Analysis/(folien)/01 Folgen-1.pdf",
+    "sem2/Analysis/Folgen.md",
     "sem2/Analysis/Monotonie.md",
-    "sem1/Lineare Algebra/Lineare Algebra.md",
+    "sem1/Web Engineering I/Protokolle.md",
+    "sem1/Web Engineering I/Kommunikation.md",
+    "sem1/Web Engineering I",
+    "sem2/Analysis/(folien)",
     "sem2/Web Engineering II/Einführung in Web Engineering II.md",
+    "sem2/Analysis",
     "sem2/Web Engineering II",
     "sem1/Lineare Algebra/Mengenlehre/Relationen.md",
-    "sem2/Analysis",
     "sem2",
     "sem1/Lineare Algebra/(skript)/LA_Huebl.pdf",
     "sem1/Lineare Algebra/Mengenlehre/Mengen.md",
+    "sem1/Lineare Algebra/Lineare Algebra.md",
     "sem1/Lineare Algebra/Logik/Elementare Aussagenlogik.md",
     "sem1/Lineare Algebra/(skript)/LA_Stroetmann.pdf",
     "sem1/Lineare Algebra/Logik/Beweistechniken.md",
     "sem1/Lineare Algebra/Mengenlehre",
     "sem1/Lineare Algebra/Logik/Prädikatenlogik.md",
-    "sem2/Digitaltechnik",
-    "sem2/Logik",
-    "sem2/Java",
-    "sem2/Analysis",
     "attachments/Pasted image 20250305150709.png",
     "sem1/Lineare Algebra/Eigenwerte und Eigenvektoren.md",
     "sem1/Lineare Algebra/Lineare Abbildungen.md",
@@ -232,11 +230,7 @@
     "attachments/Pasted image 20250103174601.png",
     "attachments/Pasted image 20250103173433.png",
     "sem1/Algorithmen und Komplexität/Algorithmen/Suchalgorithmen/Suchalgorithmen.md",
-    "common/Glossar.md",
-    "Tilde-Notation.md",
     "attachments/Pasted image 20250102212630.png",
-    "sem1/Algorithmen und Komplexität/(folien)/Test.md",
-    "sem1/Lineare Algebra/(slides)/Test.md",
     "attachments/Pasted image 20241207110144.png"
   ]
 }
