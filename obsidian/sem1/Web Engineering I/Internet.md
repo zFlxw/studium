@@ -1,6 +1,7 @@
 - Internet = **inter**connected **net**works
 - In den 1960ern entwickelt
-- Einheitliche Kommunikation über genormte Protokolle
+- Einheitliche [[Schichtenmodelle]] über genormte [[Protokolle]]
+- Ermöglicht Nutzung von [[Dienste|Diensten]]
 ## Historie
 - 1965: Begriffe Hypertext und Hypermedia werden ins Leben gerufen
 - 1969: ARPANET (mit vier Knotenpunkten)
