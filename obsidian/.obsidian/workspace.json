@@ -111,9 +111,18 @@
               "icon": "lucide-file",
               "title": "01.10.2025"
             }
+          },
+          {
+            "id": "76045a88807633f3",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
           }
-        ],
-        "currentTab": 6
+        ]
       }
     ],
     "direction": "vertical"
@@ -256,17 +265,20 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "7e87f16f370963ad",
+  "active": "4fc8ff45482e80a7",
   "lastOpenFiles": [
+    "attachments/Pasted image 20251005201820.png",
+    "attachments/Pasted image 20251005195153.png",
+    "attachments/Pasted image 20251005193745.png",
+    "sem3/Technische Informatik II/Betriebssysteme/Dateien und Dateisysteme.md",
+    "sem3/Technische Informatik II/Betriebssysteme/Einführung.md",
+    "sem3/Technische Informatik II/Betriebssysteme/Mitschriften/01.10.2025.md",
     "sem3/Technische Informatik II/Betriebssysteme/Anwendung der Prinzipien auf reale Betriebssysteme.md",
     "sem3/Technische Informatik II/Betriebssysteme/Grundlegende Eigenschaften der IO-Hardware.md",
-    "sem3/Technische Informatik II/Betriebssysteme/Dateien und Dateisysteme.md",
     "sem3/Technische Informatik II/Betriebssysteme/Prozesse und Threads.md",
     "sem3/Technische Informatik II/Betriebssysteme/Speicherverwaltung.md",
-    "sem3/Technische Informatik II/Betriebssysteme/Einführung.md",
     "sem3/Technische Informatik II",
     "sem3/Betriebssysteme/Untitled.md",
-    "sem3/Technische Informatik II/Betriebssysteme/Mitschriften/01.10.2025.md",
     "sem3/Technische Informatik II/Betriebssysteme/Mitschriften",
     "sem3/Technische Informatik II/Betriebssysteme",
     "sem3",
@@ -290,7 +302,6 @@
     "sem2/Analysis/Häufungspunkt.md",
     "sem2/Analysis/Grenzwert (Folgen).md",
     "sem2/Analysis/Folgen.md",
-    "sem2/Analysis/Monotonie.md",
     "sem2/Web Engineering II",
     "sem2/Analysis",
     "sem2",
@@ -301,8 +312,6 @@
     "attachments/Pasted image 20250105122941.png",
     "attachments/Pasted image 20250103215808.png",
     "attachments/Pasted image 20250103174601.png",
-    "attachments/Pasted image 20250103173433.png",
-    "attachments/Pasted image 20250102212630.png",
-    "attachments/Pasted image 20241207110144.png"
+    "attachments/Pasted image 20250103173433.png"
   ]
 }
