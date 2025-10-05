@@ -1,0 +1,3 @@
+## Checkliste
+- [ ] Historischer Überblick
+- [ ] Betriebssystemkonzepte
