@@ -1,0 +1,41 @@
+- „Gehirn“ des Computers
+	- Holt Befehle aus dem Speicher und führt sie aus
+	- Abarbeitung von Programmen
+- Unterschiedliche CPU-Typen haben unterschiedlichen Befehlssatz
+	- Pentium-Programme laufen nicht auf SPARC-Maschinen
+- Laden von Befehlen dauert länger als Ausführung
+	- Optimierung durch Register (Speicherbereiche) innerhalb der CPU
+	- Ganzzahl-, Gleitkomma-Register
+		- Befehle um ein Wort von Speicher in Register zu schreiben
+		- Befehle um ein Wort von Register in Speicher zu schreiben
+		- Befehle kombinieren zwei Operanden aus Registern
+- Spezialregister
+	- Befehlszähler (Program Counter, PC)
+		- Enthält Speicheradresse des nächsten Befehls
+	- Kellerregister (Stack Pointer)
+		- Zeigt auf das Ende des aktuellen Stacks
+		- Hier werden Frames für jede angesprungene, aber nicht beendete Prozedur abgelegt
+		- Eingabeparameter, lokale Variablen, …
+	- Programmstatuswort (Program Status Word, PSW)
+		- Enthält Status-Bits, CPU-Priorität, Modus (kernel mode / user mode)
+		- Begrenzter Zugriff für Benutzermodus
+			- Lesezugriff, beschränkter Schreibzugriff
+		- Wichtig bei Systemaufrufen und Ein-/Ausgabe
+- Verwaltung durch Multiplexing
+	- Zeitliche Aufteilung der CPU Ressource
+		- halte laufendes Programm an und starte anderes
+	- Betriebssystem muss alle Register kennen
+		- Speichern der Register und späteres Wiederherstellen
+- Moderne Prozessoren
+	- mehrere Befehle gleichzeitig ausführen
+- Ausführungsmodi
+	- Maßnahme, um den direkten Zugriff auf Systemressourcen durch Anwendungsprogramme zu unterbinden
+		- Modus wird durch Bit im PSW gesetzt
+	- Kernel Mode: Alle Befehle des Befehlssatzes können ausgeführt werden
+	- User Mode: Eingeschränkter Zugriff auf Befehlssatz, Speicherzugriff nur über Betriebssystem
+- Systemaufruf (kontrollierter Moduswechsel)
+	- Aufruf im Kernel-Mode über das Betriebssystem
+	- Betriebssystem muss aktiv werden
+	- Andere Fälle, in denen Betriebssystem aktiv werden muss:
+		- Interrupts (von Hardware erzeugt)
+		- Exceptions (durch Programmfehler)

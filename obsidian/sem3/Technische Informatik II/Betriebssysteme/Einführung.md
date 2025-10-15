@@ -1,7 +1,3 @@
-## Checkliste
-- [x] Historischer Überblick
-- [x] Betriebssystemkonzepte
-
 ## Historischer Überblick
 ### Moore’sches Gesetz
 > „Die Anzahl der Transistoren pro Chip verdoppelt sich ca. alle 2 Jahre“ - Gordon Moore, Mitbegründer von Intel (1986)
@@ -95,46 +91,17 @@ Darüber hinaus sorgt das Betriebssystem dafür, dass Anwendungen **nicht direkt
 - Verteilte Betriebssysteme (Cloud)
 ## Einfache Computer-Modelle
 ![[Pasted image 20251005201820.png]]
-### Prozessor
-- „Gehirn“ des Computers
-	- Holt Befehle aus dem Speicher und führt sie aus
-	- Abarbeitung von Programmen
-- Unterschiedliche CPU-Typen haben unterschiedlichen Befehlssatz
-	- Pentium-Programme laufen nicht auf SPARC-Maschinen
-- Laden von Befehlen dauert länger als Ausführung
-	- Optimierung durch Register (Speicherbereiche) innerhalb der CPU
-	- Ganzzahl-, Gleitkomma-Register
-		- Befehle um ein Wort von Speicher in Register zu schreiben
-		- Befehle um ein Wort von Register in Speicher zu schreiben
-		- Befehle kombinieren zwei Operanden aus Registern
-- Spezialregister
-	- Befehlszähler (Program Counter, PC)
-		- Enthält Speicheradresse des nächsten Befehls
-	- Kellerregister (Stack Pointer)
-		- Zeigt auf das Ende des aktuellen Stacks
-		- Hier werden Frames für jede angesprungene, aber nicht beendete Prozedur abgelegt
-		- Eingabeparameter, lokale Variablen, …
-	- Programmstatuswort (Program Status Word, PSW)
-		- Enthält Status-Bits, CPU-Priorität, Modus (kernel mode / user mode)
-		- Begrenzter Zugriff für Benutzermodus
-			- Lesezugriff, beschränkter Schreibzugriff
-		- Wichtig bei Systemaufrufen und Ein-/Ausgabe
-- Verwaltung durch Multiplexing
-	- Zeitliche Aufteilung der CPU Ressource
-		- halte laufendes Programm an und starte anderes
-	- Betriebssystem muss alle Register kennen
-		- Speichern der Register und späteres Wiederherstellen
-- Moderne Prozessoren
-	- mehrere Befehle gleichzeitig ausführen
-- Ausführungsmodi
-	- Maßnahme, um den direkten Zugriff auf Systemressourcen durch Anwendungsprogramme zu unterbinden
-		- Modus wird durch Bit im PSW gesetzt
-	- Kernel Mode: Alle Befehle des Befehlssatzes können ausgeführt werden
-	- User Mode: Eingeschränkter Zugriff auf Befehlssatz, Speicherzugriff nur über Betriebssystem
-- Systemaufruf (kontrollierter Moduswechsel)
-	- Aufruf im Kernel-Mode über das Betriebssystem
-	- Betriebssystem muss aktiv werden
-	- Andere Fälle, in denen Betriebssystem aktiv werden muss:
-		- Interrupts (von Hardware erzeugt)
-		- Exceptions (durch Programmfehler)
-- 
+Ein einfaches Computermodell beinhaltet folgende Komponenten:
+- [[Prozessor]]
+- [[Speicher]]
+- Grafikkarte
+- Tastatur-Controller
+- USB-Controller
+- Festplatten-Controller
+
+Bei Ein- und Ausgabegeräten ist es üblich, dass die Hardware einen eigenen Mikrocontroller besitzt, der das Gerät weitgehend autonom steuert. Damit dieses Zusammenspiel gut funktioniert, gibt es Treiber (Software, die zwischen Betriebssystem und Hardware vermittelt).
+
+Darüber hinaus gibt es bei den Ein- und Ausgabegeräten drei Arten:
+1. Die CPU wartet auf die Ein- / Ausgabe und bearbeitet in der Zwischenzeit keine weiteren Befehle
+2. Der Controller führt den Befehl selbstständig aus und meldet sich per Interrupt-Befehl bei der CPU, sobald er fertig ist
+3. Bearbeitung über DMA Chip (regelt den Datenfluss zwischen Controller und Speicher ohne CPU)

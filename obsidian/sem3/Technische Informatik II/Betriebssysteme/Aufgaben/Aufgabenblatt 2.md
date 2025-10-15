@@ -5,7 +5,20 @@ Beschreiben Sie die nicht funktionalen Anforderungen an ein Betriebssystem! Leit
 - Performance
 - Bedienbarkeit
 - Funktionalität
-- -
+- Rückwärtskompatibilität
+
+Für die Architekturen bedeutet das:
+
+|                         | Monolith                     | Schichten | Microkernel | Client Server |
+| ----------------------- | ---------------------------- | --------- | ----------- | ------------- |
+| Leistung                | X                            |           |             |               |
+| Sicherheit              |                              | X         |             |               |
+| Stabilität              |                              |           | X           |               |
+| Bedienbarkeit           |                              | X         |             |               |
+| Rückwärtskompatibilität | ? (führt zu großer Codebase) |           |             |               |
+| Wartbarkeit             |                              | X         |             |               |
+| Erweiterbarkeit         |                              | X         |             |               |
+
 ## Aufgabe 2.2
 Bestimmen Sie den Pfad ihres HOME-Verzeichnisses
 ```sh
@@ -16,7 +29,7 @@ $ echo $HOME
 Lassen Sie sich den Inhalt ihres Verzeichnisses in kurzer und ausführlicher Form anzeigen!
 ```sh
 $ ls
-$ ll
+$ ll  # oder ls -l
 ```
 
 Mit und ohne „hidden“ Files
