@@ -5,3 +5,20 @@
 - [ ] Scheduling von Prozessen
 - [ ] Threads
 ## Einführung: Prozesse
+- Prozess = Programm in Ausführung
+- Ein Prozess hat verschiedene Eigenschaften
+	- Besitzt eigenen, zugewiesenen Adressraum (Adressbereich im RAM, den der Prozess nutzen kann)
+	- Besitzt einen bestimmten Zustand (READY, RUNNING, BLOCKED, TERMINATED)
+	- Besitzt einen Program Counter, der auf die nächste auszuführende Anweisung zeigt
+	- Kann vom Betriebssystem zugewiesene Ressourcen (z. B. Dateien oder Geräte) verwenden
+	- Daten eines Prozesses werden mithilfe eines Prozesskontrollblocks dargestellt
+	- Prozesse können andere Prozesse erzeugen (Kind-Prozesse)
+- Informationen über Prozesse werden in einer Prozess-Tabelle gespeichert
+	- Beinhaltet alle Informationen außer dem Inhalt des Adressraums
+- Prozesse können Signale empfangen
+	- Signal = Nachricht von Betriebssystem an Prozess
+- Prozesse werden von Benutzern gestartet
+	- Benutzer ID wird mit dem Prozess gespeichert
+	- Betriebssystem verhindert so, dass Prozesse von anderen Nutzern gestoppt werden
+- Adressraum = virtuelle Bereitstellung von Speicher, der nicht unbedingt physisch „zusammenhängend“ sein muss
+	- Bsp.: Prozess fordert mehr Speicher an als noch im RAM verfügbar → BS nimmt einen Teil aus dem RAM und einen von der Festplatte
