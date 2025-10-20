@@ -8,22 +8,7 @@
         "type": "tabs",
         "children": [
           {
-            "id": "c1ef2aafef44a3f3",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "sem3/Technische Informatik II/Betriebssysteme/Prozesse und Threads.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": false
-              },
-              "icon": "lucide-file",
-              "title": "Prozesse und Threads"
-            }
-          },
-          {
-            "id": "b67f9b9f2dbe5c4e",
+            "id": "3acc72bfd3a75f7e",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -36,69 +21,8 @@
               "icon": "lucide-file",
               "title": "Aufgabenblatt 3"
             }
-          },
-          {
-            "id": "ddd0440ecc5c5dc6",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "sem3/Technische Informatik II/Rechnerarchitekturen/Hardwarekomponenten/Speicher.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": false
-              },
-              "icon": "lucide-file",
-              "title": "Speicher"
-            }
-          },
-          {
-            "id": "0c17e37131f291a4",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "sem3/Technische Informatik II/Betriebssysteme/Grundlegende Eigenschaften der IO-Hardware.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": false
-              },
-              "icon": "lucide-file",
-              "title": "Grundlegende Eigenschaften der IO-Hardware"
-            }
-          },
-          {
-            "id": "4630fac1f84b511f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "sem3/Technische Informatik II/Betriebssysteme/Dateien und Dateisysteme.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": false
-              },
-              "icon": "lucide-file",
-              "title": "Dateien und Dateisysteme"
-            }
-          },
-          {
-            "id": "db4beb717d7b2219",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "sem3/Technische Informatik II/Betriebssysteme/Anwendung der Prinzipien auf reale Betriebssysteme.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": false
-              },
-              "icon": "lucide-file",
-              "title": "Anwendung der Prinzipien auf reale Betriebssysteme"
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -241,20 +165,23 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "b67f9b9f2dbe5c4e",
+  "active": "3acc72bfd3a75f7e",
   "lastOpenFiles": [
-    "sem3/Technische Informatik II/Rechnerarchitekturen/Hardwarekomponenten/Prozessor.md",
+    "sem3/Technische Informatik II/Betriebssysteme/Aufgaben/files/prozess.sh",
+    "sem3/Technische Informatik II/Betriebssysteme/Aufgaben/files/bootstrap.sh",
+    "sem3/Technische Informatik II/Betriebssysteme/Aufgaben/files",
+    "sem3/Technische Informatik II/Betriebssysteme/Aufgaben/Aufgabenblatt 2.md",
     "sem3/Technische Informatik II/Betriebssysteme/Aufgaben/Aufgabenblatt 3.md",
     "sem3/Technische Informatik II/Betriebssysteme/Einführung.md",
     "sem3/Technische Informatik II/Rechnerarchitekturen/Hardwarekomponenten/Speicher.md",
     "attachments/Pasted image 20251015203205.png",
+    "sem3/Technische Informatik II/Rechnerarchitekturen/Hardwarekomponenten/Prozessor.md",
     "sem3/Technische Informatik II/Rechnerarchitekturen/Hardwarekomponenten",
     "sem3/Technische Informatik II/Rechnerarchitekturen",
     "sem3/Technische Informatik II/Betriebssysteme/Anwendung der Prinzipien auf reale Betriebssysteme.md",
     "sem3/Technische Informatik II/Betriebssysteme/Dateien und Dateisysteme.md",
     "sem3/Technische Informatik II/Betriebssysteme/Grundlegende Eigenschaften der IO-Hardware.md",
     "sem3/Technische Informatik II/Betriebssysteme/Prozesse und Threads.md",
-    "sem3/Technische Informatik II/Betriebssysteme/Aufgaben/Aufgabenblatt 2.md",
     "sem3/Codierungstheorie/Fouriertransformation.md",
     "sem3/Codierungstheorie/Fourierreihen.md",
     "sem3/Technische Informatik II/Betriebssysteme/Aufgaben",
@@ -283,11 +210,8 @@
     "sem1/Web Engineering I/Kommunikation/Schichtenmodelle/TCP-IP Modell.md",
     "sem1/Web Engineering I/Kommunikation/Schichtenmodelle/Schichtenmodelle.md",
     "sem1/Web Engineering I/Kommunikation/Schichtenmodelle/OSI-Referenzmodell.md",
-    "sem1/Web Engineering I/Kommunikation/Schichtenmodelle",
     "sem1/Web Engineering I/Kommunikation/Port.md",
     "sem1/Web Engineering I/Kommunikation/IP-Adressen.md",
-    "sem1/Web Engineering I/Kommunikation",
-    "sem1/Web Engineering I/Dienste/World Wide Web.md",
-    "sem1/Web Engineering I/Dienste/Dienste.md"
+    "sem1/Web Engineering I/Dienste/World Wide Web.md"
   ]
 }
