@@ -7,7 +7,7 @@ Ein System hat sechs Bandlaufwerke, um die sich n Prozesse streiten. Jeder Proze
 > Entweder gibt es nur maximal n=3 Prozesse, die nicht die gleichen Laufwerke verwenden (dann kann es zu keinem Deadlock kommen) oder die Prozesse müssen bspw unterbrochen werden können, sodass wenn sie die gleichen Laufwerke verwenden wollen, dass sie sich im Zugriff darauf abwechseln
 
 ## Aufgabe 6.3
-In System hat vier Prozesse und fünf reservierbare Ressourcen. Die folgende Tabelle zeigt welche Ressourcen belegt sind und welche maximal benötigt werden.
+Ein System hat vier Prozesse und fünf reservierbare Ressourcen. Die folgende Tabelle zeigt welche Ressourcen belegt sind und welche maximal benötigt werden.
 
 |           | Belegt    | Maximal   | Need      | Verfügbar |
 | --------- | --------- | --------- | --------- | --------- |
