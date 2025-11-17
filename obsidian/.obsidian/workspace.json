@@ -43,16 +43,17 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "sem3/Technische Informatik II/Betriebssysteme/Aufgaben/Aufgabenblatt 5.md",
+                "file": "sem3/Technische Informatik II/Betriebssysteme/Aufgaben/Aufgabenblatt 7.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "Aufgabenblatt 5"
+              "title": "Aufgabenblatt 7"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -195,11 +196,12 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "320dd7e0e5a505fd",
+  "active": "9b13d3ae9d6fa315",
   "lastOpenFiles": [
     "sem3/Technische Informatik II/Betriebssysteme/Aufgaben/Aufgabenblatt 5.md",
-    "sem3/Technische Informatik II/Betriebssysteme/Aufgaben/Aufgabenblatt 2.md",
+    "sem3/Technische Informatik II/Betriebssysteme/Aufgaben/Aufgabenblatt 7.md",
     "sem3/Technische Informatik II/Betriebssysteme/Aufgaben/Aufgabenblatt 6.md",
+    "sem3/Technische Informatik II/Betriebssysteme/Aufgaben/Aufgabenblatt 2.md",
     "sem3/Technische Informatik II/Betriebssysteme/Aufgaben/Aufgabenblatt 4.md",
     "sem3/Technische Informatik II/Betriebssysteme/Einführung.md",
     "sem3/Technische Informatik II/Betriebssysteme/Prozesse und Threads.md",
@@ -241,7 +243,6 @@
     "sem1/Web Engineering I/Protokolle.md",
     "sem1/Web Engineering I/Kommunikation/Schichtenmodelle/TCP-IP Modell.md",
     "sem1/Web Engineering I/Kommunikation/Schichtenmodelle/Schichtenmodelle.md",
-    "sem1/Web Engineering I/Kommunikation/Schichtenmodelle/OSI-Referenzmodell.md",
-    "sem1/Web Engineering I/Kommunikation/Port.md"
+    "sem1/Web Engineering I/Kommunikation/Schichtenmodelle/OSI-Referenzmodell.md"
   ]
 }

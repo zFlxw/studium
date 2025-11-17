@@ -17,6 +17,6 @@ Ein System hat vier Prozesse und fünf reservierbare Ressourcen. Die folgende Ta
 | Prozess D | 1 1 1 1 0 | 1 1 2 2 1 | 0 0 1 1 1 |           |
 > Wenn x = 1 kann Prozess D ausgeführt werden.
 > Führe D aus, gib D frei => Verfügbar (1 1 2 2 1)
-> Führe A aus, gib A frei => Vefügbar (2 1 4 3 3)
+> Führe A aus, gib A frei => Verfügbar (2 1 4 3 3)
 > Führe C aus, gib C frei => Verfügbar (3 2 4 4 3)
 > Führe B aus, gib B frei => Verfügbar (4 3 4 5 3)
