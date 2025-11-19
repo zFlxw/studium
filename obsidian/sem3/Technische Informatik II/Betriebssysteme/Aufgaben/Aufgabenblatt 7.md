@@ -5,12 +5,16 @@ Ihr System hat einen 128 MB großen Speicher. Als Vereinfachung nehmen Sie an da
 
 > Welchen Speicherbedarf haben die beiden Verfahren?
 
-Speicherbedarf von Bitmap: 128 MB / $S$ MB, bspw. 256 Byte bei S=64 KB
+Speicherbedarf von Bitmap:
+- S: Größe Belegungseinheit
+- G: Gesamtspeicher 128 MB = $2^{27}$ B
+- B: Bedarf pro Belegungseinheit
+- Bitmap: $X = \frac{G}{S} \cdot B = 2^{24} \frac{B}{S}$
+
 Speicherbedarf von Linked List: 
 - Knoten: 64 bit = 8 Byte
 - Anzahl Blöcke = 128 * 1024 kB / 64 kB = 2048
-- Anzahl Lücken/Knoten = 2048 / 2 = 1024
-- Größe Knoten = 1024 * 8 Byte = 8192 Byte = 8 kB
+- Größe Knoten = 2048 * 8 Byte = 16384 Byte = 16 kB
 
 > Welches Verfahren ist besser?
 
@@ -27,24 +31,28 @@ First-Fit:
 - 20 kB (8 kB Rest)
 - 10 kB (0 kB Rest)
 - 18 kB (9 kB Rest)
+- frei: 7
 - mittlere Größe: 9,14 kB
 
 Next-Fit:
 - 20 kB (8 kB Rest)
 - 18 kB (8 kB Rest)
 - 9 kB (0 kB Rest)
+- frei: 7
 - mittlere Größe: 9,14 kB
 
 Best-Fit:
 - 12 kB (0 kB Rest)
 - 10 kB (0 kB Rest)
 - 9 kB (0 kB Rest)
+- frei: 5
 - mittlere Größe: 12,8 kB
 
 Worst-Fit:
 - 20 kB (8 kB Rest)
 - 18 kB (8 kB Rest)
 - 15 kB (6 kB Rest)
+- frei: 8
 - mittlere Größe: 8 kB
 
 ## Aufgabe 7.3
@@ -52,6 +60,23 @@ Berechnen Sie die virtuellen Seitennummern und den Offset für die folgenden dez
 
 > Schreiben Sie ein kleines Java Programm, dass die Berechnung durchführt!
 
+```java
+public class Paging {
+    static void main() {
+        int[] values = {20000, 32768, 40000, 60000};
+        int[] pageSizes = {4096, 8192};
+
+        for (int value : values) {
+            System.out.println("Value: " + value);
+            for (int pageSize : pageSizes) {
+                int page = (int) Math.floor((double) value / pageSize);
+                System.out.println("- page (" + pageSize + " KB): " + page);
+                System.out.println("  offset (" + pageSize + " KB): " + (value - (page * pageSize)));
+            }
+        }
+    }
+}
+```
 ## Aufgabe 7.5
 Ein Computer mit 32-Bit-Adressen benutzt eine zweistufige Seitentabelle. Virtuelle Adressen werden in ein 10-Bit-Feld für die oberste Seitentabelle, ein 11-Bit-Feld für die zweite Seitentabelle und in einen Offset unterteilt.
 
@@ -60,7 +85,7 @@ Ein Computer mit 32-Bit-Adressen benutzt eine zweistufige Seitentabelle. Virtuel
 $32 - 10 - 11 = 11$
 $2^{11} = 2048$
 
-Anzahl Seiten: $2^{10} + 2^{11} = 2^{21}$
+Anzahl Seiten: $2^{10} \cdot 2^{11} = 2^{21}$
 
 ## Aufgabe 7.6
 Der TLB ist Teil der CPU und dient zur Beschleunigung von Datenzugriffen. Betrachten Sie folgendes C-Programm:
