@@ -12,3 +12,28 @@ Typisch sind folgende Speicherhardware:
 - **RAM** (Random Access Memory; Arbeitsspeicher): Schnellstmöglicher „externer“ transiente Speicher
 - **Festplatten**: Langsam, aber große Speicherkapazität und geeignet als persistener Speicher
 - **Magnetbänder**: Sehr größer Speicher, allerdings auch sehr langsam. Wird eigentlich nur noch im Server-Bereich verwendet, bspw. für Backups
+
+## Hardwarekomponenten
+### ROM (Read Only Memory)
+- Speicher der bei Herstellung beschrieben wird und anschließend nur gelesen werden kann
+- Früher oft als BIOS Chip oder Firmware genutzt
+- Heute relativ unbedeutend
+### PROM (Programmable Read Only Memory)
+- Bei Herstellung kein Programm
+- Kann einmalig mit einem speziellen Schreibgerät programmiert werden, danach keine Änderungen möglich
+- Technisch: Programmierung meist über Überspannung
+- Wird heute kaum noch verwendet
+### EPROM (Erasable Programmable Read Only Memory)
+- Wie PROMs, allerdings können Programme mit UV Licht gelöscht werden und somit kann der Speicher neuprogrammiert werden
+- UV Sensor muss in der Praxis durch Plastikkappe abgedeckt sein, um versehentliches Löschen zu verhindern
+### EEPROM (Electrically Erasable Read Only Memory)
+- EPROMs, die elektrisch gelöscht werden können
+- Spielen insbesondere bei Mikrocontrollern eine Rolle, aber werden zunehmend von Flash-Speichern verdrängt
+### Flash-Speicher
+- Lässt sich in Blöcken auslesen und ist somit eine schnellere (und kostengünstigere) Alternative zu EEPROMs
+- Zwei Varianten:
+	- NAND: nicht lineare adressierbar (in Reihe)
+	- NOR: lineare adressierbar (parallel)
+- Negativer Aspekt: begrenzte Lebensdauer
+
+

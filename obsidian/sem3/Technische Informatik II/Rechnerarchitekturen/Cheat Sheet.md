@@ -1,0 +1,11 @@
+- Von Neumann Architektur
+- Harvard Architektur
+- Control Unit
+- Historie
+- CPU Befehlsarten
+- Cache
+- Cache Aufgabe
+- Pipelines
+- Speicher
+- IOPS
+- 

@@ -93,7 +93,7 @@ Darüber hinaus sorgt das Betriebssystem dafür, dass Anwendungen **nicht direkt
 ![[Pasted image 20251005201820.png]]
 Ein einfaches Computermodell beinhaltet folgende Komponenten:
 - [[Prozessor]]
-- [[Speicher]]
+- [[sem3/Technische Informatik II/Rechnerarchitekturen/Hardwarekomponenten/Speicher]]
 - Grafikkarte
 - Tastatur-Controller
 - USB-Controller
