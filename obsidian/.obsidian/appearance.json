@@ -6,7 +6,7 @@
     "center-image",
     "small-caps"
   ],
-  "baseFontSize": 20,
+  "baseFontSize": 21,
   "baseFontSizeAction": true,
   "textFontFamily": "Atkinson Hyperlegible,Noto Sans",
   "showViewHeader": true,

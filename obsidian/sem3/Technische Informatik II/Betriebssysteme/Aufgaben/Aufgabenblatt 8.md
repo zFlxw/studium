@@ -1,6 +1,6 @@
 ## Aufgabe 8.1
-Die Größe des Festplattenplatzes für die ausgelagerten Seiten ist abhängig von der Anzahl der Prozesse $n$, der Anzahl der Bytes im virtuellen Adressraum $v$ und von der Größe des physikalischen Speichers $r$.
-
+> Die Größe des Festplattenplatzes für die ausgelagerten Seiten ist abhängig von der Anzahl der Prozesse $n$, der Anzahl der Bytes im virtuellen Adressraum $v$ und von der Größe des physikalischen Speichers $r$.
+> 
 > Geben Sie eine Formel für den Speicherbedarf im ungünstigsten Fall an!
 
 $S = n \cdot v - r$
@@ -19,7 +19,7 @@ Eher nicht, da der Swap sonst bei wenigen Prozessen schon sehr groß wäre.
 Der VAX setzt kein R-Bit, weil er beim ersten Zugriff einen page fault ausführt.
 
 ## Aufgabe 8.3
-Unser Computer hat 4 Seitenrahmen. Die Tabelle zeigt für jede Seite das R-Bit, das M-Bit, die Ladezeit und die Zeit des letzten Zugriffs. Die Zeiten sind jeweils in Timer-Intervallen angegeben.
+> Unser Computer hat 4 Seitenrahmen. Die Tabelle zeigt für jede Seite das R-Bit, das M-Bit, die Ladezeit und die Zeit des letzten Zugriffs. Die Zeiten sind jeweils in Timer-Intervallen angegeben.
 
 | Seite | R-Bit | M-Bit | Ladezeit | Letzter Zugriff |
 | ----- | ----- | ----- | -------- | --------------- |
@@ -36,8 +36,8 @@ LRU: 1
 Second Chance: 2
 
 ## Aufgabe 8.4
-Der kleine Computer hat nur 4 Seitenrahmen. Nach dem ersten Timerintervall sind die R-Bits 0111 (Seite 0 hat den Wert 0, die restlichen Seiten den Wert 1). In den folgenden Intervallen sind die Werte 1011, 1010, 1101, 0010, 1010, 1100 und 0001.
-
+> Der kleine Computer hat nur 4 Seitenrahmen. Nach dem ersten Timerintervall sind die R-Bits 0111 (Seite 0 hat den Wert 0, die restlichen Seiten den Wert 1). In den folgenden Intervallen sind die Werte 1011, 1010, 1101, 0010, 1010, 1100 und 0001.
+> 
 > Geben Sie die vier 8 Bit-Zähler eines Aging-Algorithmus nach dem letzten Intervall an!
 
 |     | 0111     | 1011     | 1010     | 1101     | 0010     | 1010      | 1100     | 0001     |
