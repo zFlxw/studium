@@ -17,15 +17,19 @@ Unabhängig davon wäre es allgemein sicherer den Schlüsselaustausch nach dem D
 
 ## Aufgabe 11.3
 > In einem System sind zu einen Zeitpunkt 1000 Objekte und 100 Domänen. Zum Ablegen einer Objekt-ID, einer Domänen-ID und der Zugriffsrechte (z.B. r-w-x Kombination) wird jeweils eine Speicherplatzeinheit benötigt.
-	• Auf 1% der Objekte kann in allen Domänen zugegriffen werden.
-	• Auf 10% der Objekte kann in zwei Domänen nicht zugegriffen werden.
-	• Auf die restlichen Domänen (89%) kann nur in einer Domäne zugegriffen werden.
-> 
-> Wie viel Platz (in Speicherplatzeinheiten) wird benötigt, wenn man
-	• Die Schutzmatrix als ganzes abspeichert
-	• Die Schutzmatrix als Zugriffskontrolllisten abspeichert?
-	• Die Schutzmatrix als Capability-Listen abspeichert?
 
+-  Auf 1% der Objekte kann in allen Domänen zugegriffen werden. ($10\cdot 100$)
+-  Auf 10% der Objekte kann in zwei Domänen nicht zugegriffen werden. ($100\cdot 98$)
+-  Auf die restlichen Domänen (89%) kann nur in einer Domäne zugegriffen werden. ($890\cdot 1$)
+
+> Wie viel Platz (in Speicherplatzeinheiten) wird benötigt, wenn man
+
+- Die Schutzmatrix als ganzes abspeichert
+  $1000\cdot 100\cdot 1~\text{SE}$
+-  Die Schutzmatrix als Zugriffskontrolllisten abspeichert?
+   $11960\cdot 2~\text{SE}$
+-  Die Schutzmatrix als Capability-Listen abspeichert?
+   $11960\cdot 2~\text{SE}$
 
 ## Aufgabe 11.4
 > Das folgendes Verzeichnis mit vier Dateien ist in einem System vorhanden.
@@ -42,6 +46,12 @@ Unabhängig davon wäre es allgemein sicherer den Schlüsselaustausch nach dem D
 	• Erstellen Sie die Schutzmatrix für das Verzeichnis!
 	• Erstellen Sie dann die Zugriffskontrolllisten für das Verzeichnis!
 
+|       | PPP-Notes | prog1 | project.t | splash.gif |
+| ----- | --------- | ----- | --------- | ---------- |
+| alice | r         | r/w/x | r/w       | r/w        |
+| bob   | r/w       | none  | r/w       | none       |
+| users | r         | none  | r/w       | none       |
+| devel | none      | r/x   | none      | r          |
 
 ## Aufgabe 11.5
 > Bei vielen Windows-Systemen haben ausgewählte Benutzer die Möglichkeit temporär Administratorrechte zu erhalten. Erklären Sie wieso dies gegen das POLA Prinzip für Sicherheit verstößt!

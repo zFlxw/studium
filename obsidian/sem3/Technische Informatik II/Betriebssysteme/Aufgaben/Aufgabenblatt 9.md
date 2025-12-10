@@ -14,6 +14,7 @@ Anzahl Dateien: $\dfrac{8589934592~\text{B}}{8192~\text{B}} = 1048576$
 
 Zeit pro Datei: $5~\text{ms} + 4~\text{ms} + \dfrac{8192\text~{B}}{8388608 \frac{B}{s}} \approx 10~\text{ms}$
 Zeit insgesamt: $1048576 \cdot 0.01~\text{s}=10485.76~\text{s}=174.762~\text{m}=2.912~\text{h}$
+(Zeit mal zwei rechnen, da Lesen und Schreiben jeweils so lang brauchen)
 
 > Diskutieren Sie anhand des Ergebnisse, ob eine Verdichtung von Plattenplatte dann überhaupt sinnvoll ist!
 

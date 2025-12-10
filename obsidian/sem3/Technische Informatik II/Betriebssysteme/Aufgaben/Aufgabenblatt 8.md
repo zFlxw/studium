@@ -16,7 +16,7 @@ Eher nicht, da der Swap sonst bei wenigen Prozessen schon sehr groß wäre.
 ## Aufgabe 8.2
 > Der TLB eines Rechners, der VAX heißt, enthält kein R-Bit. Warum nicht?
 
-Der VAX setzt kein R-Bit, weil er beim ersten Zugriff einen page fault ausführt.
+Der TLB ist Teil der MMU und kann einen Teil der Seitentabelle cachen, wodurch das R-Bit überflüssig wird.
 
 ## Aufgabe 8.3
 > Unser Computer hat 4 Seitenrahmen. Die Tabelle zeigt für jede Seite das R-Bit, das M-Bit, die Ladezeit und die Zeit des letzten Zugriffs. Die Zeiten sind jeweils in Timer-Intervallen angegeben.

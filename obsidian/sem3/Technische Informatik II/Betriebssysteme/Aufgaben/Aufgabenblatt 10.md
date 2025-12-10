@@ -5,7 +5,7 @@ Man braucht einen Controller, über den das Gerät angesprochen werden kann. Au�
 
 > Nennen Sie die vier Ein-/Ausgabeschichten um die Ein- und Ausgabe durch ein Betriebssystem zu realisieren!
 
-Geräteunabhängige OS-Software, Gerätetreiber, Interrupts
+Anwendung, Geräteunabhängige OS-Software, Gerätetreiber, Interrupts
 
 > In welcher der vier Ein-/Ausgabeschichten werden die folgenden Aufgaben jeweils bearbeitet?
 > 	a. Berechnung der Spur, des Sektors und des Kopfes beim Lesen von der Platte
@@ -13,7 +13,7 @@ Geräteunabhängige OS-Software, Gerätetreiber, Interrupts
 > 	c. Prüfung, ob ein Benutzer das Gerät verwenden darf
 > 	d. Konvertierung von Binär-Integer-Zahlen nach ASCII zum Drucken
 
-a: Gerätetreiber
+a: Controller
 b: Gerätetreiber
 c: Geräteunabhängige OS-Software
 d: User I/O Software
@@ -33,4 +33,4 @@ Indem das Betriebssystem Treiber unterstützt, sodass lediglich eine neue Treibe
 ## Aufgabe 10.4
 > Warum werden Dateien vor der Ausgabe an einen Drucker zunächst in einem Spooler-Ordner zwischengespeichert?
 
-Ohne Spooler müsste das Programm, das den Druckvorgang gestartet hat, warten, bis der Vorgang beendet ist. Außerdem lässt sich durch den Spooler eine Warteschlange realisieren und falls ein Fehler beim Drucker auftritt, würden die Daten verloren gehen, wenn es den Spooler nicht gäbe.
+Ohne Spooler müsste das Programm, das den Druckvorgang gestartet hat, warten, bis der Vorgang beendet ist. Außerdem lässt sich durch den Spooler eine Warteschlange realisieren und falls ein Fehler beim Drucker auftritt, würden die Daten verloren gehen, wenn es den Spooler nicht gäbe. Zudem vermeidet man Deadlocks (Abhängigkeit von zwei Prozessen).
