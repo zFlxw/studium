@@ -1,0 +1,8 @@
+- Grundkonzepte und Datenmodellierung (u.a Entity Relationship Modell)
+- Aktuelle und historische Datenbankmodelle
+- Relationales Datenmodell
+- Normalformen
+- Relationaler Datenbankentwurf
+- Mehrbenutzerbetrieb und Transaktionskonzepte
+- Architekturen von Datenbanksystemen
+- Einführung in SQL (Praxisprojekt/praktische Übungen)

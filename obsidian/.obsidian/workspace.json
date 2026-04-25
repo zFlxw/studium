@@ -4,176 +4,40 @@
     "type": "split",
     "children": [
       {
-        "id": "ae325180ed3f9b4e",
+        "id": "93bae94e46ec67f5",
         "type": "tabs",
         "children": [
           {
-            "id": "320dd7e0e5a505fd",
+            "id": "1d5aeae3d61c7413",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "sem3/Technische Informatik II/Betriebssysteme/Aufgaben/Aufgabenblatt 6.md",
+                "file": "sem4/Datenbanken/Übungen/Foliensatz 05.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "Aufgabenblatt 6"
+              "title": "Foliensatz 05"
             }
           },
           {
-            "id": "9ecdc3e16e9e0fb5",
+            "id": "8cf94465263468df",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "sem3/Technische Informatik II/Betriebssysteme/Aufgaben/Aufgabenblatt 7.md",
+                "file": "sem4/Statistik/1. Stunde.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "Aufgabenblatt 7"
-            }
-          },
-          {
-            "id": "2d23ddd4bb2d7d3d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "sem3/Technische Informatik II/Betriebssysteme/Aufgaben/Aufgabenblatt 2.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": false
-              },
-              "icon": "lucide-file",
-              "title": "Aufgabenblatt 2"
-            }
-          },
-          {
-            "id": "43aacaff7c4d356f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "sem3/Technische Informatik II/Betriebssysteme/Aufgaben/Aufgabenblatt 3.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": false
-              },
-              "icon": "lucide-file",
-              "title": "Aufgabenblatt 3"
-            }
-          },
-          {
-            "id": "e35076ea5f53dd76",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "sem3/Technische Informatik II/Betriebssysteme/Aufgaben/Aufgabenblatt 4.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": false
-              },
-              "icon": "lucide-file",
-              "title": "Aufgabenblatt 4"
-            }
-          },
-          {
-            "id": "f8820d109163f32b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "sem3/Technische Informatik II/Betriebssysteme/Aufgaben/Aufgabenblatt 5.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": false
-              },
-              "icon": "lucide-file",
-              "title": "Aufgabenblatt 5"
-            }
-          },
-          {
-            "id": "9b13d3ae9d6fa315",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "sem3/Technische Informatik II/Betriebssysteme/Aufgaben/Aufgabenblatt 11.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": false
-              },
-              "icon": "lucide-file",
-              "title": "Aufgabenblatt 11"
-            }
-          },
-          {
-            "id": "9cdfd25f6b244de1",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "sem3/Technische Informatik II/Betriebssysteme/Aufgaben/Aufgabenblatt 10.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": false
-              },
-              "icon": "lucide-file",
-              "title": "Aufgabenblatt 10"
-            }
-          },
-          {
-            "id": "c7b739966f91c8a7",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "sem3/Technische Informatik II/Rechnerarchitekturen/Hardwarekomponenten/Speicher.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": false
-              },
-              "icon": "lucide-file",
-              "title": "Speicher"
-            }
-          },
-          {
-            "id": "6eaaaa8aae849f28",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "sem3/Technische Informatik II/Betriebssysteme/Aufgaben/Aufgabenblatt 9.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": false
-              },
-              "icon": "lucide-file",
-              "title": "Aufgabenblatt 9"
-            }
-          },
-          {
-            "id": "547e9b73723c0512",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "sem3/Technische Informatik II/Betriebssysteme/Aufgaben/Aufgabenblatt 8.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": false
-              },
-              "icon": "lucide-file",
-              "title": "Aufgabenblatt 8"
+              "title": "1. Stunde"
             }
           }
-        ],
-        "currentTab": 6
+        ]
       }
     ],
     "direction": "vertical"
@@ -318,51 +182,51 @@
   },
   "active": "6bbc59a4db36bb5b",
   "lastOpenFiles": [
-    "sem3/Technische Informatik II/Betriebssysteme/Aufgaben/Aufgabenblatt 10.md",
-    "sem3/Technische Informatik II/Betriebssysteme/Aufgaben/Aufgabenblatt 9.md",
-    "sem3/Technische Informatik II/Betriebssysteme/Aufgaben/Aufgabenblatt 8.md",
-    "sem3/Technische Informatik II/Betriebssysteme/Aufgaben/Aufgabenblatt 7.md",
-    "sem3/Technische Informatik II/Betriebssysteme/Aufgaben/Aufgabenblatt 11.md",
+    "sem4/Datenbanken/Übungen/SQL-Skripte/UNI 1.sql",
+    "sem4/Datenbanken/Übungen/SQL-Skripte/INSERT_UNI 1.sql",
+    "sem4/Datenbanken/Übungen/SQL-Skripte/UNI.sql",
+    "sem4/Datenbanken/Übungen/SQL-Skripte/INSERT_UNI.sql",
+    "sem4/Datenbanken/Übungen/SQL-Skripte",
+    "attachments/Pasted image 20260424193303.png",
+    "sem4/Datenbanken/Themenübersicht.md",
+    "sem4/Datenbanken/Übungen/Foliensatz 05.md",
+    "sem4/Datenbanken/Übungen",
+    "sem4/Datenbanken/Untitled.md",
+    "sem4/Statistik/1. Stunde.md",
+    "Richter Altklausur.md",
+    "Untitled.base",
+    "sem4/Datenbanken/1. Vorlesung.md",
+    "attachments/Statistik-1.jpg",
+    "attachments/Pasted image 20260331123914.png",
+    "sem4/Statistik",
+    "sem4/Datenbanken",
+    "sem4",
     "sem3/Technische Informatik II/Betriebssysteme/Aufgaben/Aufgabenblatt 6.md",
+    "sem3/Technische Informatik II/Betriebssysteme/Zusammenfassung.md",
+    "sem3/Technische Informatik II/Betriebssysteme/Aufgabentypen.md",
+    "attachments/Pasted image 20251215163752.png",
+    "sem3/Technische Informatik II/Betriebssysteme/Aufgaben/Aufgabenblatt 7.md",
     "sem3/Technische Informatik II/Betriebssysteme/Aufgaben/Aufgabenblatt 5.md",
     "sem3/Technische Informatik II/Betriebssysteme/Aufgaben/Aufgabenblatt 4.md",
     "sem3/Technische Informatik II/Betriebssysteme/Aufgaben/Aufgabenblatt 3.md",
     "sem3/Technische Informatik II/Betriebssysteme/Aufgaben/Aufgabenblatt 2.md",
+    "sem3/Technische Informatik II/Betriebssysteme/Speicherverwaltung.md",
+    "sem3/Technische Informatik II/Betriebssysteme/Grundlegende Eigenschaften der IO-Hardware.md",
+    "sem3/Technische Informatik II/Betriebssysteme/Prozesse und Threads.md",
+    "sem3/Technische Informatik II/Betriebssysteme/Einführung.md",
+    "sem3/Technische Informatik II/Betriebssysteme/Aufgaben/Aufgabenblatt 10.md",
+    "sem3/Technische Informatik II/Betriebssysteme/Aufgaben/Aufgabenblatt 11.md",
+    "sem3/Technische Informatik II/Betriebssysteme/Aufgaben/Aufgabenblatt 9.md",
+    "sem3/Technische Informatik II/Betriebssysteme/Aufgaben/Aufgabenblatt 8.md",
     "Untitled 1.md",
-    "Untitled.md",
     "sem3/Technische Informatik II/Rechnerarchitekturen/Cheat Sheet.md",
     "attachments/Pasted image 20251127123749.png",
     "sem3/Technische Informatik II/Rechnerarchitekturen/Hardwarekomponenten/Speicher.md",
-    "sem3/Technische Informatik II/Rechnerarchitekturen/Speicher.md",
-    "sem3/Technische Informatik II/Betriebssysteme/Einführung.md",
-    "sem3/Technische Informatik II/Betriebssysteme/Prozesse und Threads.md",
-    "sem3/Technische Informatik II/Betriebssysteme/Anwendung der Prinzipien auf reale Betriebssysteme.md",
-    "sem3/Technische Informatik II/Betriebssysteme/Dateien und Dateisysteme.md",
-    "sem3/Technische Informatik II/Betriebssysteme/Grundlegende Eigenschaften der IO-Hardware.md",
-    "sem3/Technische Informatik II/Betriebssysteme/Speicherverwaltung.md",
     "sem3/Technische Informatik II/Betriebssysteme/Aufgaben/files/prozess.sh",
-    "sem3/Technische Informatik II/Betriebssysteme/Aufgaben/files/bootstrap.sh",
-    "sem3/Technische Informatik II/Betriebssysteme/Aufgaben/files",
     "attachments/Pasted image 20251015203205.png",
-    "sem3/Technische Informatik II/Rechnerarchitekturen/Hardwarekomponenten/Prozessor.md",
-    "sem3/Technische Informatik II/Rechnerarchitekturen/Hardwarekomponenten",
-    "sem3/Technische Informatik II/Rechnerarchitekturen",
-    "sem3/Codierungstheorie/Fouriertransformation.md",
-    "sem3/Codierungstheorie/Fourierreihen.md",
-    "sem3/Technische Informatik II/Betriebssysteme/Aufgaben",
-    "sem3/Codierungstheorie/Einführung in die Codierungstheorie.md",
-    "sem3/Technische Informatik II/Betriebssysteme/Mitschriften/01.10.2025.md",
     "attachments/Pasted image 20251008111513.png",
     "attachments/Pasted image 20251008105708.png",
     "attachments/Pasted image 20251008102521.png",
-    "attachments/Pasted image 20251008102453.png",
-    "attachments/Pasted image 20251008101524.png",
-    "attachments/Pasted image 20251008100903.png",
-    "sem3/Codierungstheorie",
-    "attachments/Pasted image 20251005201820.png",
-    "attachments/Pasted image 20251005195153.png",
-    "sem3/Technische Informatik II",
-    "sem3/Technische Informatik II/Betriebssysteme/Mitschriften",
-    "sem3/Technische Informatik II/Betriebssysteme"
+    "attachments/Pasted image 20251008102453.png"
   ]
 }

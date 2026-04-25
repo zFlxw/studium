@@ -19,4 +19,3 @@ Immer dann, wenn mehrere Prozesse zeitgleich die gleichen Ressourcen verwenden w
 > Beschreiben Sie in einem kurzen Abriss, wie ein Betriebssystem, das Interrupts ausschalten kann, Semaphoren realisieren könnte?
 
 Zuerst müssen Interrupts ausgeschaltet werden, danach Semaphoren anlegen (jeweils mit Zähler und Queue) und anschließend Interrupts wieder aktivieren.
-
