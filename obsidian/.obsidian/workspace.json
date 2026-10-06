@@ -13,13 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "sem4/Datenbanken/Übungen/Foliensatz 05.md",
+                "file": "sem5/Datenbanken II/Übungen/Übungen 1.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "Foliensatz 05"
+              "title": "Übungen 1"
             }
           },
           {
@@ -57,7 +57,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": false
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-folder-closed",
               "title": "Files"
@@ -162,7 +164,8 @@
               "title": "Outline of README"
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -180,8 +183,15 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "6bbc59a4db36bb5b",
+  "active": "1d5aeae3d61c7413",
   "lastOpenFiles": [
+    "README.md",
+    "sem5/Datenbanken II/Übungen/Übungen 1.md",
+    "sem5/Datenbanken II/Übungen/Untitled",
+    "sem5/Datenbanken II/Übungen",
+    "sem5/Datenbanken II",
+    "sem4/Datenbanken/Übungen/Foliensatz 05.md",
+    "sem5",
     "sem4/Datenbanken/Übungen/SQL-Skripte/UNI 1.sql",
     "sem4/Datenbanken/Übungen/SQL-Skripte/INSERT_UNI 1.sql",
     "sem4/Datenbanken/Übungen/SQL-Skripte/UNI.sql",
@@ -189,18 +199,13 @@
     "sem4/Datenbanken/Übungen/SQL-Skripte",
     "attachments/Pasted image 20260424193303.png",
     "sem4/Datenbanken/Themenübersicht.md",
-    "sem4/Datenbanken/Übungen/Foliensatz 05.md",
     "sem4/Datenbanken/Übungen",
     "sem4/Datenbanken/Untitled.md",
     "sem4/Statistik/1. Stunde.md",
     "Richter Altklausur.md",
-    "Untitled.base",
     "sem4/Datenbanken/1. Vorlesung.md",
     "attachments/Statistik-1.jpg",
     "attachments/Pasted image 20260331123914.png",
-    "sem4/Statistik",
-    "sem4/Datenbanken",
-    "sem4",
     "sem3/Technische Informatik II/Betriebssysteme/Aufgaben/Aufgabenblatt 6.md",
     "sem3/Technische Informatik II/Betriebssysteme/Zusammenfassung.md",
     "sem3/Technische Informatik II/Betriebssysteme/Aufgabentypen.md",
@@ -221,8 +226,6 @@
     "Untitled 1.md",
     "sem3/Technische Informatik II/Rechnerarchitekturen/Cheat Sheet.md",
     "attachments/Pasted image 20251127123749.png",
-    "sem3/Technische Informatik II/Rechnerarchitekturen/Hardwarekomponenten/Speicher.md",
-    "sem3/Technische Informatik II/Betriebssysteme/Aufgaben/files/prozess.sh",
     "attachments/Pasted image 20251015203205.png",
     "attachments/Pasted image 20251008111513.png",
     "attachments/Pasted image 20251008105708.png",
