@@ -8,33 +8,18 @@
         "type": "tabs",
         "children": [
           {
-            "id": "1d5aeae3d61c7413",
+            "id": "c0615c5d3cce5939",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "sem5/Datenbanken II/Übungen/Übungen 1.md",
+                "file": "sem5/IT-Recht/1. Vorlesung.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "Übungen 1"
-            }
-          },
-          {
-            "id": "8cf94465263468df",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "sem4/Statistik/1. Stunde.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": false
-              },
-              "icon": "lucide-file",
-              "title": "1. Stunde"
+              "title": "1. Vorlesung"
             }
           }
         ]
@@ -183,10 +168,17 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "1d5aeae3d61c7413",
+  "active": "c0615c5d3cce5939",
   "lastOpenFiles": [
-    "README.md",
+    "attachments/Pasted image 20261012113601.png",
+    "sem1/Algorithmen und Komplexität/Algorithmen/Suchalgorithmen/Suchalgorithmen.md",
+    "sem4/Statistik/1. Stunde.md",
+    "Untitled.canvas",
+    "sem5/IT-Recht/1. Vorlesung.md",
+    "2026-10-12.md",
     "sem5/Datenbanken II/Übungen/Übungen 1.md",
+    "sem5/IT-Recht",
+    "README.md",
     "sem5/Datenbanken II/Übungen/Untitled",
     "sem5/Datenbanken II/Übungen",
     "sem5/Datenbanken II",
@@ -199,9 +191,7 @@
     "sem4/Datenbanken/Übungen/SQL-Skripte",
     "attachments/Pasted image 20260424193303.png",
     "sem4/Datenbanken/Themenübersicht.md",
-    "sem4/Datenbanken/Übungen",
     "sem4/Datenbanken/Untitled.md",
-    "sem4/Statistik/1. Stunde.md",
     "Richter Altklausur.md",
     "sem4/Datenbanken/1. Vorlesung.md",
     "attachments/Statistik-1.jpg",
@@ -221,10 +211,6 @@
     "sem3/Technische Informatik II/Betriebssysteme/Einführung.md",
     "sem3/Technische Informatik II/Betriebssysteme/Aufgaben/Aufgabenblatt 10.md",
     "sem3/Technische Informatik II/Betriebssysteme/Aufgaben/Aufgabenblatt 11.md",
-    "sem3/Technische Informatik II/Betriebssysteme/Aufgaben/Aufgabenblatt 9.md",
-    "sem3/Technische Informatik II/Betriebssysteme/Aufgaben/Aufgabenblatt 8.md",
-    "Untitled 1.md",
-    "sem3/Technische Informatik II/Rechnerarchitekturen/Cheat Sheet.md",
     "attachments/Pasted image 20251127123749.png",
     "attachments/Pasted image 20251015203205.png",
     "attachments/Pasted image 20251008111513.png",
