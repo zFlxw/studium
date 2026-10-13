@@ -8,18 +8,33 @@
         "type": "tabs",
         "children": [
           {
-            "id": "c0615c5d3cce5939",
+            "id": "48750aa31ed5d378",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "sem5/IT-Recht/1. Vorlesung.md",
+                "file": "sem5/Datenbanken II/Übungen/Übungen 2.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "1. Vorlesung"
+              "title": "Übungen 2"
+            }
+          },
+          {
+            "id": "fd50d49e443ebc93",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "sem5/Datenbanken II/Übungen/Übungen 1.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": false
+              },
+              "icon": "lucide-file",
+              "title": "Übungen 1"
             }
           }
         ]
@@ -168,15 +183,16 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "c0615c5d3cce5939",
+  "active": "48750aa31ed5d378",
   "lastOpenFiles": [
+    "sem5/Datenbanken II/Übungen/Übungen 1.md",
+    "sem5/Datenbanken II/Übungen/Übungen 2.md",
+    "sem5/IT-Recht/1. Vorlesung.md",
     "attachments/Pasted image 20261012113601.png",
     "sem1/Algorithmen und Komplexität/Algorithmen/Suchalgorithmen/Suchalgorithmen.md",
     "sem4/Statistik/1. Stunde.md",
     "Untitled.canvas",
-    "sem5/IT-Recht/1. Vorlesung.md",
     "2026-10-12.md",
-    "sem5/Datenbanken II/Übungen/Übungen 1.md",
     "sem5/IT-Recht",
     "README.md",
     "sem5/Datenbanken II/Übungen/Untitled",
@@ -215,7 +231,6 @@
     "attachments/Pasted image 20251015203205.png",
     "attachments/Pasted image 20251008111513.png",
     "attachments/Pasted image 20251008105708.png",
-    "attachments/Pasted image 20251008102521.png",
-    "attachments/Pasted image 20251008102453.png"
+    "attachments/Pasted image 20251008102521.png"
   ]
 }
