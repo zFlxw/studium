@@ -4,41 +4,25 @@
     "type": "split",
     "children": [
       {
-        "id": "93bae94e46ec67f5",
+        "id": "4db31351d0113725",
         "type": "tabs",
         "children": [
           {
-            "id": "5b1e12542d49f65c",
+            "id": "66634ccb68430769",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "sem5/IT-Recht/1. Vorlesung.md",
+                "file": "sem5/Datenbanken II/Übungen/Übungen 5.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "1. Vorlesung"
-            }
-          },
-          {
-            "id": "48750aa31ed5d378",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "sem5/IT-Recht/2. Vorlesung.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": false
-              },
-              "icon": "lucide-file",
-              "title": "2. Vorlesung"
+              "title": "Übungen 5"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -97,8 +81,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "2625a55d3a9e966e",
@@ -185,14 +168,15 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "48750aa31ed5d378",
+  "active": "66634ccb68430769",
   "lastOpenFiles": [
-    "sem5/IT-Recht/1. Vorlesung.md",
-    "sem5/IT-Recht/2. Vorlesung.md",
     "sem5/Datenbanken II/Übungen/Übungen 4.md",
+    "sem5/Datenbanken II/Übungen/Übungen 5.md",
+    "sem5/IT-Recht/2. Vorlesung.md",
+    "sem5/Datenbanken II/Übungen/Übungen 1.md",
+    "sem5/IT-Recht/1. Vorlesung.md",
     "sem5/Datenbanken II/Übungen/Übungen 3.md",
     "sem5/Datenbanken II/Übungen/Übungen 2.md",
-    "sem5/Datenbanken II/Übungen/Übungen 1.md",
     "attachments/Pasted image 20261012113601.png",
     "sem1/Algorithmen und Komplexität/Algorithmen/Suchalgorithmen/Suchalgorithmen.md",
     "sem4/Statistik/1. Stunde.md",
@@ -228,7 +212,6 @@
     "sem3/Technische Informatik II/Betriebssysteme/Aufgaben/Aufgabenblatt 2.md",
     "sem3/Technische Informatik II/Betriebssysteme/Speicherverwaltung.md",
     "sem3/Technische Informatik II/Betriebssysteme/Grundlegende Eigenschaften der IO-Hardware.md",
-    "sem3/Technische Informatik II/Betriebssysteme/Prozesse und Threads.md",
     "attachments/Pasted image 20251127123749.png",
     "attachments/Pasted image 20251015203205.png",
     "attachments/Pasted image 20251008111513.png",
