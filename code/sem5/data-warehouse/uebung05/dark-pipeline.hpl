@@ -1,0 +1,1240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pipeline>
+  <info>
+    <capture_transform_performance>N</capture_transform_performance>
+    <transform_performance_capturing_delay>1000</transform_performance_capturing_delay>
+    <transform_performance_capturing_size_limit>100</transform_performance_capturing_size_limit>
+    <pipeline_type>Normal</pipeline_type>
+    <pipeline_status>-1</pipeline_status>
+    <parameters/>
+    <name>New pipeline</name>
+    <name_sync_with_filename>Y</name_sync_with_filename>
+    <created_user>-</created_user>
+    <modified_user>-</modified_user>
+    <created_date>2026/10/23 11:38:23.620</created_date>
+    <modified_date>2026/10/23 11:38:23.620</modified_date>
+  </info>
+  <transform>
+    <type>JsonInput</type>
+    <name>File Input</name>
+    <include>N</include>
+    <include_field/>
+    <rownum>N</rownum>
+    <rownum_field/>
+    <limit>0</limit>
+    <valueField/>
+    <IsInFields>N</IsInFields>
+    <IsAFile>N</IsAFile>
+    <addresultfile>N</addresultfile>
+    <IsIgnoreEmptyFile>N</IsIgnoreEmptyFile>
+    <doNotFailIfNoFile>Y</doNotFailIfNoFile>
+    <ignoreMissingPath>Y</ignoreMissingPath>
+    <readurl>N</readurl>
+    <removeSourceField>N</removeSourceField>
+    <defaultPathLeafToNull>Y</defaultPathLeafToNull>
+    <files>
+      <file>
+        <name>${PROJECT_HOME}/uebung05/characters.json</name>
+        <filemask/>
+        <exclude_filemask/>
+        <file_required>N</file_required>
+        <include_subfolders>N</include_subfolders>
+      </file>
+    </files>
+    <fields>
+      <field>
+        <name>obj</name>
+        <length>-1</length>
+        <type>String</type>
+        <format/>
+        <trim_type>none</trim_type>
+        <precision>-1</precision>
+        <currency/>
+        <decimal/>
+        <group/>
+        <repeat>N</repeat>
+        <path>$.characters[*]</path>
+      </field>
+    </fields>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+    <GUI>
+      <xloc>32</xloc>
+      <yloc>160</yloc>
+    </GUI>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <attributes/>
+  </transform>
+  <transform>
+    <type>JsonInput</type>
+    <name>Each Row Input</name>
+    <include>N</include>
+    <include_field/>
+    <rownum>N</rownum>
+    <rownum_field/>
+    <limit>0</limit>
+    <valueField>obj</valueField>
+    <IsInFields>Y</IsInFields>
+    <IsAFile>N</IsAFile>
+    <addresultfile>N</addresultfile>
+    <IsIgnoreEmptyFile>N</IsIgnoreEmptyFile>
+    <doNotFailIfNoFile>Y</doNotFailIfNoFile>
+    <ignoreMissingPath>Y</ignoreMissingPath>
+    <readurl>N</readurl>
+    <removeSourceField>N</removeSourceField>
+    <defaultPathLeafToNull>Y</defaultPathLeafToNull>
+    <files/>
+    <fields>
+      <field>
+        <name>married</name>
+        <length>-1</length>
+        <type>String</type>
+        <format/>
+        <trim_type>none</trim_type>
+        <precision>-1</precision>
+        <currency/>
+        <decimal/>
+        <group/>
+        <repeat>N</repeat>
+        <path>$.married</path>
+      </field>
+      <field>
+        <name>name</name>
+        <length>-1</length>
+        <type>String</type>
+        <format/>
+        <trim_type>none</trim_type>
+        <precision>-1</precision>
+        <currency/>
+        <decimal/>
+        <group/>
+        <repeat>N</repeat>
+        <path>$.name</path>
+      </field>
+      <field>
+        <name>parentOf</name>
+        <length>-1</length>
+        <type>String</type>
+        <format/>
+        <trim_type>none</trim_type>
+        <precision>-1</precision>
+        <currency/>
+        <decimal/>
+        <group/>
+        <repeat>N</repeat>
+        <path>$.parentOf</path>
+      </field>
+      <field>
+        <name>parents</name>
+        <length>-1</length>
+        <type>String</type>
+        <format/>
+        <trim_type>none</trim_type>
+        <precision>-1</precision>
+        <currency/>
+        <decimal/>
+        <group/>
+        <repeat>N</repeat>
+        <path>$.parents</path>
+      </field>
+    </fields>
+    <distribute>N</distribute>
+    <copies>1</copies>
+    <GUI>
+      <xloc>144</xloc>
+      <yloc>160</yloc>
+    </GUI>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <attributes/>
+  </transform>
+  <transform>
+    <type>FilterRows</type>
+    <name>parentOf Not Null</name>
+    <compare>
+      <condition>
+        <negated>N</negated>
+        <operator>-</operator>
+        <leftvalue>parentOf</leftvalue>
+        <function>IS NOT NULL</function>
+        <conditions/>
+      </condition>
+    </compare>
+    <send_true_to>Clear Brackets (parentOf)</send_true_to>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+    <GUI>
+      <xloc>288</xloc>
+      <yloc>48</yloc>
+    </GUI>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <attributes/>
+  </transform>
+  <transform>
+    <type>FilterRows</type>
+    <name>parents Not Null</name>
+    <compare>
+      <condition>
+        <negated>N</negated>
+        <operator>-</operator>
+        <leftvalue>parents</leftvalue>
+        <function>IS NOT NULL</function>
+        <conditions/>
+      </condition>
+    </compare>
+    <send_true_to>Clear Brackets (parents)</send_true_to>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+    <GUI>
+      <xloc>288</xloc>
+      <yloc>160</yloc>
+    </GUI>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <attributes/>
+  </transform>
+  <transform>
+    <type>FilterRows</type>
+    <name>married Not Null</name>
+    <compare>
+      <condition>
+        <negated>N</negated>
+        <operator>-</operator>
+        <leftvalue>married</leftvalue>
+        <function>IS NOT NULL</function>
+        <conditions/>
+      </condition>
+    </compare>
+    <send_true_to>Clear Brackets (married)</send_true_to>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+    <GUI>
+      <xloc>288</xloc>
+      <yloc>272</yloc>
+    </GUI>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <attributes/>
+  </transform>
+  <transform>
+    <type>ReplaceString</type>
+    <name>Clear Brackets (parentOf)</name>
+    <fields>
+      <field>
+        <in_stream_name>parentOf</in_stream_name>
+        <out_stream_name/>
+        <use_regex>Y</use_regex>
+        <replace_string>[\[\]"]</replace_string>
+        <replace_by_string/>
+        <set_empty_string>Y</set_empty_string>
+        <replace_field_by_string/>
+        <whole_word>N</whole_word>
+        <case_sensitive>N</case_sensitive>
+        <is_unicode>N</is_unicode>
+      </field>
+    </fields>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+    <GUI>
+      <xloc>448</xloc>
+      <yloc>48</yloc>
+    </GUI>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <attributes/>
+  </transform>
+  <transform>
+    <type>SplitFieldToRows3</type>
+    <name>To Rows (parentOf)</name>
+    <splitfield>parentOf</splitfield>
+    <delimiter>,</delimiter>
+    <newfield>other</newfield>
+    <rownum>N</rownum>
+    <rownum_field/>
+    <resetrownumber>Y</resetrownumber>
+    <delimiter_is_regex>N</delimiter_is_regex>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+    <GUI>
+      <xloc>624</xloc>
+      <yloc>48</yloc>
+    </GUI>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <attributes/>
+  </transform>
+  <transform>
+    <type>StringOperations</type>
+    <name>Trim (parentOf)</name>
+    <fields>
+      <field>
+        <in_stream_name>parentOf</in_stream_name>
+        <out_stream_name/>
+        <trim_type>right</trim_type>
+        <lower_upper>none</lower_upper>
+        <init_cap>no</init_cap>
+        <mask_xml>none</mask_xml>
+        <digits>none</digits>
+        <remove_special_characters>none</remove_special_characters>
+        <padding_type>none</padding_type>
+        <pad_len/>
+        <pad_char/>
+      </field>
+    </fields>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+    <GUI>
+      <xloc>768</xloc>
+      <yloc>48</yloc>
+    </GUI>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <attributes/>
+  </transform>
+  <transform>
+    <type>ReplaceString</type>
+    <name>Clear Brackets (parents)</name>
+    <fields>
+      <field>
+        <in_stream_name>parents</in_stream_name>
+        <out_stream_name/>
+        <use_regex>Y</use_regex>
+        <replace_string>[\[\]"]</replace_string>
+        <replace_by_string/>
+        <set_empty_string>Y</set_empty_string>
+        <replace_field_by_string/>
+        <whole_word>N</whole_word>
+        <case_sensitive>N</case_sensitive>
+        <is_unicode>N</is_unicode>
+      </field>
+    </fields>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+    <GUI>
+      <xloc>448</xloc>
+      <yloc>160</yloc>
+    </GUI>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <attributes/>
+  </transform>
+  <transform>
+    <type>SplitFieldToRows3</type>
+    <name>To Rows (parents)</name>
+    <splitfield>parents</splitfield>
+    <delimiter>,</delimiter>
+    <newfield>other</newfield>
+    <rownum>N</rownum>
+    <rownum_field/>
+    <resetrownumber>Y</resetrownumber>
+    <delimiter_is_regex>N</delimiter_is_regex>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+    <GUI>
+      <xloc>624</xloc>
+      <yloc>160</yloc>
+    </GUI>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <attributes/>
+  </transform>
+  <transform>
+    <type>StringOperations</type>
+    <name>Trim (parents)</name>
+    <fields>
+      <field>
+        <in_stream_name>parentOf</in_stream_name>
+        <out_stream_name/>
+        <trim_type>right</trim_type>
+        <lower_upper>none</lower_upper>
+        <init_cap>no</init_cap>
+        <mask_xml>none</mask_xml>
+        <digits>none</digits>
+        <remove_special_characters>none</remove_special_characters>
+        <padding_type>none</padding_type>
+        <pad_len/>
+        <pad_char/>
+      </field>
+    </fields>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+    <GUI>
+      <xloc>768</xloc>
+      <yloc>160</yloc>
+    </GUI>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <attributes/>
+  </transform>
+  <transform>
+    <type>ReplaceString</type>
+    <name>Clear Brackets (married)</name>
+    <fields>
+      <field>
+        <in_stream_name>married</in_stream_name>
+        <out_stream_name/>
+        <use_regex>Y</use_regex>
+        <replace_string>[\[\]"]</replace_string>
+        <replace_by_string/>
+        <set_empty_string>Y</set_empty_string>
+        <replace_field_by_string/>
+        <whole_word>N</whole_word>
+        <case_sensitive>N</case_sensitive>
+        <is_unicode>N</is_unicode>
+      </field>
+    </fields>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+    <GUI>
+      <xloc>448</xloc>
+      <yloc>272</yloc>
+    </GUI>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <attributes/>
+  </transform>
+  <transform>
+    <type>SplitFieldToRows3</type>
+    <name>To Rows (married)</name>
+    <splitfield>married</splitfield>
+    <delimiter>,</delimiter>
+    <newfield>other</newfield>
+    <rownum>N</rownum>
+    <rownum_field/>
+    <resetrownumber>Y</resetrownumber>
+    <delimiter_is_regex>N</delimiter_is_regex>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+    <GUI>
+      <xloc>624</xloc>
+      <yloc>272</yloc>
+    </GUI>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <attributes/>
+  </transform>
+  <transform>
+    <type>StringOperations</type>
+    <name>Trim (married)</name>
+    <fields>
+      <field>
+        <in_stream_name>parentOf</in_stream_name>
+        <out_stream_name/>
+        <trim_type>right</trim_type>
+        <lower_upper>none</lower_upper>
+        <init_cap>no</init_cap>
+        <mask_xml>none</mask_xml>
+        <digits>none</digits>
+        <remove_special_characters>none</remove_special_characters>
+        <padding_type>none</padding_type>
+        <pad_len/>
+        <pad_char/>
+      </field>
+    </fields>
+    <distribute>N</distribute>
+    <copies>1</copies>
+    <GUI>
+      <xloc>768</xloc>
+      <yloc>272</yloc>
+    </GUI>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <attributes/>
+  </transform>
+  <transform>
+    <type>Formula</type>
+    <name>Map To Dots Format (married)</name>
+    <formulas>
+      <formula>
+        <field_name>source</field_name>
+        <formula>IF([name] &lt; [other], [name], [other])</formula>
+        <value_type>2</value_type>
+        <value_length>-1</value_length>
+        <value_precision>-1</value_precision>
+        <replace_field/>
+        <set_na>N</set_na>
+      </formula>
+      <formula>
+        <field_name>target</field_name>
+        <formula>IF([name] &lt; [other], [other], [name])</formula>
+        <value_type>2</value_type>
+        <value_length>-1</value_length>
+        <value_precision>-1</value_precision>
+        <replace_field/>
+        <set_na>N</set_na>
+      </formula>
+      <formula>
+        <field_name>type</field_name>
+        <formula>"married"</formula>
+        <value_type>2</value_type>
+        <value_length>-1</value_length>
+        <value_precision>-1</value_precision>
+        <replace_field/>
+        <set_na>N</set_na>
+      </formula>
+    </formulas>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+    <GUI>
+      <xloc>944</xloc>
+      <yloc>272</yloc>
+    </GUI>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <attributes/>
+  </transform>
+  <transform>
+    <type>Formula</type>
+    <name>Map To Dots Format (parentOf)</name>
+    <formulas>
+      <formula>
+        <field_name>source</field_name>
+        <formula>[other]</formula>
+        <value_type>2</value_type>
+        <value_length>-1</value_length>
+        <value_precision>-1</value_precision>
+        <replace_field/>
+        <set_na>N</set_na>
+      </formula>
+      <formula>
+        <field_name>target</field_name>
+        <formula>[name]</formula>
+        <value_type>2</value_type>
+        <value_length>-1</value_length>
+        <value_precision>-1</value_precision>
+        <replace_field/>
+        <set_na>N</set_na>
+      </formula>
+      <formula>
+        <field_name>type</field_name>
+        <formula>"parent"</formula>
+        <value_type>2</value_type>
+        <value_length>-1</value_length>
+        <value_precision>-1</value_precision>
+        <replace_field/>
+        <set_na>N</set_na>
+      </formula>
+    </formulas>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+    <GUI>
+      <xloc>944</xloc>
+      <yloc>48</yloc>
+    </GUI>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <attributes/>
+  </transform>
+  <transform>
+    <type>Formula</type>
+    <name>Map To Dots Format (parents)</name>
+    <formulas>
+      <formula>
+        <field_name>source</field_name>
+        <formula>[name]</formula>
+        <value_type>2</value_type>
+        <value_length>-1</value_length>
+        <value_precision>-1</value_precision>
+        <replace_field/>
+        <set_na>N</set_na>
+      </formula>
+      <formula>
+        <field_name>target</field_name>
+        <formula>[other]</formula>
+        <value_type>2</value_type>
+        <value_length>-1</value_length>
+        <value_precision>-1</value_precision>
+        <replace_field/>
+        <set_na>N</set_na>
+      </formula>
+      <formula>
+        <field_name>type</field_name>
+        <formula>"parent"</formula>
+        <value_type>2</value_type>
+        <value_length>-1</value_length>
+        <value_precision>-1</value_precision>
+        <replace_field/>
+        <set_na>N</set_na>
+      </formula>
+    </formulas>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+    <GUI>
+      <xloc>944</xloc>
+      <yloc>160</yloc>
+    </GUI>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <attributes/>
+  </transform>
+  <transform>
+    <type>SelectValues</type>
+    <name>Select (parentOf)</name>
+    <fields>
+      <field>
+        <name>source</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>
+      <field>
+        <name>target</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>
+      <field>
+        <name>type</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>
+      <select_unspecified>N</select_unspecified>
+    </fields>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+    <GUI>
+      <xloc>1120</xloc>
+      <yloc>48</yloc>
+    </GUI>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <attributes/>
+  </transform>
+  <transform>
+    <type>SelectValues</type>
+    <name>Select (parents)</name>
+    <fields>
+      <field>
+        <name>source</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>
+      <field>
+        <name>target</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>
+      <field>
+        <name>type</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>
+      <select_unspecified>N</select_unspecified>
+    </fields>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+    <GUI>
+      <xloc>1120</xloc>
+      <yloc>160</yloc>
+    </GUI>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <attributes/>
+  </transform>
+  <transform>
+    <type>SelectValues</type>
+    <name>Select (married)</name>
+    <fields>
+      <field>
+        <name>source</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>
+      <field>
+        <name>target</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>
+      <field>
+        <name>type</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>
+      <select_unspecified>N</select_unspecified>
+    </fields>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+    <GUI>
+      <xloc>1120</xloc>
+      <yloc>272</yloc>
+    </GUI>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <attributes/>
+  </transform>
+  <transform>
+    <type>SortRows</type>
+    <name>Sort Rows (Edges)</name>
+    <fields>
+      <field>
+        <name>source</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>target</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>type</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+    </fields>
+    <directory>${java.io.tmpdir}</directory>
+    <sort_prefix>out</sort_prefix>
+    <sort_size>1000000</sort_size>
+    <free_memory/>
+    <unique_rows>N</unique_rows>
+    <compress>N</compress>
+    <compress_variables/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+    <GUI>
+      <xloc>1264</xloc>
+      <yloc>160</yloc>
+    </GUI>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <attributes/>
+  </transform>
+  <transform>
+    <type>Unique</type>
+    <name>Unique Rows (Edges)</name>
+    <count_rows>N</count_rows>
+    <count_field/>
+    <fields>
+      <field>
+        <name>source</name>
+        <case_insensitive>N</case_insensitive>
+      </field>
+      <field>
+        <name>target</name>
+        <case_insensitive>N</case_insensitive>
+      </field>
+      <field>
+        <name>type</name>
+        <case_insensitive>N</case_insensitive>
+      </field>
+    </fields>
+    <reject_duplicate_row>N</reject_duplicate_row>
+    <error_description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+    <GUI>
+      <xloc>1264</xloc>
+      <yloc>272</yloc>
+    </GUI>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <attributes/>
+  </transform>
+  <transform>
+    <type>Formula</type>
+    <name>Map To Dots Format (Edges)</name>
+    <formulas>
+      <formula>
+        <field_name>line</field_name>
+        <formula>CHAR(34)&amp;[source]&amp;CHAR(34)&amp;" -> "&amp;CHAR(34)&amp;[target]&amp;CHAR(34)&amp;IF([type]="married"," "&amp;CHAR(91)&amp;"dir=none, color=red, style=dashed"&amp;CHAR(93)&amp;";",";")</formula>
+        <value_type>2</value_type>
+        <value_length>-1</value_length>
+        <value_precision>-1</value_precision>
+        <replace_field/>
+        <set_na>N</set_na>
+      </formula>
+    </formulas>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+    <GUI>
+      <xloc>1264</xloc>
+      <yloc>384</yloc>
+    </GUI>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <attributes/>
+  </transform>
+  <transform>
+    <type>DataGrid</type>
+    <name>File Header</name>
+    <fields>
+      <field>
+        <currency/>
+        <decimal/>
+        <group/>
+        <name>line</name>
+        <type>String</type>
+        <format/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+    </fields>
+    <data>
+      <line>
+        <item>digraph Dark {</item>
+      </line>
+      <line>
+        <item>  rankdir=TB;</item>
+      </line>
+      <line>
+        <item>  node [shape=box, fontname="Helvetica"];</item>
+      </line>
+    </data>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+    <GUI>
+      <xloc>768</xloc>
+      <yloc>384</yloc>
+    </GUI>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <attributes/>
+  </transform>
+  <transform>
+    <type>SelectValues</type>
+    <name>Select Line (Nodes)</name>
+    <fields>
+      <field>
+        <name>line</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>
+      <select_unspecified>N</select_unspecified>
+    </fields>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+    <GUI>
+      <xloc>448</xloc>
+      <yloc>384</yloc>
+    </GUI>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <attributes/>
+  </transform>
+  <transform>
+    <type>Append</type>
+    <name>Append Nodes (Output)</name>
+    <head_name>Dots File Header</head_name>
+    <tail_name>Select Line (Nodes)</tail_name>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+    <GUI>
+      <xloc>624</xloc>
+      <yloc>384</yloc>
+    </GUI>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <attributes/>
+  </transform>
+  <transform>
+    <type>SelectValues</type>
+    <name>Select Values (Edges)</name>
+    <fields>
+      <field>
+        <name>line</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>
+      <select_unspecified>N</select_unspecified>
+    </fields>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+    <GUI>
+      <xloc>1264</xloc>
+      <yloc>528</yloc>
+    </GUI>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <attributes/>
+  </transform>
+  <transform>
+    <type>Append</type>
+    <name>Appends Edges (Output)</name>
+    <head_name>Append Nodes (Output)</head_name>
+    <tail_name>Select Values (Edges)</tail_name>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+    <GUI>
+      <xloc>624</xloc>
+      <yloc>528</yloc>
+    </GUI>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <attributes/>
+  </transform>
+  <transform>
+    <type>DataGrid</type>
+    <name>File Footer</name>
+    <fields>
+      <field>
+        <currency/>
+        <decimal/>
+        <group/>
+        <name>line</name>
+        <type>String</type>
+        <format/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+    </fields>
+    <data>
+      <line>
+        <item>}</item>
+      </line>
+    </data>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+    <GUI>
+      <xloc>448</xloc>
+      <yloc>656</yloc>
+    </GUI>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <attributes/>
+  </transform>
+  <transform>
+    <type>Append</type>
+    <name>Append Footer (Output)</name>
+    <head_name>Appends Edges (Output)</head_name>
+    <tail_name>Dots File Footer</tail_name>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+    <GUI>
+      <xloc>624</xloc>
+      <yloc>656</yloc>
+    </GUI>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <attributes/>
+  </transform>
+  <transform>
+    <type>TextFileOutput</type>
+    <name>Output File</name>
+    <compression>None</compression>
+    <create_parent_folder>Y</create_parent_folder>
+    <separator/>
+    <enclosure/>
+    <enclosure_forced>N</enclosure_forced>
+    <enclosure_fix_disabled>N</enclosure_fix_disabled>
+    <header>N</header>
+    <footer>N</footer>
+    <format>DOS</format>
+    <encoding>UTF-8</encoding>
+    <endedLine/>
+    <fileNameInField>N</fileNameInField>
+    <fileNameField/>
+    <schema_definition/>
+    <ignore_fields>N</ignore_fields>
+    <file>
+      <name>${PROJECT_HOME}/uebung05/dark.dot</name>
+      <do_not_open_new_file_init>Y</do_not_open_new_file_init>
+      <extension/>
+      <append>N</append>
+      <split>N</split>
+      <haspartno>N</haspartno>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <SpecifyFormat>N</SpecifyFormat>
+      <date_time_format/>
+      <add_to_result_filenames>Y</add_to_result_filenames>
+      <pad>N</pad>
+      <fast_dump>N</fast_dump>
+      <splitevery/>
+    </file>
+    <fields/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+    <GUI>
+      <xloc>624</xloc>
+      <yloc>784</yloc>
+    </GUI>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <attributes/>
+  </transform>
+  <transform>
+    <type>Formula</type>
+    <name>Map To Dots Format (Nodes)</name>
+    <formulas>
+      <formula>
+        <field_name>line</field_name>
+        <formula>CHAR(34)&amp;[name]&amp;CHAR(34)&amp;";" </formula>
+        <value_type>2</value_type>
+        <value_length>-1</value_length>
+        <value_precision>-1</value_precision>
+        <replace_field/>
+        <set_na>N</set_na>
+      </formula>
+    </formulas>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+    <GUI>
+      <xloc>144</xloc>
+      <yloc>384</yloc>
+    </GUI>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <attributes/>
+  </transform>
+  <order>
+    <hop>
+      <from>File Input</from>
+      <to>Each Row Input</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Each Row Input</from>
+      <to>parentOf Not Null</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Each Row Input</from>
+      <to>parents Not Null</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Each Row Input</from>
+      <to>married Not Null</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>parentOf Not Null</from>
+      <to>Clear Brackets (parentOf)</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Clear Brackets (parentOf)</from>
+      <to>To Rows (parentOf)</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>To Rows (parentOf)</from>
+      <to>Trim (parentOf)</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Clear Brackets (parents)</from>
+      <to>To Rows (parents)</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>To Rows (parents)</from>
+      <to>Trim (parents)</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>parents Not Null</from>
+      <to>Clear Brackets (parents)</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Clear Brackets (married)</from>
+      <to>To Rows (married)</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>To Rows (married)</from>
+      <to>Trim (married)</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>married Not Null</from>
+      <to>Clear Brackets (married)</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Trim (married)</from>
+      <to>Map To Dots Format (married)</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Trim (parentOf)</from>
+      <to>Map To Dots Format (parentOf)</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Trim (parents)</from>
+      <to>Map To Dots Format (parents)</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Map To Dots Format (parentOf)</from>
+      <to>Select (parentOf)</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Map To Dots Format (parents)</from>
+      <to>Select (parents)</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Map To Dots Format (married)</from>
+      <to>Select (married)</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Select (parentOf)</from>
+      <to>Sort Rows (Edges)</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Select (parents)</from>
+      <to>Sort Rows (Edges)</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Select (married)</from>
+      <to>Sort Rows (Edges)</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Sort Rows (Edges)</from>
+      <to>Unique Rows (Edges)</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Unique Rows (Edges)</from>
+      <to>Map To Dots Format (Edges)</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>File Header</from>
+      <to>Append Nodes (Output)</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Map To Dots Format (Edges)</from>
+      <to>Select Values (Edges)</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Append Nodes (Output)</from>
+      <to>Appends Edges (Output)</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Select Values (Edges)</from>
+      <to>Appends Edges (Output)</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>File Footer</from>
+      <to>Append Footer (Output)</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Appends Edges (Output)</from>
+      <to>Append Footer (Output)</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Append Footer (Output)</from>
+      <to>Output File</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Each Row Input</from>
+      <to>Map To Dots Format (Nodes)</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Map To Dots Format (Nodes)</from>
+      <to>Select Line (Nodes)</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Select Line (Nodes)</from>
+      <to>Append Nodes (Output)</to>
+      <enabled>Y</enabled>
+    </hop>
+  </order>
+  <notepads/>
+  <attributes/>
+  <transform_error_handling/>
+</pipeline>

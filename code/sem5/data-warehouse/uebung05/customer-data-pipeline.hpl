@@ -394,7 +394,7 @@
     <fields>
       <field>
         <name>Total_Quantity</name>
-        <ascending>N</ascending>
+        <ascending>Y</ascending>
         <case_sensitive>N</case_sensitive>
         <collator_enabled>N</collator_enabled>
         <collator_strength>0</collator_strength>
