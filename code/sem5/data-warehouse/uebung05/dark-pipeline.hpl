@@ -884,7 +884,7 @@
   <transform>
     <type>Append</type>
     <name>Append Nodes (Output)</name>
-    <head_name>Dots File Header</head_name>
+    <head_name>File Header</head_name>
     <tail_name>Select Line (Nodes)</tail_name>
     <distribute>Y</distribute>
     <copies>1</copies>
@@ -976,7 +976,7 @@
     <type>Append</type>
     <name>Append Footer (Output)</name>
     <head_name>Appends Edges (Output)</head_name>
-    <tail_name>Dots File Footer</tail_name>
+    <tail_name>File Footer</tail_name>
     <distribute>Y</distribute>
     <copies>1</copies>
     <GUI>
