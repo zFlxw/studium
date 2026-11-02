@@ -1,0 +1,6 @@
+**Aufgabe**: „Diskutieren Sie in einer Gruppe von min. 4 Personen, ob es für ein Unternehmen des Mittelstands (bis 100 Mio. € Umsatz) mit 10 Außenstellen besser ist ein OLAP mit Data Mart oder mit einem Data Lake aufzubauen. Ziel des OLAP ist es, die ERP Daten des Unternehmens auszuwerten. Stellen Sie Ihre Diskussionsergebnisse vor.“
+> Ein Data Mart mit OLAP System sollte verwendet werden, da sämtlichen Daten vom ERP-System strukturiert und relational sind. Außerdem ist bei der Größe des Unternehmens nicht davon auszugehen, dass es realistisch Data Engineers oder Data Scientists gibt, die ein Data Lake instandhalten und betreiben könnten.
+
+
+„Wie würde das Diskussionsergebnis aussehen, wenn das Unternehmen kein ERP besitzen würde? Stellen Sie auch hier Ihre Diskussionsergebnisse vor.“
+> Ein Data Lake wäre hier eine Idee, weil die Daten unstrukturiert vorliegen, jedoch besteht die Gefahr, dass durch die Dezentralisierung inkonsistente Stammdaten vorliegen. Daher wäre es vermutlich sinnvoller, ein ERP-System einzuführen und auf Data Marts zurückzugreifen. Falls das nicht geht, sollte eine starke ETL-Schicht inkl. Stammdatenabgleich eingebaut werden und darauf aufbauend Data Marts.
