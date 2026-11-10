@@ -1,0 +1,8 @@
+- FASMI (F. 9)
+- OLAP Anwendung & Risiken (F. 11 & 12)
+- Star- & Snowflake-Schema (F. 19)
+- OLAP Datenabfragen (F. 24)
+- ETL (F. 30)
+- Möglichkeiten der Datenmodellierung (F. 53)
+- Versionierung von Daten (F. 64)
+- Data Marts (F. 73)
